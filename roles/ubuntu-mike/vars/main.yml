@@ -1,0 +1,18 @@
+---
+apt_repos:
+  - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
+
+apt_packages:
+  - vim
+  - most
+  - zsh
+  - htop
+  - python-pip
+  - jq
+  - tig
+  # Gui Applications
+  - terminator
+  
+pip_packages:
+  - ipython
+  - virtualenvwrapper
