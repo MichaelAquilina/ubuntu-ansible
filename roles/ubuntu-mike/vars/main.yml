@@ -12,6 +12,7 @@ apt_packages:
   - tig
   # Gui Applications
   - terminator
+  - virtualbox-4.3
   
 pip_packages:
   - ipython
