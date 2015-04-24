@@ -41,3 +41,17 @@
 - name: Create Dev Directory
   file: path={{ ansible_env.HOME}}/Development
         state=directory
+
+- name: Download Zprezto Git Repo
+  git:
+    repo: git@github.com:MichaelAquilina/prezto.git
+    dest: '{{ ansible_env.HOME }}/.zprezto'
+
+- name: Download Dev Git Repos
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ ansible_env.HOME }}/Development/{{ item.folder }}'
+  with_items:
+    - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
+    - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }
+
