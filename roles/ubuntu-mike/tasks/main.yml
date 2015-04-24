@@ -17,23 +17,10 @@
     state: present
     id: 98AB5139
 
-- name: Add Steam APT Key
+- name: Add Additional APT Keys
   sudo: yes
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: B05498B7
-
-- name: Add Spotify APT Key
-  sudo: yes
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: 94558F59
-
-- name: Add Dropbox APT Key
-  sudo: yes
-  apt_key:
-    keyserver: keyserver.ubuntu.com
-    id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
+  with_items: apt_keys
 
 - name: Add Additional APT Repostories
   sudo: yes

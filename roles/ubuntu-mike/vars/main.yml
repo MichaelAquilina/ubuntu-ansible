@@ -7,6 +7,11 @@ apt_repos:
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'ppa:git-core/ppa'
 
+apt_keys:
+  - {keyserver: keyserver.ubuntu.com, id: 94558F59}  # Spotify
+  - {keyserver: keyserver.ubuntu.com, id: B05498B7}  # Steam
+  - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
+
 apt_packages:
   - vim
   - most
