@@ -19,10 +19,16 @@ apt_packages:
   - htop
   - python-pip
   - jq
+  - synaptic
+  - gdebi
   - tig
   # Development
   - python-dev
   - git
+  - g++
+  - gfortran
+  - liblapack3
+  - libblas3
   # Gui Applications
   - terminator
   - virtualbox-4.3
@@ -35,4 +41,6 @@ apt_packages:
 pip_packages:
   - ipython
   - virtualenvwrapper
+  - numpy
+  - pandas
 
