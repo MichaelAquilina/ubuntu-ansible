@@ -4,6 +4,7 @@ apt_repos:
   - 'deb http://archive.canonical.com/ trusty partner'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://repository.spotify.com stable non-free'
+  - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'ppa:git-core/ppa'
 
 apt_packages:
@@ -23,7 +24,9 @@ apt_packages:
   - dropbox
   - skype
   - spotify-client
-  
+  # Cannot install steam automatically due to EULA acceptance
+  # - steam
+
 pip_packages:
   - ipython
   - virtualenvwrapper
