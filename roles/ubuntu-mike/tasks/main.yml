@@ -17,6 +17,12 @@
     state: present
     id: 98AB5139
 
+- name: Add Dropbox APT Key
+  sudo: yes
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
+
 - name: Add Additional APT Repostories
   sudo: yes
   apt_repository: "repo='{{ item }}' state=present"
