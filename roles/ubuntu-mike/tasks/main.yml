@@ -61,3 +61,7 @@
     - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
     - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }
 
+- name: Notify Completion
+  debug:
+    msg: "Setup complete. Don't forget to install Steam and sign in to Dropbox!"
+
