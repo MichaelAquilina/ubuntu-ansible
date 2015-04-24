@@ -4,7 +4,7 @@
     name: aptitude
     state: latest
 
-- name: APT Get + Upgrade
+- name: APT Update + Upgrade
   sudo: yes
   apt:
     update-cache: yes
@@ -16,6 +16,12 @@
     url: https://www.virtualbox.org/download/oracle_vbox.asc 
     state: present
     id: 98AB5139
+
+- name: Add Spotify APT Key
+  sudo: yes
+  apt_key:
+    keyserver: hkp://keyserver.ubuntu.com:80
+    id: 94558F59
 
 - name: Add Dropbox APT Key
   sudo: yes

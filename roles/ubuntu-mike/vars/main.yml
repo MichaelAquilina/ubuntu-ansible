@@ -3,6 +3,7 @@ apt_repos:
   - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://archive.canonical.com/ trusty partner'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
+  - 'deb http://repository.spotify.com stable non-free'
   - 'ppa:git-core/ppa'
 
 apt_packages:
@@ -21,6 +22,7 @@ apt_packages:
   - virtualbox-4.3
   - dropbox
   - skype
+  - spotify-client
   
 pip_packages:
   - ipython
