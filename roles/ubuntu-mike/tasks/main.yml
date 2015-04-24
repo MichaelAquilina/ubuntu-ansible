@@ -4,12 +4,6 @@
     name: aptitude
     state: latest
 
-- name: APT Update + Upgrade
-  sudo: yes
-  apt:
-    update-cache: yes
-    upgrade: full
-
 - name: Add VirtualBox APT Key
   sudo: yes
   apt_key: 
@@ -21,6 +15,12 @@
   sudo: yes
   apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
   with_items: apt_keys
+
+- name: APT Update + Upgrade
+  sudo: yes
+  apt:
+    update-cache: yes
+    upgrade: full
 
 - name: Add Additional APT Repostories
   sudo: yes
