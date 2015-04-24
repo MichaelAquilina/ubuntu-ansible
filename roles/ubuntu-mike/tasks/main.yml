@@ -51,7 +51,6 @@
   git:
     repo: git@github.com:MichaelAquilina/prezto.git
     dest: '{{ ansible_env.HOME }}/.zprezto'
-    track_submodules: yes
     recursive: yes
 
 - name: Download Dev Git Repos
