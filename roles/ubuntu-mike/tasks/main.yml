@@ -46,7 +46,7 @@
   debug: "msg={{ dropbox_state.stdout }}"
 
 - name: Download Dropbox Daemon
-  command: yes > DISPLAY='' dropbox start -i
+  shell: "yes | DISPLAY='' dropbox start -i"
   when: dropbox_state.stdout == ''
 
 - name: Change Default Shell to Zsh
