@@ -37,6 +37,7 @@ apt_packages:
   - spotify-client
   - indicator-multiload
   - compizconfig-settings-manager
+  - dconf-tools
   # Cannot install steam automatically due to EULA acceptance
   # - steam
 
