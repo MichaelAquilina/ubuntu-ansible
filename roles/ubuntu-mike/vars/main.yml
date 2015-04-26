@@ -35,6 +35,8 @@ apt_packages:
   - dropbox
   - skype
   - spotify-client
+  - indicator-multiload
+  - compizconfig-settings-manager
   # Cannot install steam automatically due to EULA acceptance
   # - steam
 
