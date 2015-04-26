@@ -89,6 +89,16 @@
            'application://firefox.desktop',
            'unity://running-apps', 'unity://devices']
 
+- name: Setup Indicator Multiload
+  gsetting: user=None path={{ item.path }} key={{ item.key }} value={{ item.value }}
+  with_items:
+    - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: traditional}
+    - {path: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.net, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
+    - {path: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
+
 - name: Notify Completion
   debug:
     msg: "Setup complete. Don't forget to install Steam and sign in to Dropbox!"
