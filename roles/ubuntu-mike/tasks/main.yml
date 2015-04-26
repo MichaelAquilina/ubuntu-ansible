@@ -37,18 +37,6 @@
   pip: name={{ item }} state=latest
   with_items: pip_packages
 
-- name: Check Dropbox Status
-  command: dropbox running
-  register: dropbox_state
-  changed_when: False
-
-- name: Dropbox Status
-  debug: "msg={{ dropbox_state.stdout }}"
-
-- name: Download Dropbox Daemon
-  shell: "yes | DISPLAY='' dropbox start -i"
-  when: dropbox_state.stdout == ''
-
 - name: Change Default Shell to Zsh
   sudo: yes
   user:
