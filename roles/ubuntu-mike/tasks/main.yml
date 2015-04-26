@@ -16,16 +16,16 @@
   apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
   with_items: apt_keys
 
+- name: Add Additional APT Repostories
+  sudo: yes
+  apt_repository: "repo='{{ item }}' state=present"
+  with_items: apt_repos
+
 - name: APT Update + Upgrade
   sudo: yes
   apt:
     update-cache: yes
     upgrade: full
-
-- name: Add Additional APT Repostories
-  sudo: yes
-  apt_repository: "repo='{{ item }}' state=present"
-  with_items: apt_repos
 
 - name: Install APT Packages
   sudo: yes
