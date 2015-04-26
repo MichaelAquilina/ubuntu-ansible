@@ -60,9 +60,22 @@
   git:
     repo: '{{ item.repo }}'
     dest: '{{ ansible_env.HOME }}/Development/{{ item.folder }}'
+    update: no
   with_items:
     - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
     - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }
+
+
+- name: Setup Launch Items
+  gsetting:
+    user: '{{ ansible_env.USER }}'
+    path: com.canonical.Unity.Launcher
+    key: favorites
+    value: >
+          ['application://org.gnome.Nautilus.desktop',
+           'application://terminator.desktop',
+           'application://firefox.desktop',
+           'unity://running-apps', 'unity://devices']
 
 - name: Notify Completion
   debug:
