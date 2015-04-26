@@ -6,10 +6,12 @@ apt_repos:
   - 'deb http://repository.spotify.com stable non-free'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'ppa:git-core/ppa'
+  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 94558F59}  # Spotify
   - {keyserver: keyserver.ubuntu.com, id: B05498B7}  # Steam
+  - {keyserver: keyserver.ubuntu.com, id: 6C2225A4}  # Synapse
   - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
 
 apt_packages:
@@ -40,6 +42,7 @@ apt_packages:
   - indicator-multiload
   - compizconfig-settings-manager
   - dconf-tools
+  - synapse
   # Cannot install steam automatically due to EULA acceptance
   # - steam
 
