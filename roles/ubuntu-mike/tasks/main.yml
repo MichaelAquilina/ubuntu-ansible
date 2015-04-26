@@ -37,6 +37,14 @@
   pip: name={{ item }} state=latest
   with_items: pip_packages
 
+- name: Add known_hosts github.com key
+  lineinfile:
+    dest: ~/.ssh/known_hosts
+    create: yes
+    state: present
+    line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
+    regexp: "^github\\.com"
+
 - name: Change Default Shell to Zsh
   sudo: yes
   user:
