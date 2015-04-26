@@ -49,6 +49,9 @@
     dest: '{{ ansible_env.HOME }}/.zprezto'
     recursive: yes
 
+- name: Setup Zprezto
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu-mike/files/zprezto_setup.sh 
+
 - name: Create Dev Directory
   file: path={{ ansible_env.HOME}}/Development
         state=directory
