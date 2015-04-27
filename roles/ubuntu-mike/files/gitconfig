@@ -1,0 +1,27 @@
+[user]
+	name = Michael Aquilina
+	email = michaelaquilina@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[merge]
+	tool = kdiff3
+[diff]
+	tool = diffuse
+[color]
+	ui = true
+[push]
+	default = simple
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+[help]
+	autocorrect = 1
+[pull]
+	rebase = true
+[alias]
+	glog = log --graph --all --decorate
+	kdiff = difftool
+[dif]
+	tool = diffuse
