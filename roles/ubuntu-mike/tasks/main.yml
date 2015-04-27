@@ -45,6 +45,14 @@
     line: "{{ lookup('pipe', 'ssh-keyscan -t rsa github.com') }}"
     regexp: "^github\\.com"
 
+- name: Setup Conifguration Files
+  command: ln -s {{ ansible_env.PWD }}/roles/ubuntu-mike/files/{{ filename }} {{ dest }}
+  with_items:
+    - {filename: tigrc, dest: ~/.tigrc }
+    - {filename: nanorc, dest: ~/.nanorc }
+    - {filename: gitconfig, dest: ~/.gitconfig }
+    - {filename: vimrc, dest: ~/.vimrc }
+
 - name: Change Default Shell to Zsh
   sudo: yes
   user:
