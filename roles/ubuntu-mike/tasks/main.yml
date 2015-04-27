@@ -53,6 +53,20 @@
     - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
 
+- name: Install Vundle
+  git:
+    repo: https://github.com/gmarik/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
+    update: no
+
+- name: mkidr vim
+  file: path=~/.vim/colors state=directory
+
+- name: Install Vim Molokai Theme
+  get_url:
+    url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+    dest: ~/.vim/colors/molokai.vim
+
 - name: Change Default Shell to Zsh
   sudo: yes
   user:
