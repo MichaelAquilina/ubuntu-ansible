@@ -46,7 +46,7 @@
     regexp: "^github\\.com"
 
 - name: Setup Conifguration Files
-  command: ln -s {{ ansible_env.PWD }}/roles/ubuntu-mike/files/{{ filename }} {{ dest }}
+  command: creates={{ item.dest }} ln -s {{ ansible_env.PWD }}/roles/ubuntu-mike/files/{{ item.filename }} {{ item.dest }}
   with_items:
     - {filename: tigrc, dest: ~/.tigrc }
     - {filename: nanorc, dest: ~/.nanorc }
