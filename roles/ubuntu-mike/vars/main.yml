@@ -43,6 +43,7 @@ apt_packages:
   - compizconfig-settings-manager
   - dconf-tools
   - synapse
+  - kdiff3
   # Cannot install steam automatically due to EULA acceptance
   # - steam
 
