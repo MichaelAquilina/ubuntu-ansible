@@ -53,6 +53,14 @@
     - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
 
+- name: Setup terminator dir
+  file: path=~/.config/terminator state=directory
+
+- name: Setup terminator
+  command: ln -s {{ ansible_env.PWD }}/roles/ubuntu-mike/files/terminator_config ~/.config/terminator/config
+  args:
+     creates: ~/.config/terminator/config
+
 - name: Install Vundle
   git:
     repo: https://github.com/gmarik/Vundle.vim.git
