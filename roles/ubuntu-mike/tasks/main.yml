@@ -137,6 +137,13 @@
     - {path: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
     - {path: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
 
+- name: Setup Compiz
+  gsetting:
+    user: None
+    path: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
+    key: mode
+    value: "1"
+
 - name: Notify Completion
   debug:
     msg: "Setup complete. Don't forget to install Steam and sign in to Dropbox!"
