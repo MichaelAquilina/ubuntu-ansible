@@ -61,6 +61,14 @@
   args:
      creates: ~/.config/terminator/config
 
+- name: Setup Synapse dir
+  file: path=~/.config/synapse state=directory
+
+- name: Setup Synapse
+  command: ln -s {{ ansible_env.PWD }}/roles/ubuntu-mike/files/synapse_config.json ~/.config/synapse/config.json
+  args:
+     creates: ~/.config/synapse/config.json
+
 - name: Install Vundle
   git:
     repo: https://github.com/gmarik/Vundle.vim.git
