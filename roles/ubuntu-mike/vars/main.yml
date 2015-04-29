@@ -33,6 +33,7 @@ apt_packages:
   - gfortran
   - liblapack3
   - libblas3
+  - golang
   # Gui Applications
   - terminator
   - virtualbox-4.3
