@@ -7,6 +7,7 @@ apt_repos:
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'ppa:git-core/ppa'
   - 'ppa:caffeine-developers/ppa'
+  - 'ppa:numix/ppa'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
 
 apt_keys:
@@ -47,6 +48,8 @@ apt_packages:
   - synapse
   - kdiff3
   - caffeine
+  - numix-icon-theme
+  - numix-gtk-theme
   # Cannot install steam automatically due to EULA acceptance
   # - steam
 

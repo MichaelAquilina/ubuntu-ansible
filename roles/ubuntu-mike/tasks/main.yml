@@ -127,6 +127,9 @@
            'application://firefox.desktop',
            'unity://running-apps', 'unity://devices']
 
+- name: Set GTK Theme
+  gsetting: user=None path=org.gnome.desktop.interface key=gtk-theme value=Numix
+
 - name: Setup Indicator Multiload
   gsetting: user=None path={{ item.path }} key={{ item.key }} value={{ item.value }}
   with_items:
