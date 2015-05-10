@@ -44,11 +44,11 @@ def main():
     value = value.strip()
     value = value.replace('\n', '')
 
-    old_value = _get_value(user, path, key)
+    old_value = _get_value(path, key)
     changed = old_value != value
 
     if changed and not module.check_mode:
-        _set_value(user, path, key, value)
+        _set_value(path, key, value)
 
     print json.dumps({
         'changed': changed,

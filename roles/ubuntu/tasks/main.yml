@@ -53,7 +53,7 @@
   command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu-mike/files/zprezto_setup.sh 
 
 - name: Setup dircolors
-  file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai ~/.dircolors
+  file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai
 
 - name: Create Dev Directory
   file: path={{ ansible_env.HOME}}/Development
