@@ -28,7 +28,6 @@
 
 - name: Setup Launch Items
   gsetting:
-    user: '{{ ansible_env.USER }}'
     path: com.canonical.Unity.Launcher
     key: favorites
     value: >
@@ -38,10 +37,10 @@
            'unity://running-apps', 'unity://devices']
 
 - name: Set GTK Theme
-  gsetting: user=None path=org.gnome.desktop.interface key=gtk-theme value=Numix
+  gsetting: path=org.gnome.desktop.interface key=gtk-theme value=Numix
 
 - name: Setup Indicator Multiload
-  gsetting: user=None path={{ item.path }} key={{ item.key }} value={{ item.value }}
+  gsetting: path={{ item.path }} key={{ item.key }} value={{ item.value }}
   with_items:
     - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: traditional}
     - {path: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
@@ -52,7 +51,6 @@
 
 - name: Setup Compiz
   gsetting:
-    user: None
     path: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
     key: mode
     value: "1"

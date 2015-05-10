@@ -9,7 +9,7 @@ import sys
 
 from ansible.module_utils.basic import *
 
-def _set_value(user, path, key, value):
+def _set_value(path, key, value):
     try:
         return subprocess.check_output([
 	    'gsettings', 'set', path, key, value
@@ -18,7 +18,7 @@ def _set_value(user, path, key, value):
         print e.output
         raise e
 
-def _get_value(user, path, key):
+def _get_value(path, key):
     return subprocess.check_output([
     	'gsettings', 'get', path, key
     ]).strip()
@@ -28,7 +28,6 @@ def main():
     module = AnsibleModule(
         argument_spec = {
             'state': { 'choices': ['present'], 'default': 'present' },
-            'user': { 'required': True },
             'path': {'required': True},
             'key': { 'required': True },
             'value': { 'required': True },
@@ -38,7 +37,6 @@ def main():
 
     params = module.params
     state = module.params['state']
-    user = module.params['user']
     path = module.params['path']
     key = module.params['key']
     value = module.params['value']
