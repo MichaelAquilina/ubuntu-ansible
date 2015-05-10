@@ -1,0 +1,26 @@
+apt_packages:
+  - vim
+  - curl
+  - most
+  - zsh
+  - htop
+  - python-pip
+  - jq
+  - synaptic
+  - gdebi
+  - tig
+  - cowsay
+  # Development
+  - python-dev
+  - git
+  - g++
+  - gfortran
+  - liblapack3
+  - libblas3
+  - golang
+
+pip_packages:
+  - ipython
+  - virtualenvwrapper
+  - numpy
+  - pandas

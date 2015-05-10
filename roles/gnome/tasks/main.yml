@@ -1,0 +1,58 @@
+- name: Add VirtualBox APT Key
+  sudo: yes
+  apt_key: 
+    url: https://www.virtualbox.org/download/oracle_vbox.asc 
+    state: present
+    id: 98AB5139
+
+- name: Add Additional APT Keys
+  sudo: yes
+  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
+  with_items: ui_apt_keys
+
+- name: Add Additional APT Repostories
+  sudo: yes
+  apt_repository: "repo='{{ item }}' state=present"
+  with_items: ui_apt_repos
+
+- name: Install APT Packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items: ui_apt_packages
+
+- name: Setup terminator
+  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/terminator_config dest=~/.config/terminator/config
+
+- name: Setup Synapse
+  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/synapse_config.json dest=~/.config/synapse/config.json
+
+- name: Setup Launch Items
+  gsetting:
+    user: '{{ ansible_env.USER }}'
+    path: com.canonical.Unity.Launcher
+    key: favorites
+    value: >
+          ['application://org.gnome.Nautilus.desktop',
+           'application://terminator.desktop',
+           'application://firefox.desktop',
+           'unity://running-apps', 'unity://devices']
+
+- name: Set GTK Theme
+  gsetting: user=None path=org.gnome.desktop.interface key=gtk-theme value=Numix
+
+- name: Setup Indicator Multiload
+  gsetting: user=None path={{ item.path }} key={{ item.key }} value={{ item.value }}
+  with_items:
+    - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: traditional}
+    - {path: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.net, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
+    - {path: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
+    - {path: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
+
+- name: Setup Compiz
+  gsetting:
+    user: None
+    path: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
+    key: mode
+    value: "1"

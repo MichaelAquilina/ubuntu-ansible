@@ -1,0 +1,69 @@
+- name: Install Aptitude
+  sudo: yes
+  apt:
+    name: aptitude
+    state: latest
+
+- name: Install APT Packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items: apt_packages
+
+- name: Install PIP Packages
+  sudo: yes
+  pip: name={{ item }} state=latest
+  with_items: pip_packages
+
+- name: Setup Conifguration Files
+  file: dest={{ item.dest }} state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
+  with_items:
+    - {filename: tigrc, dest: ~/.tigrc }
+    - {filename: nanorc, dest: ~/.nanorc }
+    - {filename: gitconfig, dest: ~/.gitconfig }
+    - {filename: vimrc, dest: ~/.vimrc }
+
+- name: Install Vundle
+  git:
+    repo: https://github.com/gmarik/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
+    update: no
+
+- name: mkidr vim
+  file: path=~/.vim/colors state=directory
+
+- name: Install Vim Molokai Theme
+  get_url:
+    url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+    dest: ~/.vim/colors/molokai.vim
+
+- name: Change Default Shell to Zsh
+  sudo: yes
+  user:
+    name: '{{ ansible_env.USER }}'
+    shell: /bin/zsh
+
+- name: Download Zprezto Git Repo
+  git:
+    repo: git@github.com:MichaelAquilina/prezto.git
+    dest: '{{ ansible_env.HOME }}/.zprezto'
+    recursive: yes
+    update: no
+
+- name: Setup Zprezto
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu-mike/files/zprezto_setup.sh 
+
+- name: Setup dircolors
+  file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai ~/.dircolors
+
+- name: Create Dev Directory
+  file: path={{ ansible_env.HOME}}/Development
+        state=directory
+
+- name: Download Dev Git Repos
+  git:
+    repo: '{{ item.repo }}'
+    dest: '{{ ansible_env.HOME }}/Development/{{ item.folder }}'
+    update: no
+  with_items:
+    - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
+    - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }

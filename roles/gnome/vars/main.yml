@@ -1,42 +1,22 @@
 ---
-apt_repos:
+ui_apt_repos:
   - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://archive.canonical.com/ trusty partner'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://repository.spotify.com stable non-free'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
-  - 'ppa:git-core/ppa'
   - 'ppa:caffeine-developers/ppa'
   - 'ppa:numix/ppa'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
+  - 'ppa:webupd8team/sublime-text-3'
 
-apt_keys:
+ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 94558F59}  # Spotify
   - {keyserver: keyserver.ubuntu.com, id: B05498B7}  # Steam
   - {keyserver: keyserver.ubuntu.com, id: 6C2225A4}  # Synapse
   - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
 
-apt_packages:
-  - vim
-  - curl
-  - most
-  - zsh
-  - htop
-  - python-pip
-  - jq
-  - synaptic
-  - gdebi
-  - tig
-  - cowsay
-  # Development
-  - python-dev
-  - git
-  - g++
-  - gfortran
-  - liblapack3
-  - libblas3
-  - golang
-  # Gui Applications
+ui_apt_packages:
   - terminator
   - virtualbox-4.3
   - dropbox
@@ -50,12 +30,4 @@ apt_packages:
   - caffeine
   - numix-icon-theme
   - numix-gtk-theme
-  # Cannot install steam automatically due to EULA acceptance
-  # - steam
-
-pip_packages:
-  - ipython
-  - virtualenvwrapper
-  - numpy
-  - pandas
-
+  - sublime-text-installer
