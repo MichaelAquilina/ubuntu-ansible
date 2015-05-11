@@ -20,21 +20,10 @@
   apt: pkg={{ item }} state=latest
   with_items: ui_apt_packages
 
-- name: Setup terminator
-  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/terminator_config dest=~/.config/terminator/config
-
-- name: Setup Synapse
-  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/synapse_config.json dest=~/.config/synapse/config.json
-
-- name: Setup Launch Items
-  gsetting:
-    path: com.canonical.Unity.Launcher
-    key: favorites
-    value: >
-          ['application://org.gnome.Nautilus.desktop',
-           'application://terminator.desktop',
-           'application://firefox.desktop',
-           'unity://running-apps', 'unity://devices']
+- name: Set Gnome Keybindings
+  gsetting: path=org.gnome.desktop.wm.keybindings key={{ item.key}} value={{ item.value }}}
+  with_items:
+    - {key: switch-input-source, value: ''}
 
 - name: Set GTK Theme
   gsetting: path=org.gnome.desktop.interface key=gtk-theme value=Numix
@@ -54,3 +43,19 @@
     path: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
     key: mode
     value: "1"
+
+- name: Setup terminator
+  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/terminator_config dest=~/.config/terminator/config
+
+- name: Setup Synapse
+  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/synapse_config.json dest=~/.config/synapse/config.json
+
+- name: Setup Launch Items
+  gsetting:
+    path: com.canonical.Unity.Launcher
+    key: favorites
+    value: >
+          ['application://org.gnome.Nautilus.desktop',
+           'application://terminator.desktop',
+           'application://firefox.desktop',
+           'unity://running-apps', 'unity://devices']
