@@ -35,6 +35,12 @@
    - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
    - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
 
+- name: Set Clock Format
+  gsetting: path=com.canonical.indicator.datetime key={{ item.key }} value='{{ item.value }}'
+  with_items:
+    - {key: "time-format", value: "custom"}
+    - {key: "custom-time-format", value: "%a %H:%M %Y/%m/%d"}
+
 - name: Set GTK Theme
   gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
 
