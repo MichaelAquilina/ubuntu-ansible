@@ -35,7 +35,6 @@ def main():
         supports_check_mode = True,
     )
 
-    params = module.params
     state = module.params['state']
     path = module.params['path']
     key = module.params['key']

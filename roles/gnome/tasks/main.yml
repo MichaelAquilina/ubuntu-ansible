@@ -21,17 +21,17 @@
   with_items: ui_apt_packages
 
 - name: Set Gnome Keybindings
-  gsetting: path=org.gnome.desktop.wm.keybindings key={{ item.key}} value={{ item.value }}}
+  gsetting: "path=org.gnome.desktop.wm.keybindings key={{ item.key }} value={{ item.value }}"
   with_items:
-    - {key: switch-input-source, value: ''}
+      - {key: switch-input-source, value: "[\\'disabled\\']"}
 
 - name: Set GTK Theme
-  gsetting: path=org.gnome.desktop.interface key=gtk-theme value=Numix
+  gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
 
 - name: Setup Indicator Multiload
   gsetting: path={{ item.path }} key={{ item.key }} value={{ item.value }}
   with_items:
-    - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: traditional}
+    - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: "\\'traditional\\'"}
     - {path: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
     - {path: de.mh21.indicator-multiload.graphs.net, key: enabled, value: 'true'}
     - {path: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
