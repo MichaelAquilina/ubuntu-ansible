@@ -26,6 +26,7 @@
       - {key: switch-input-source, value: "[\\'disabled\\']"}
       - {key: switch-input-source-backward, value: "[\\'disabled\\']"}
       - {key: maximize, value: "[\\'<Super>Up\\']"}
+      - {key: unmaximize, value: "[\\'<Super>Down\\']"}
       - {key: show-desktop, value: "[\\'<Super>d\\']"}
 
 - name: Set GTK Theme
