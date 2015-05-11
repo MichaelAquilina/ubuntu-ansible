@@ -29,6 +29,12 @@
       - {key: unmaximize, value: "[\\'<Super>Down\\']"}
       - {key: show-desktop, value: "[\\'<Super>d\\']"}
 
+- name: Compiz Key Bindings
+  gsetting: "path={{ item.path }} key={{ item.key }} value={{ item.value }}"
+  with_items:
+   - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
+   - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
+
 - name: Set GTK Theme
   gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
 
