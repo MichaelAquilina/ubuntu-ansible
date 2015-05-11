@@ -1,0 +1,22 @@
+#! /usr/bin/env python
+
+# Decode unicode escaped characters read in from stdin
+
+from __future__ import unicode_literals, print_function
+
+import sys
+
+
+def main():
+    while True:
+      data = sys.stdin.readline()
+      if not data:
+         break
+
+      output = data.decode('unicode-escape')
+
+      sys.stdout.write(output)
+
+if __name__ == '__main__':
+    main()
+

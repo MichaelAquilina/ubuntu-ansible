@@ -22,6 +22,12 @@
     - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
 
+- name: Setup local bin folder
+  file: path=~/.bin state=directory
+
+- name: Setup Custom Executables
+  file: state=link dest=~/.bin/unescape src={{ ansible_env.PWD }}/roles/ubuntu/files/unescape
+
 - name: Install Vundle
   git:
     repo: https://github.com/gmarik/Vundle.vim.git
