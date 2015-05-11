@@ -24,6 +24,9 @@
   gsetting: "path=org.gnome.desktop.wm.keybindings key={{ item.key }} value={{ item.value }}"
   with_items:
       - {key: switch-input-source, value: "[\\'disabled\\']"}
+      - {key: switch-input-source-backward, value: "[\\'disabled\\']"}
+      - {key: maximize, value: "[\\'<Super>Up\\']"}
+      - {key: show-desktop, value: "[\\'<Super>d\\']"}
 
 - name: Set GTK Theme
   gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
