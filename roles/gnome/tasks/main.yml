@@ -39,7 +39,7 @@
   gsetting: path=com.canonical.indicator.datetime key={{ item.key }} value='{{ item.value }}'
   with_items:
     - {key: "time-format", value: "custom"}
-    - {key: "custom-time-format", value: "%a %H:%M %Y/%m/%d"}
+    - {key: "custom-time-format", value: "%H:%M %a %Y/%m/%d"}
 
 - name: Set GTK Theme
   gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
