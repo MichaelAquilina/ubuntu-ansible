@@ -4,6 +4,16 @@
     name: aptitude
     state: latest
 
+- name: Add Apt Keys
+  sudo: yes
+  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
+  with_items: apt_keys
+
+- name: Add Apt Repos
+  sudo: yes
+  apt_repository: "state=present repo='{{ item }}'"
+  with_items: apt_repos
+
 - name: Install APT Packages
   sudo: yes
   apt: pkg={{ item }} state=latest

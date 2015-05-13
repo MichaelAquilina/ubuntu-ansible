@@ -1,3 +1,9 @@
+apt_repos:
+  - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
+
+apt_keys:
+  - {keyserver: keyserver.ubuntu.com, id: 323293EE}  # Mercurial
+
 apt_packages:
   - vim
   - curl
@@ -15,6 +21,7 @@ apt_packages:
   # Development
   - python-dev
   - git
+  - mercurial
   - g++
   - gfortran
   - liblapack3
