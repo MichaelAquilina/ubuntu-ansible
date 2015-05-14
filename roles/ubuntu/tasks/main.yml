@@ -24,6 +24,12 @@
   pip: name={{ item }} state=latest
   with_items: pip_packages
 
+- name: Remove useless folders
+  file: path={{ item }} state=absent
+  with_items:
+    - "~/Templates"
+    - "~/Public"
+
 - name: Setup Conifguration Files
   file: dest={{ item.dest }} state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
   with_items:
@@ -83,3 +89,10 @@
   with_items:
     - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
     - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }
+
+- name: Setup bin links
+  file: src={{ item.src }} dest={{ item.dest }} state=link
+  with_items:
+    - {src: "~/Development/whatismyip/whatismyip.py", dest: "~/.bin/whatismyip" }
+    - {src: "~/Development/todolist/todo.py", dest: "~/.bin/todo" }
+
