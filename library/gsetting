@@ -9,18 +9,18 @@ import sys
 
 from ansible.module_utils.basic import *
 
-def _set_value(path, key, value):
+def _set_value(schema, key, value):
     try:
         return subprocess.check_output([
-	    'gsettings', 'set', path, key, value
+	    'gsettings', 'set', schema, key, value
         ]).strip()
     except subprocess.CalledProcessError as e:
         print e.output
         raise e
 
-def _get_value(path, key):
+def _get_value(schema, key):
     return subprocess.check_output([
-    	'gsettings', 'get', path, key
+    	'gsettings', 'get', schema, key
     ]).strip()
 
 def main():
@@ -28,7 +28,7 @@ def main():
     module = AnsibleModule(
         argument_spec = {
             'state': { 'choices': ['present'], 'default': 'present' },
-            'path': {'required': True},
+            'schema': {'required': True},
             'key': { 'required': True },
             'value': { 'required': True },
         },
@@ -36,18 +36,18 @@ def main():
     )
 
     state = module.params['state']
-    path = module.params['path']
+    schema = module.params['schema']
     key = module.params['key']
     value = module.params['value']
 
     value = value.strip()
     value = value.replace('\n', '')
 
-    old_value = _get_value(path, key)
+    old_value = _get_value(schema, key)
     changed = old_value != value
 
     if changed and not module.check_mode:
-        _set_value(path, key, value)
+        _set_value(schema, key, value)
 
     print json.dumps({
         'changed': changed,

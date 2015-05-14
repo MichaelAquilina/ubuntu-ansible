@@ -21,7 +21,7 @@
   with_items: ui_apt_packages
 
 - name: Set Gnome Keybindings
-  gsetting: "path=org.gnome.desktop.wm.keybindings key={{ item.key }} value={{ item.value }}"
+  gsetting: "schema=org.gnome.desktop.wm.keybindings key={{ item.key }} value={{ item.value }}"
   with_items:
       - {key: switch-input-source, value: "[\\'disabled\\']"}
       - {key: switch-input-source-backward, value: "[\\'disabled\\']"}
@@ -30,14 +30,14 @@
       - {key: show-desktop, value: "[\\'<Super>d\\']"}
 
 - name: Compiz Key Bindings
-  gsetting: "path={{ item.path }} key={{ item.key }} value={{ item.value }}"
+  gsetting: "schema={{ item.schema }} key={{ item.key }} value={{ item.value }}"
   with_items:
-   - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
-   - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
+   - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
+   - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
 
 - name: Set Clock Format
   gsetting:
-    path: com.canonical.indicator.datetime
+    schema: com.canonical.indicator.datetime
     key: "{{ item.key }}"
     value: "'{{ item.value }}'"
   with_items:
@@ -45,21 +45,21 @@
     - {key: "custom-time-format", value: "%H:%M %a %Y/%m/%d"}
 
 - name: Set GTK Theme
-  gsetting: "path=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
+  gsetting: "schema=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
 
 - name: Setup Indicator Multiload
-  gsetting: path={{ item.path }} key={{ item.key }} value={{ item.value }}
+  gsetting: schema={{ item.schema }} key={{ item.key }} value={{ item.value }}
   with_items:
-    - {path: de.mh21.indicator-multiload.general, key: color-scheme, value: "\\'traditional\\'"}
-    - {path: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
-    - {path: de.mh21.indicator-multiload.graphs.net, key: enabled, value: 'true'}
-    - {path: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
-    - {path: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
-    - {path: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
+    - {schema: de.mh21.indicator-multiload.general, key: color-scheme, value: "\\'traditional\\'"}
+    - {schema: de.mh21.indicator-multiload.graphs.mem, key: enabled, value: 'true'}
+    - {schema: de.mh21.indicator-multiload.graphs.net, key: enabled, value: 'true'}
+    - {schema: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
+    - {schema: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
+    - {schema: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
 
 - name: Setup Compiz
   gsetting:
-    path: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
+    schema: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
     key: mode
     value: "1"
 
@@ -71,7 +71,7 @@
 
 - name: Setup Launch Items
   gsetting:
-    path: com.canonical.Unity.Launcher
+    schema: com.canonical.Unity.Launcher
     key: favorites
     value: >
           ['application://org.gnome.Nautilus.desktop',
