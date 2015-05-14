@@ -75,3 +75,10 @@
            'application://terminator.desktop',
            'application://firefox.desktop',
            'unity://running-apps', 'unity://devices']
+
+- name: Download and Setup Pycharm
+  sudo: yes
+  command: roles/gnome/files/setup_pycharm.sh
+  args:
+    creates: /opt/jetbrains/pycharm
+
