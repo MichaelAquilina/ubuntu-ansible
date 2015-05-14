@@ -36,7 +36,10 @@
    - {path: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
 
 - name: Set Clock Format
-  gsetting: path=com.canonical.indicator.datetime key={{ item.key }} value='{{ item.value }}'
+  gsetting:
+    path: com.canonical.indicator.datetime
+    key: "{{ item.key }}"
+    value: "'{{ item.value }}'"
   with_items:
     - {key: "time-format", value: "custom"}
     - {key: "custom-time-format", value: "%H:%M %a %Y/%m/%d"}
