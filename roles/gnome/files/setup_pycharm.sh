@@ -7,4 +7,3 @@ wget https://download.jetbrains.com/python/pycharm-professional-3.4.1.tar.gz -O 
 
 tar -xzf pycharm.tar.gz -C /opt/jetbrains/pycharm
 rm pycharm.tar.gz
-
