@@ -3,4 +3,4 @@
   connection: local
   roles:
     - ubuntu
-    - gnome
+    - unity
