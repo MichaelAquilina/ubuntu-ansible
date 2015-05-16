@@ -17,6 +17,7 @@ ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
 
 ui_apt_packages:
+  - gdebi
   - terminator
   - virtualbox-4.3
   - dropbox
