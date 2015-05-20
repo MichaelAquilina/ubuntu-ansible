@@ -6,6 +6,7 @@ apt_keys:
 
 apt_packages:
   - vim
+  - at
   - curl
   - most
   - zsh
