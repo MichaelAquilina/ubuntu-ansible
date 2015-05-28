@@ -8,6 +8,7 @@ apt_packages:
   - vim
   - at
   - curl
+  - cmatrix
   - most
   - zsh
   - htop
