@@ -96,3 +96,7 @@
     - {src: "~/Development/whatismyip/whatismyip.py", dest: "~/.bin/whatismyip" }
     - {src: "~/Development/todolist/todo.py", dest: "~/.bin/todo" }
 
+
+- name: Setup Insults
+  sudo: yes
+  copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
