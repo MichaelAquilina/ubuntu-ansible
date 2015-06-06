@@ -12,7 +12,7 @@ apt_packages:
   - most
   - zsh
   - htop
-  - python-pip
+  - python-setuptools
   - jq
   - synaptic
   - gdebi
@@ -31,6 +31,8 @@ apt_packages:
   - golang
 
 pip_packages:
+  - distribute  # Force upgrade
+  - pip  # Force upgrade
   - ipython
   - virtualenvwrapper
   - numpy
