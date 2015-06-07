@@ -14,6 +14,7 @@ apt_packages:
   - htop
   - python-setuptools
   - jq
+  - lame
   - synaptic
   - gdebi
   - tig
