@@ -1,7 +1,7 @@
 - name: Add VirtualBox APT Key
   sudo: yes
-  apt_key: 
-    url: https://www.virtualbox.org/download/oracle_vbox.asc 
+  apt_key:
+    url: https://www.virtualbox.org/download/oracle_vbox.asc
     state: present
     id: 98AB5139
 
@@ -69,12 +69,6 @@
 - name: Setup terminator
   file: state=link src={{ ansible_env.PWD }}/roles/unity/files/terminator_config dest=~/.config/terminator/config
 
-- name: Create Synapse dir
-  file: state=directory dest=~/.config/synapse
-
-- name: Setup Synapse
-  file: state=link force=true src={{ ansible_env.PWD }}/roles/unity/files/synapse_config.json dest=~/.config/synapse/config.json
-
 - name: Setup Launch Items
   gsetting:
     schema: com.canonical.Unity.Launcher
@@ -84,4 +78,3 @@
            'application://terminator.desktop',
            'application://firefox.desktop',
            'unity://running-apps', 'unity://devices']
-
