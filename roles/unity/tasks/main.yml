@@ -69,6 +69,16 @@
 - name: Setup terminator
   file: state=link src={{ ansible_env.PWD }}/roles/unity/files/terminator_config dest=~/.config/terminator/config
 
+- name: Create synapse hotkeys dir
+  file: state=directory dest=~/.config/hotkeys
+
+- name: Setup synapse
+  file:
+    state: link
+    force: true
+    src: "{{ ansible_env.PWD }}/roles/unity/files/synapse.hotkeys"
+    dest: ~/.config/hotkeys/synapse.hotkeys
+
 - name: Setup Launch Items
   gsetting:
     schema: com.canonical.Unity.Launcher
