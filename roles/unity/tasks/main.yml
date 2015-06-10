@@ -73,7 +73,7 @@
   file: state=directory dest=~/.config/synapse
 
 - name: Setup Synapse
-  file: state=link src={{ ansible_env.PWD }}/roles/unity/files/synapse_config.json dest=~/.config/synapse/config.json
+  file: state=link force=true src={{ ansible_env.PWD }}/roles/unity/files/synapse_config.json dest=~/.config/synapse/config.json
 
 - name: Setup Launch Items
   gsetting:
