@@ -1,5 +1,6 @@
 apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
+  - 'ppa:fkrull/deadsnakes'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 323293EE}  # Mercurial
@@ -23,6 +24,13 @@ apt_packages:
   - whois
   # Development
   - python-dev
+  - python2.6
+  - python3-dev
+  - python2.6-dev
+  - python3.2
+  - python3.2-dev
+  - python3.3
+  - python3.3-dev
   - git
   - mercurial
   - g++
@@ -38,3 +46,4 @@ pip_packages:
   - virtualenvwrapper
   - numpy
   - pandas
+  - tox
