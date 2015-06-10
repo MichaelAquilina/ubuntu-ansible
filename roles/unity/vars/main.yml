@@ -9,6 +9,7 @@ ui_apt_repos:
   - 'ppa:numix/ppa'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
   - 'ppa:webupd8team/sublime-text-3'
+  - 'ppa:webupd8team/atom'
 
 ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 94558F59}  # Spotify
@@ -17,6 +18,7 @@ ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
 
 ui_apt_packages:
+  - atom
   - gdebi
   - terminator
   - virtualbox-4.3

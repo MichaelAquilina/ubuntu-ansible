@@ -72,7 +72,7 @@
     update: no
 
 - name: Setup Zprezto
-  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu-mike/files/zprezto_setup.sh 
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zprezto_setup.sh 
 
 - name: Setup dircolors
   file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai
