@@ -93,4 +93,5 @@
           ['application://org.gnome.Nautilus.desktop',
            'application://terminator.desktop',
            'application://firefox.desktop',
+           'application://atom.desktop',
            'unity://running-apps', 'unity://devices']
