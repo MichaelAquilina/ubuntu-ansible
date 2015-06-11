@@ -13,6 +13,7 @@ apt_packages:
   - most
   - zsh
   - htop
+  - pandoc
   - python-setuptools
   - jq
   - lame
