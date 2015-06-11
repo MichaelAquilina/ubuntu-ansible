@@ -69,6 +69,12 @@
 - name: Setup terminator
   file: state=link src={{ ansible_env.PWD }}/roles/unity/files/terminator_config dest=~/.config/terminator/config
 
+- name: Set Terminator as default emulator
+  gsetting:
+    schema: org.gnome.desktop.default-applications.terminal
+    key: exec
+    value: "'terminator'"
+
 - name: Create synapse hotkeys dir
   file: state=directory dest=~/.config/hotkeys
 
