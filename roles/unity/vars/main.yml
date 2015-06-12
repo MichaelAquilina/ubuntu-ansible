@@ -25,6 +25,7 @@ ui_apt_packages:
   - dropbox
   - skype
   - spotify-client
+  - synaptic
   - indicator-multiload
   - compizconfig-settings-manager
   - dconf-tools

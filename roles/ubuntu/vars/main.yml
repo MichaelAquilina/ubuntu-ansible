@@ -17,8 +17,6 @@ apt_packages:
   - python-setuptools
   - jq
   - lame
-  - synaptic
-  - gdebi
   - tig
   - cowsay
   - xsel
