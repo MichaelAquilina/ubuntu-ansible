@@ -72,7 +72,7 @@
     update: no
 
 - name: Setup Zprezto
-  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zprezto_setup.sh 
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zprezto_setup.sh
 
 - name: Setup dircolors
   file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai
@@ -96,7 +96,9 @@
     - {src: "~/Development/whatismyip/whatismyip.py", dest: "~/.bin/whatismyip" }
     - {src: "~/Development/todolist/todo.py", dest: "~/.bin/todo" }
 
-
 - name: Setup Insults
   sudo: yes
   copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
+
+- name: Remove Extra Files
+  file: state=absent  path=~/examples.desktop
