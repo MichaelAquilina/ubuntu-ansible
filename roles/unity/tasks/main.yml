@@ -95,3 +95,15 @@
            'application://firefox.desktop',
            'application://atom.desktop',
            'unity://running-apps', 'unity://devices']
+
+- name: Disable Webapp Integration
+  gsetting:
+    schema: com.canonical.unity.webapps
+    key: integration-allowed
+    value: "false"
+
+- name: Enable Integrated Menus
+  gsetting:
+    schema: com.canonical.Unity
+    key: integrated-menus
+    value: "true"
