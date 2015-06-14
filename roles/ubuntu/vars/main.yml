@@ -18,6 +18,7 @@ apt_packages:
   - jq
   - lame
   - tig
+  - tree
   - cowsay
   - xsel
   - whois
