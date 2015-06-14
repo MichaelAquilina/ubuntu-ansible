@@ -107,3 +107,9 @@
     schema: com.canonical.Unity
     key: integrated-menus
     value: "true"
+
+- name: Disable pre-authorized domains
+  gsetting:
+    schema: com.canonical.unity.webapps
+    key: preauthorized-domains
+    value: "@as []"
