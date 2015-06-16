@@ -38,6 +38,7 @@ apt_packages:
   - liblapack3
   - libblas3
   - golang
+  - shellcheck
 
 pip_packages:
   - distribute  # Force upgrade
