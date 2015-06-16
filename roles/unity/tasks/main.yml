@@ -90,11 +90,12 @@
     schema: com.canonical.Unity.Launcher
     key: favorites
     value: >
-          ['application://org.gnome.Nautilus.desktop',
-           'application://terminator.desktop',
-           'application://firefox.desktop',
-           'application://atom.desktop',
-           'unity://running-apps', 'unity://devices']
+           ['application://nautilus.desktop',
+            'application://terminator.desktop',
+            'application://firefox.desktop',
+            'application://atom.desktop',
+            'unity://running-apps',
+            'unity://devices']
 
 - name: Disable Webapp Integration
   gsetting:
