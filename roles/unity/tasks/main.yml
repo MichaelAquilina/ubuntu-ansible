@@ -85,6 +85,13 @@
     src: "{{ ansible_env.PWD }}/roles/unity/files/synapse.hotkeys"
     dest: ~/.config/hotkeys/synapse.hotkeys
 
+- name: Setup Atom
+  file:
+    state: link
+    force: true
+    src: "{{ ansible_env.PWD }}/roles/unity/files/config.cson"
+    dest: ~/.atom/config.cson
+
 - name: Setup Launch Items
   gsetting:
     schema: com.canonical.Unity.Launcher
