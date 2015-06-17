@@ -38,7 +38,10 @@ apt_packages:
   - liblapack3
   - libblas3
   - golang
+  - golang-go.tools
+  - gocode
   - shellcheck
+  - coffeescript
 
 pip_packages:
   - distribute  # Force upgrade
