@@ -22,6 +22,8 @@ apt_packages:
   - cowsay
   - xsel
   - whois
+  - cabal-debian
+  - cabal-install
   # Development
   - python-dev
   - python2.6
