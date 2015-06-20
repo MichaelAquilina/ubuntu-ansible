@@ -51,3 +51,4 @@ pip_packages:
   - numpy
   - pandas
   - tox
+  - cookiecutter
