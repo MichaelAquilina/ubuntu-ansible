@@ -24,6 +24,10 @@ apt_packages:
   - whois
   - cabal-debian
   - cabal-install
+  - texlive-latex-base
+  - texlive-latex-recommended
+  - texlive-font-utils
+  - texlive-fonts-recommended
   # Development
   - python-dev
   - python2.6
