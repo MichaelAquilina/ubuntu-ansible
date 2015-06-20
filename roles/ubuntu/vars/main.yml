@@ -58,3 +58,4 @@ pip_packages:
   - pandas
   - tox
   - cookiecutter
+  - lifx-cmd
