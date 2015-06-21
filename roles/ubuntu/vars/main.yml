@@ -17,7 +17,6 @@ apt_packages:
   - python-setuptools
   - jq
   - lame
-  - tig
   - tree
   - cowsay
   - xsel
@@ -37,8 +36,8 @@ apt_packages:
   - python3.2-dev
   - python3.3
   - python3.3-dev
-  - git
-  - mercurial
+  - libncurses5-dev
+  - exuberant-ctags
   - g++
   - gfortran
   - liblapack3
@@ -48,6 +47,10 @@ apt_packages:
   - gocode
   - shellcheck
   - coffeescript
+  # Revision Control
+  - git
+  - mercurial
+  - tig
 
 pip_packages:
   - distribute  # Force upgrade
