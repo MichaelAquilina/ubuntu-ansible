@@ -35,6 +35,13 @@
    - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
    - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
 
+# Fixes issue where tomboy notes would not gain focus from indicator panel
+- name: Disable Focus Prevention
+  gsetting:
+    schema: org.compiz.core:/org/compiz/profiles/unity/plugins/core/
+    key: focus-prevention-level
+    value: "0"
+
 - name: Set Clock Format
   gsetting:
     schema: com.canonical.indicator.datetime
