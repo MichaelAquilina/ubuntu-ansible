@@ -20,6 +20,7 @@ ui_apt_keys:
 ui_apt_packages:
   - tomboy
   - atom
+  - gnome-dictionary
   - gdebi
   - terminator
   - virtualbox-4.3
