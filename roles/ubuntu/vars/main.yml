@@ -21,6 +21,7 @@ apt_packages:
   - cowsay
   - xsel
   - whois
+  - nmap
   - cabal-debian
   - cabal-install
   - texlive-latex-base
