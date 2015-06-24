@@ -19,3 +19,4 @@
   "atom-beautify": {}
   "spell-check": {}
   "rst-preview": {}
+  linter: {}
