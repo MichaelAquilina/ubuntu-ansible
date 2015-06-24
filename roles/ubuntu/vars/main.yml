@@ -63,3 +63,4 @@ pip_packages:
   - tox
   - cookiecutter
   - lifx-cmd
+  - flake8
