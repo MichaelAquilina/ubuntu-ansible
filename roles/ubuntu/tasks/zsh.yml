@@ -1,0 +1,18 @@
+- name: Change Default Shell to Zsh
+  sudo: yes
+  user:
+    name: '{{ ansible_env.USER }}'
+    shell: /bin/zsh
+
+- name: Download Zprezto Git Repo
+  git:
+    repo: git@github.com:MichaelAquilina/prezto.git
+    dest: '{{ ansible_env.HOME }}/.zprezto'
+    recursive: yes
+    update: no
+
+- name: Setup Zprezto
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zprezto_setup.sh
+
+- name: Setup dircolors
+  file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai
