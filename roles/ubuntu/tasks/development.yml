@@ -2,23 +2,8 @@
   file: path={{ ansible_env.HOME}}/Development
         state=directory
 
-- name: Download Dev Git Repos
-  git:
-    repo: '{{ item.repo }}'
-    dest: '{{ ansible_env.HOME }}/Development/{{ item.folder }}'
-    update: no
-  with_items:
-    - { repo: 'git@github.com:MichaelAquilina/todolist.git', folder: todolist }
-    - { repo: 'git@github.com:MichaelAquilina/whatismyip.git', folder: whatismyip }
-
 - name: Setup local bin folder
   file: path=~/.bin state=directory
 
 - name: Setup Custom Executables
   file: state=link dest=~/.bin/unescape src={{ ansible_env.PWD }}/roles/ubuntu/files/unescape
-
-- name: Setup bin links
-  file: src={{ item.src }} dest={{ item.dest }} state=link
-  with_items:
-    - {src: "~/Development/whatismyip/whatismyip.py", dest: "~/.bin/whatismyip" }
-    - {src: "~/Development/todolist/todo.py", dest: "~/.bin/todo" }
