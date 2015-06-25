@@ -1,6 +1,7 @@
 apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
   - 'ppa:fkrull/deadsnakes'
+  - 'ppa:chris-lea/node.js'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 323293EE}  # Mercurial
@@ -39,6 +40,7 @@ apt_packages:
   - python3.3-dev
   - libncurses5-dev
   - exuberant-ctags
+  - nodejs
   - g++
   - gfortran
   - liblapack3
