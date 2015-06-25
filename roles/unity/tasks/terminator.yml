@@ -1,0 +1,11 @@
+- name: Create terminator config dir
+  file: state=directory dest=~/.config/terminator
+
+- name: Setup terminator
+  file: state=link src={{ ansible_env.PWD }}/roles/unity/files/terminator_config dest=~/.config/terminator/config
+
+- name: Set Terminator as default emulator
+  gsetting:
+    schema: org.gnome.desktop.default-applications.terminal
+    key: exec
+    value: "'terminator'"

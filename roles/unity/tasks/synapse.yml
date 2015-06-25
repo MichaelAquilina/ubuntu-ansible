@@ -1,0 +1,9 @@
+- name: Create synapse hotkeys dir
+  file: state=directory dest=~/.config/hotkeys
+
+- name: Setup synapse
+  file:
+    state: link
+    force: true
+    src: "{{ ansible_env.PWD }}/roles/unity/files/synapse.hotkeys"
+    dest: ~/.config/hotkeys/synapse.hotkeys
