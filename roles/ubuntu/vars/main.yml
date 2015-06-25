@@ -1,10 +1,11 @@
 apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
   - 'ppa:fkrull/deadsnakes'
-  - 'ppa:chris-lea/node.js'
+  - 'deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu utopic main'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 323293EE}  # Mercurial
+  - {keyserver: keyserver.ubuntu.com, id: C7917B12}  # nodejs
 
 apt_packages:
   - vim
@@ -29,6 +30,7 @@ apt_packages:
   - texlive-latex-recommended
   - texlive-font-utils
   - texlive-fonts-recommended
+  - python-software-properties
   # Development
   - python-dev
   - python2.6
