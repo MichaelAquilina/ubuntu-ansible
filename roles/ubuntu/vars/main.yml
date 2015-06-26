@@ -1,11 +1,11 @@
 apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
   - 'ppa:fkrull/deadsnakes'
-  - 'deb http://ppa.launchpad.net/chris-lea/node.js/ubuntu utopic main'
+  - 'deb https://deb.nodesource.com/iojs_2.x {{ ansible_distribution_release }} main'
 
 apt_keys:
-  - {keyserver: keyserver.ubuntu.com, id: 323293EE}  # Mercurial
-  - {keyserver: keyserver.ubuntu.com, id: C7917B12}  # nodejs
+  - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
+  - {keyserver: keyserver.ubuntu.com, id: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280}  # nodejs
 
 apt_packages:
   - vim
@@ -42,7 +42,7 @@ apt_packages:
   - python3.3-dev
   - libncurses5-dev
   - exuberant-ctags
-  - nodejs
+  - iojs
   - g++
   - gfortran
   - liblapack3
