@@ -11,10 +11,10 @@ ui_apt_repos:
   - 'ppa:webupd8team/sublime-text-3'
 
 ui_apt_keys:
-  - {keyserver: keyserver.ubuntu.com, id: 94558F59}  # Spotify
-  - {keyserver: keyserver.ubuntu.com, id: B05498B7}  # Steam
-  - {keyserver: keyserver.ubuntu.com, id: 6C2225A4}  # Synapse
-  - {keyserver: keyserver.ubuntu.com, id: 5044912E}  # Dropbox
+  - {keyserver: keyserver.ubuntu.com, id: E22CBE98B5575C1857671254082CCEDF94558F59}  # Spotify
+  - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
+  - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
+  - {keyserver: keyserver.ubuntu.com, id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E}  # Dropbox
 
 ui_apt_packages:
   - tomboy
