@@ -28,9 +28,4 @@
 
 - include: unity.yml
 
-- name: Setup Atom
-  file:
-    state: link
-    force: true
-    src: "{{ ansible_env.PWD }}/roles/unity/files/config.cson"
-    dest: ~/.atom/config.cson
+- include: atom.yml

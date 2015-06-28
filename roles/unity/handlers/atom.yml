@@ -1,0 +1,12 @@
+- name: build atom
+  command: "{{ ansible_env.HOME }}/Development/node/atom/script/build"
+
+- name: bootstrap atom
+  command: "{{ ansible_env.HOME }}/Development/node/atom/script/bootstrap"
+
+- name: install atom
+  sudo: yes
+  command: "{{ ansible_env.HOME }}/Development/node/atom/script/grunt install"
+  args:
+    chdir: "{{ ansible_env.HOME }}/Development/node/atom"
+  failed_when: false  # Bug in grunt always returns non-zero
