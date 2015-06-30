@@ -20,3 +20,4 @@
   "spell-check": {}
   "rst-preview": {}
   linter: {}
+  "atom-ternjs": {}

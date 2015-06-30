@@ -27,5 +27,3 @@
 - include: compiz.yml
 
 - include: unity.yml
-
-- include: atom.yml
