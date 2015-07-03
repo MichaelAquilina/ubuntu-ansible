@@ -7,7 +7,7 @@
 [merge]
 	tool = kdiff3
 [diff]
-	tool = diffuse
+	tool = kdiff3
 [color]
 	ui = true
 [push]
