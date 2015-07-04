@@ -5,11 +5,12 @@
 [keybindings]
 [profiles]
   [[default]]
-    copy_on_selection = True
     use_system_font = False
     font = Monospace Bold 12
     background_image = None
     foreground_color = "#ffffff"
+    copy_on_selection = True
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
