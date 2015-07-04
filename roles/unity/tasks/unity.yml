@@ -3,7 +3,7 @@
     schema: com.canonical.Unity.Launcher
     key: favorites
     value: >
-           ['application://nautilus.desktop',
+           ['application://org.gnome.Nautilus.desktop',
             'application://terminator.desktop',
             'application://firefox.desktop',
             'application://atom.desktop',
