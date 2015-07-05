@@ -19,21 +19,23 @@ ui_apt_keys:
 
 ui_apt_packages:
   - atom
-  - tomboy
-  - gnome-dictionary
-  - gdebi
-  - terminator
-  - virtualbox-4.3
-  - dropbox
-  - skype
-  - spotify-client
-  - synaptic
-  - indicator-multiload
+  - caffeine
   - compizconfig-settings-manager
   - dconf-tools
-  - synapse
+  - dropbox
+  - gdebi
+  - gimp
+  - gnome-dictionary
+  - indicator-multiload
   - kdiff3
-  - caffeine
-  - numix-icon-theme
   - numix-gtk-theme
+  - numix-icon-theme
+  - skype
+  - spotify-client
   - sublime-text-installer
+  - synapse
+  - synaptic
+  - terminator
+  - tomboy
+  - virtualbox-4.3
+  - vlc
