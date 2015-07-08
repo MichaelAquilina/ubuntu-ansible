@@ -14,9 +14,6 @@
     maxLineLength: 120
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/bin/shellcheck"
-  "exception-reporting":
-    userId: "d6bd2b51-fde2-ef06-9e6c-dc2a41a175c0"
-  "atom-beautify": {}
   "spell-check": {}
   "rst-preview": {}
   linter: {}
