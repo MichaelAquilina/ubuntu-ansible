@@ -27,6 +27,7 @@ apt_packages:
   - texlive-fonts-recommended
   - texlive-latex-base
   - texlive-latex-recommended
+  - subversion
   - tree
   - vim
   - whois
