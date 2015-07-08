@@ -10,6 +10,7 @@ apt_keys:
 
 apt_packages:
   - at
+  - autoconf
   - cabal-debian
   - cabal-install
   - cmatrix
