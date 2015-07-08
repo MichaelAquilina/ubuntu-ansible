@@ -9,32 +9,34 @@ apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280}  # nodejs
 
 apt_packages:
+  # other
+  - cowsay
+  - cmatrix
+  - lame
+  - zsh
+  # networking
+  - curl
+  - nmap
+  - whois
+  # editors
+  - most
+  - vim
+  # utilities
   - at
-  - autoconf
   - cabal-debian
   - cabal-install
-  - cmatrix
-  - cowsay
-  - curl
   - htop
   - jq
-  - lame
-  - most
-  - nmap
+  - tree
+  - xsel
+  # pandoc
   - pandoc
-  - python-setuptools
-  - python-software-properties
   - texlive-font-utils
   - texlive-fonts-recommended
-  - texlive-latex-base
   - texlive-latex-recommended
-  - subversion
-  - tree
-  - vim
-  - whois
-  - xsel
-  - zsh
+  - texlive-latex-base
   # Development
+  - autoconf
   - coffeescript
   - exuberant-ctags
   - g++
@@ -47,6 +49,9 @@ apt_packages:
   - liblapack3
   - libncurses5-dev
   - python-dev
+  - python-setuptools
+  - python-software-properties
+  - python-sqlparse
   - python2.6
   - python2.6-dev
   - python3-dev
@@ -59,9 +64,8 @@ apt_packages:
   # Revision Control
   - git
   - mercurial
+  - subversion
   - tig
-  # Other
-  - python-sqlparse
 
 pip_packages:
   - cookiecutter
