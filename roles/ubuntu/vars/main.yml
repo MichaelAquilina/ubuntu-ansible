@@ -37,7 +37,6 @@ apt_packages:
   - texlive-latex-base
   # Development
   - autoconf
-  - coffeescript
   - exuberant-ctags
   - g++
   - gfortran
