@@ -1,16 +1,17 @@
 ---
 ui_apt_repos:
-  - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://archive.canonical.com/ trusty partner'
+  - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
-  - 'deb http://repository.spotify.com testing non-free'
-  - 'deb http://repo.steampowered.com/steam/ precise steam'
-  - 'ppa:caffeine-developers/ppa'
-  - 'ppa:numix/ppa'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
-  - 'ppa:webupd8team/sublime-text-3'
-  - 'ppa:webupd8team/atom'
+  - 'deb http://repo.steampowered.com/steam/ precise steam'
+  - 'deb http://repository.spotify.com testing non-free'
+  - 'ppa:bitcoin/bitcoin'
+  - 'ppa:caffeine-developers/ppa'
   - 'ppa:meebey/ppa'
+  - 'ppa:numix/ppa'
+  - 'ppa:webupd8team/atom'
+  - 'ppa:webupd8team/sublime-text-3'
 
 ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: E22CBE98B5575C1857671254082CCEDF94558F59}  # Spotify
@@ -20,6 +21,7 @@ ui_apt_keys:
 
 ui_apt_packages:
   - atom
+  - bitcoin-qt
   - caffeine
   - compizconfig-settings-manager
   - dconf-tools
