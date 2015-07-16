@@ -16,6 +16,7 @@ apt_packages:
   - zsh
   # networking
   - curl
+  - iftop
   - nethogs
   - nload
   - nmap
