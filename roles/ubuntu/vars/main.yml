@@ -16,6 +16,8 @@ apt_packages:
   - zsh
   # networking
   - curl
+  - nethogs
+  - nload
   - nmap
   - whois
   # editors
