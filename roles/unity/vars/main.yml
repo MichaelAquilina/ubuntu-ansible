@@ -3,17 +3,18 @@ ui_apt_repos:
   - 'deb http://archive.canonical.com/ trusty partner'
   - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
+  - 'deb http://ppa.launchpad.net/meebey/ppa/ubuntu trusty main'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
   - 'ppa:bitcoin/bitcoin'
   - 'ppa:caffeine-developers/ppa'
-  - 'ppa:meebey/ppa'
   - 'ppa:numix/ppa'
   - 'ppa:webupd8team/atom'
   - 'ppa:webupd8team/sublime-text-3'
 
 ui_apt_keys:
+  - {keyserver: keyserver.ubuntu.com, id: FE1538238AE2A998398D61CA5C39B6F9FC6D77D5}  # smuxi-release
   - {keyserver: keyserver.ubuntu.com, id: E22CBE98B5575C1857671254082CCEDF94558F59}  # Spotify
   - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
   - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
