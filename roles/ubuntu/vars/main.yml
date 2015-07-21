@@ -30,6 +30,7 @@ apt_packages:
   - cabal-install
   - htop
   - jq
+  - pass
   - tree
   - xsel
   # pandoc
