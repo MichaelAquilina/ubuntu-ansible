@@ -20,6 +20,8 @@
   apt: pkg={{ item }} state=latest
   with_items: ui_apt_packages
 
+- include: powersettings.yml
+
 - include: terminator.yml
 
 - include: synapse.yml

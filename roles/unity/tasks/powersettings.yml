@@ -1,0 +1,5 @@
+- name: Set inactive timeout on battery
+  gsettings:
+    schema: org.gnome.settings-daemon.plugins.power
+    key: sleep-inactive-battery-timeout
+    value: "1800"
