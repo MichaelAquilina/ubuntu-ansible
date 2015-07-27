@@ -3,3 +3,9 @@
     schema: org.gnome.settings-daemon.plugins.power
     key: sleep-inactive-battery-timeout
     value: "1800"
+
+- name: Set Idle timeout
+  gsettings:
+    schema: org.gnome.desktop.session
+    key: idle-delay
+    value: "uint32 180"
