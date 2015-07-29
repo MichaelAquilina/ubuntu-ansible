@@ -17,8 +17,6 @@ apt_packages:
   # networking
   - curl
   - iftop
-  - nethogs
-  - nload
   - nmap
   - whois
   # editors
