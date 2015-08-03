@@ -73,6 +73,7 @@ pip_packages:
   - distribute  # Force upgrade
   - flake8
   - ipython
+  - isort
   - lifx-cmd
   - numpy
   - pandas
