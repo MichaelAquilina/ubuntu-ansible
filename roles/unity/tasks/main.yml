@@ -20,6 +20,9 @@
   apt: pkg={{ item }} state=latest
   with_items: ui_apt_packages
 
+- name: Enable pinentry-gtk2
+  copy: dest=~/.gnupg/gpg-agent.conf src={{ ansible_env.PWD }}/roles/unity/files/gpg-agent.conf
+
 - include: powersettings.yml
 
 - include: terminator.yml
