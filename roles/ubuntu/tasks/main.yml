@@ -36,6 +36,13 @@
   sudo: yes
   copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
 
+- name: Disable Gnome Keyring for GPG
+  sudo: yes
+  file: state=absent path={{ item }}
+  with_items:
+     - /etc/xdg/autostart/gnome-keyring-gpg.desktop
+     - /usr/share/upstart/sessions/gnome-keyring-gpg.conf
+
 - name: Remove useless items
   file: path={{ item }} state=absent
   with_items:
