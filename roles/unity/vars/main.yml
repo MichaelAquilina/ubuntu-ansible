@@ -34,6 +34,7 @@ ui_apt_packages:
   - kdiff3
   - numix-gtk-theme
   - numix-icon-theme
+  - pinentry-gtk2
   - skype
   - smuxi
   - spotify-client
