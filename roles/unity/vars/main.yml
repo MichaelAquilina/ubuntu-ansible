@@ -32,6 +32,7 @@ ui_apt_packages:
   - gnome-dictionary
   - indicator-multiload
   - kdiff3
+  - network-manager-openvpn
   - numix-gtk-theme
   - numix-icon-theme
   - pinentry-gtk2
