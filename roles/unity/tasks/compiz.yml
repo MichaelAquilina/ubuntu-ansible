@@ -47,3 +47,9 @@
     schema: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
     key: mode
     value: "1"
+
+- name: Setup default resize mouse key
+  gsettings:
+    schema: org.gnome.desktop.wm.preferences
+    key: resize-with-right-button
+    value: "true"
