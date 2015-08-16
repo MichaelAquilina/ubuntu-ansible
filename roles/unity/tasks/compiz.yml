@@ -42,7 +42,7 @@
     - {schema: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
     - {schema: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
 
-- name: Setup Compiz
+- name: Setup Default Placement of new Windows
   gsettings:
     schema: org.compiz.place:/org/compiz/profiles/unity/plugins/place/
     key: mode
