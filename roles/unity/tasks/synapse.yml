@@ -7,3 +7,10 @@
     force: true
     src: "{{ ansible_env.PWD }}/roles/unity/files/synapse.hotkeys"
     dest: ~/.config/hotkeys/synapse.hotkeys
+
+# Fixes issue where compiz would conflict super+space for synapse
+- name: Disable Main Menu Key
+  gsettings:
+    schema: org.compiz.gnomecompat:/org/compiz/profiles/unity/plugins/gnomecompat/
+    key: main-menu-key
+    value: "'Disabled'"
