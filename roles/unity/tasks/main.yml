@@ -12,7 +12,7 @@
 
 - name: Add Additional APT Repostories
   sudo: yes
-  apt_repository: "repo='{{ item }}' state=present"
+  apt_repository: "repo='{{ item }}' state=present update_cache=yes"
   with_items: ui_apt_repos
 
 - name: Install APT Packages
