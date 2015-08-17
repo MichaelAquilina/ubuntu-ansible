@@ -31,8 +31,6 @@ apt_packages:
   - jq
   - pass
   - tree
-  - tlp
-  - tlp-rdw
   - xsel
   # pandoc
   - pandoc
