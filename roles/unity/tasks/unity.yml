@@ -5,7 +5,7 @@
     value: >
            ['application://org.gnome.Nautilus.desktop',
             'application://terminator.desktop',
-            'application://firefox.desktop',
+            'application://google-chrome.desktop',
             'application://atom.desktop',
             'application://tomboy.desktop',
             'unity://running-apps',
