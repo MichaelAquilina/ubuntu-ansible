@@ -28,6 +28,7 @@ apt_packages:
   - cabal-debian
   - cabal-install
   - htop
+  - figlet
   - jq
   - pass
   - tree
