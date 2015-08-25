@@ -25,7 +25,7 @@
   with_items: pip_packages
 
 - name: Setup Conifguration Files
-  file: dest={{ item.dest }} state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
+  file: dest={{ item.dest }} force=yes state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
   with_items:
     - {filename: tigrc, dest: ~/.tigrc }
     - {filename: nanorc, dest: ~/.nanorc }
