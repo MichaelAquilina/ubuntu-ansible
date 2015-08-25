@@ -31,6 +31,7 @@
     - {filename: nanorc, dest: ~/.nanorc }
     - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
+    - {filename: htoprc, dest: ~/.config/htop/htoprc }
 
 - name: Setup Insults
   sudo: yes
