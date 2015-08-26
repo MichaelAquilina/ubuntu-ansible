@@ -6,6 +6,10 @@
   core:
     projectHome: "/home/michael/Development"
     excludeVcsIgnoredPaths: false
+    themes: [
+      "one-dark-ui"
+      "atom-material-syntax"
+    ]
   editor:
     invisibles: {}
     scrollPastEnd: true
