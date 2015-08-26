@@ -1,9 +1,10 @@
 - name: Setup Atom Packages
   apm: name={{ item }}
   with_items:
-    - autocomplete-python
-    - atom-material-syntax
     - atom-beautify
+    - atom-material-syntax
+    - autocomplete-python
+    - highlight-selected
     - linter-flake8
     - linter-shellcheck
-    - highlight-selected
+    - sort-lines
