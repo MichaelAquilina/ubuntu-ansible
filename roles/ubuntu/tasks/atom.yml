@@ -5,4 +5,5 @@
     - atom-material-syntax
     - atom-beautify
     - linter-flake8
+    - linter-shellcheck
     - highlight-selected
