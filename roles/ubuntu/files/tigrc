@@ -2,6 +2,9 @@
 bind generic w scroll-line-up
 bind generic s scroll-line-down
 
+# Copy commit id currently being viewed
+bind generic Y !@sh -c "echo -n %(commit) | xclip -selection c"
+
 # vim: set expandtab sw=4 tabstop=4:
 # *color* 'area' 'fgcolor' 'bgcolor' '[attributes]'
 
