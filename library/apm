@@ -8,7 +8,7 @@ from ansible.module_utils.basic import *
 def get_installed(links=False):
     packages = {}
     output = subprocess.check_output([
-        'apm', 'list', '--links={}'.format(links), '-i' ,'-b',
+        'apm', 'list', '--links={}'.format(links), '-i', '-b',
     ]).strip().split('\n')
     for line in output:
         name, version = line.split('@')
@@ -29,7 +29,7 @@ def install_package(name, version):
 
 def main():
     module = AnsibleModule(
-        argument_spec = {
+        argument_spec={
             'name': {'required': True},
             'version': {'default': None},
         },
@@ -45,7 +45,7 @@ def main():
         if name not in packages or (version is not None and version != packages[name]):
             changed = True
             install_package(name, version)
-    except CalledProcessError as e:
+    except subprocess.CalledProcessError as e:
         module.fail_json(msg=e.msg)
     else:
         module.exit_json(changed=changed)
