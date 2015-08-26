@@ -5,6 +5,7 @@
     - atom-material-syntax
     - autocomplete-python
     - highlight-selected
+    - linter
     - linter-flake8
     - linter-shellcheck
     - sort-lines
