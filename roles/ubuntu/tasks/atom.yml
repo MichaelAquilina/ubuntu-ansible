@@ -4,8 +4,11 @@
     - atom-beautify
     - atom-material-syntax
     - autocomplete-python
+    - git-blame
     - highlight-selected
+    - keybinding-cheatsheet
     - linter
     - linter-flake8
     - linter-shellcheck
+    - python-isort
     - sort-lines
