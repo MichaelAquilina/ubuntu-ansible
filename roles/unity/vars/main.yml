@@ -7,6 +7,7 @@ ui_apt_repos:
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
+  - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
   - 'ppa:bitcoin/bitcoin'
   - 'ppa:caffeine-developers/ppa'
   - 'ppa:numix/ppa'
@@ -19,6 +20,7 @@ ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
   - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
   - {keyserver: keyserver.ubuntu.com, id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E}  # Dropbox
+  - {keyserver: keyserver.ubuntu.com, id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991} # Google
 
 ui_apt_packages:
   - atom
