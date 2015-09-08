@@ -4,6 +4,7 @@
     - atom-beautify
     - atom-material-syntax
     - autocomplete-python
+    - file-icons
     - git-blame
     - highlight-selected
     - keybinding-cheatsheet
