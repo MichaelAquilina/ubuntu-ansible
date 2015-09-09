@@ -2,6 +2,7 @@
   apm: name={{ item }}
   with_items:
     - atom-beautify
+    - atom-jinja2
     - atom-material-syntax
     - autocomplete-python
     - file-icons
