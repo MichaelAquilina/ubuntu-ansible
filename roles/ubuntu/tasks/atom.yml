@@ -11,5 +11,6 @@
     - linter
     - linter-flake8
     - linter-shellcheck
+    - nucleus-dark-ui
     - python-isort
     - sort-lines

@@ -7,7 +7,7 @@
     projectHome: "/home/michael/Development"
     excludeVcsIgnoredPaths: false
     themes: [
-      "one-dark-ui"
+      "nucleus-dark-ui"
       "atom-material-syntax"
     ]
   editor:
