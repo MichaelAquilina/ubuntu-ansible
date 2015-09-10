@@ -8,7 +8,7 @@
     excludeVcsIgnoredPaths: false
     themes: [
       "nucleus-dark-ui"
-      "atom-material-syntax"
+      "atom-dark-fusion-syntax"
     ]
   editor:
     invisibles: {}
