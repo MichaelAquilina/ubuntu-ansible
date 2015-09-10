@@ -15,3 +15,10 @@
     - nucleus-dark-ui
     - python-isort
     - sort-lines
+
+- name: Setup linking to Atom config.cson
+  file:
+    dest: ~/.atom/config.cson
+    force: yes
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/unity/files/config.cson"
