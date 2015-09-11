@@ -27,11 +27,12 @@ apt_packages:
   - at
   - cabal-debian
   - cabal-install
-  - htop
   - figlet
+  - htop
   - jq
   - pass
   - tree
+  - w3m
   - xsel
   # pandoc
   - pandoc
