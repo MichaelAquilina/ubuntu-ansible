@@ -28,6 +28,7 @@ apt_packages:
   - cabal-debian
   - cabal-install
   - figlet
+  - ffmpeg
   - htop
   - jq
   - pass
