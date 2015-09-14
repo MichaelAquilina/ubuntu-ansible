@@ -16,6 +16,7 @@ apt_packages:
   - lame
   - zsh
   # networking
+  - axel
   - curl
   - iftop
   - nmap
