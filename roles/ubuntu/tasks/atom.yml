@@ -15,6 +15,7 @@
     - linter-shellcheck
     - nucleus-dark-ui
     - python-isort
+    - rulerz
     - sort-lines
 
 - name: Setup linking to Atom config.cson
