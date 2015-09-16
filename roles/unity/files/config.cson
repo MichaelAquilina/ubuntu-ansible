@@ -22,5 +22,6 @@
   "rst-preview": {}
   linter: {}
   "atom-ternjs": {}
+  "python-tools": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
