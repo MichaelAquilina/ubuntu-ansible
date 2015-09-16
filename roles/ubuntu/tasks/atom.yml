@@ -17,6 +17,7 @@
     - python-isort
     - rulerz
     - sort-lines
+    - vim-mode
 
 - name: Setup linking to Atom config.cson
   file:
