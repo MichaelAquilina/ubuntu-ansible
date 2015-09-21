@@ -22,6 +22,10 @@
     - {key: launcher-opacity, value: "0.0"}
     - {key: reveal-pressure, value: "20"}
     - {key: show-menu-bar, value: "\\'Disabled\\'"}
+    - {key: show-hud, value: "\\'Disabled\\'"}
+    - {key: show-desktop-key, value: "\\'<Super>d\\'"}
+    - {key: execute-command, value: "\\'Disabled\\'"}
+    - {key: dash-tap-duration, value: "1"}  # Workaround to disable dash from showing
 
 # Fixes issue where tomboy notes would not gain focus from indicator panel
 - name: Disable Focus Prevention
