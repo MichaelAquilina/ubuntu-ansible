@@ -29,6 +29,4 @@
 
 - include: synapse.yml
 
-- include: compiz.yml
-
 - include: unity.yml
