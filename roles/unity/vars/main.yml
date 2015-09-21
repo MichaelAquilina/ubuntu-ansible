@@ -49,5 +49,6 @@ ui_apt_packages:
   - synaptic
   - terminator
   - tomboy
+  - unity-tweak-tool
   - virtualbox-5.0
   - vlc
