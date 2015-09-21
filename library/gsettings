@@ -13,22 +13,21 @@ def set_value(schema, key, value):
 
 def get_value(schema, key):
     return subprocess.check_output([
-    	'gsettings', 'get', schema, key
+        'gsettings', 'get', schema, key
     ]).strip()
 
 
 def main():
     module = AnsibleModule(
-        argument_spec = {
-            'state': { 'choices': ['present'], 'default': 'present' },
+        argument_spec={
+            'state': {'choices': ['present'], 'default': 'present'},
             'schema': {'required': True},
-            'key': { 'required': True },
-            'value': { 'required': True },
+            'key': {'required': True},
+            'value': {'required': True},
         },
-        supports_check_mode = True,
+        supports_check_mode=True,
     )
 
-    state = module.params['state']
     schema = module.params['schema']
     key = module.params['key']
     value = module.params['value']
