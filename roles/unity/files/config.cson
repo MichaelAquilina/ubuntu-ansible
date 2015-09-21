@@ -10,6 +10,9 @@
       "nucleus-dark-ui"
       "atom-dark-fusion-syntax"
     ]
+    disabledPackages: [
+      "vim-mode"
+    ]
   editor:
     invisibles: {}
     scrollPastEnd: true
