@@ -21,7 +21,7 @@
     - {key: launcher-hide-mode, value: "1"}
     - {key: launcher-opacity, value: "0.0"}
     - {key: reveal-pressure, value: "20"}
-    - {key: show-menu-bar, value: "Disabled"}
+    - {key: show-menu-bar, value: "\\'Disabled\\'"}
 
 # Fixes issue where tomboy notes would not gain focus from indicator panel
 - name: Disable Focus Prevention
@@ -51,12 +51,6 @@
     - {schema: de.mh21.indicator-multiload.graphs.load, key: enabled, value: 'false'}
     - {schema: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
     - {schema: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
-
-- name: Disable Integrated HUD
-  gsettings:
-    schema: org.compiz.integrated
-    key: show-hud
-    value: "'Disabled'"
 
 - name: Setup Default Placement of new Windows
   gsettings:
