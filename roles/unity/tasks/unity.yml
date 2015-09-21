@@ -13,6 +13,16 @@
    - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: right-maximize, value: "\\'<Super>Right\\'"}
    - {schema: 'org.compiz.grid:/org/compiz/profiles/unity/plugins/grid/', key: left-maximize, value: "\\'<Super>Left\\'"}
 
+- name: Launcher Setup
+  gsettings: "schema=org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ key={{ item.key }} value={{ item.value }}"
+  with_items:
+    - {key: show-launcher, value: "\\'<Alt>\\'"}
+    - {key: autohide-animation, value: "0"}
+    - {key: launcher-hide-mode, value: "1"}
+    - {key: launcher-opacity, value: "0.0"}
+    - {key: reveal-pressure, value: "20"}
+    - {key: show-menu-bar, value: "Disabled"}
+
 # Fixes issue where tomboy notes would not gain focus from indicator panel
 - name: Disable Focus Prevention
   gsettings:
@@ -42,11 +52,11 @@
     - {schema: de.mh21.indicator-multiload.graphs.disk, key: enabled, value: 'true'}
     - {schema: de.mh21.indicator-multiload.graphs.swap, key: enabled, value: 'false'}
 
-- name: Enable Integrated HUD
+- name: Disable Integrated HUD
   gsettings:
     schema: org.compiz.integrated
     key: show-hud
-    value: "['<Alt>']"
+    value: "'Disabled'"
 
 - name: Setup Default Placement of new Windows
   gsettings:
