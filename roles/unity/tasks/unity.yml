@@ -43,9 +43,6 @@
     - {key: "time-format", value: "custom"}
     - {key: "custom-time-format", value: "%H:%M %a %Y/%m/%d"}
 
-- name: Set GTK Theme
-  gsettings: "schema=org.gnome.desktop.interface key=gtk-theme value=\\'Numix\\'"
-
 - name: Setup Indicator Multiload
   gsettings: schema={{ item.schema }} key={{ item.key }} value={{ item.value }}
   with_items:

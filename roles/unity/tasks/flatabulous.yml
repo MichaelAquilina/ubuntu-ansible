@@ -1,0 +1,17 @@
+- name: Create themes directory
+  file:
+    state: directory
+    path: ~/.themes/
+
+- name: Download flatabulous
+  get_url:
+    url: https://github.com/anmoljagetia/Flatabulous/archive/master.zip
+    dest: ~/.themes/Flatabulous.zip
+
+- name: Extract Flatabulous
+  unarchive:
+    dest: ~/.themes
+    src: ~/.themes/Flatabulous.zip
+
+- name: Set GTK Theme
+  gsettings: "schema=org.gnome.desktop.interface key=gtk-theme value=\\'Flatabulous-master\\'"
