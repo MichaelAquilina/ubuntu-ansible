@@ -17,6 +17,7 @@
     invisibles: {}
     scrollPastEnd: true
     preferredLineLength: 120
+    showIndentGuide: true
   "linter-flake8":
     maxLineLength: 120
   "linter-shellcheck":
