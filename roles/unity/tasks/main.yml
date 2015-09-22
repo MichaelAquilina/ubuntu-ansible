@@ -23,6 +23,8 @@
 - name: Enable pinentry-gtk2
   copy: dest=~/.gnupg/gpg-agent.conf src={{ ansible_env.PWD }}/roles/unity/files/gpg-agent.conf
 
+- include: wallpaper.yml
+
 - include: flatabulous.yml
 
 - include: powersettings.yml
