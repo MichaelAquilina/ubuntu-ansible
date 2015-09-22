@@ -12,6 +12,7 @@
   unarchive:
     dest: ~/.themes
     src: ~/.themes/Flatabulous.zip
+    creates: ~/.themes/Flatabulous-master
 
 - name: Set GTK Theme
   gsettings: "schema=org.gnome.desktop.interface key=gtk-theme value=\\'Flatabulous-master\\'"
