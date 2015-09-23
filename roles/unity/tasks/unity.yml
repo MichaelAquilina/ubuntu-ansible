@@ -19,7 +19,7 @@
     - {key: show-launcher, value: "\\'<Alt>\\'"}
     - {key: autohide-animation, value: "0"}
     - {key: launcher-hide-mode, value: "1"}
-    - {key: launcher-opacity, value: "0.0"}
+    - {key: launcher-opacity, value: "0.666"}
     - {key: reveal-pressure, value: "20"}
     - {key: show-menu-bar, value: "\\'Disabled\\'"}
     - {key: show-hud, value: "\\'Disabled\\'"}
