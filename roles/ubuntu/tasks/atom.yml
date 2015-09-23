@@ -31,4 +31,4 @@
     dest: ~/.atom/keymap.cson
     force: yes
     state: link
-    src: "{{ asnible_env.PWD }}/roles/unity/files/keymap.cson"
+    src: "{{ ansible_env.PWD }}/roles/unity/files/keymap.cson"
