@@ -1,18 +1,21 @@
 - name: Create themes directory
+  sudo: yes
   file:
     state: directory
-    path: ~/.themes/
+    path: /usr/share/themes
 
 - name: Download flatabulous
+  sudo: yes
   get_url:
     url: https://github.com/anmoljagetia/Flatabulous/archive/master.zip
-    dest: ~/.themes/Flatabulous.zip
+    dest: /usr/share/themes/Flatabulous.zip
 
 - name: Extract Flatabulous
+  sudo: yes
   unarchive:
-    dest: ~/.themes
-    src: ~/.themes/Flatabulous.zip
-    creates: ~/.themes/Flatabulous-master
+    dest: /usr/share/themes
+    src: /usr/share/themes/Flatabulous.zip
+    creates: /usr/share/themes/Flatabulous-master
 
 - name: Set GTK Theme
   gsettings: "schema=org.gnome.desktop.interface key=gtk-theme value=\\'Flatabulous-master\\'"
