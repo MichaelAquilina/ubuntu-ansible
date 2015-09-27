@@ -56,5 +56,3 @@
 - include: vim.yml
 
 - include: development.yml
-
-- include: atom.yml

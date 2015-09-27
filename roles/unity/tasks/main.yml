@@ -34,3 +34,5 @@
 - include: synapse.yml
 
 - include: unity.yml
+
+- include: atom.yml
