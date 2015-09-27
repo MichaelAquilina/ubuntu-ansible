@@ -1,0 +1,13 @@
+- name: Disable Gnome Keyring for GPG
+  sudo: yes
+  file: state=absent path={{ item }}
+  with_items:
+     - /etc/xdg/autostart/gnome-keyring-gpg.desktop
+     - /usr/share/upstart/sessions/gnome-keyring-gpg.conf
+
+- name: Create GPG Configuration File
+  copy:
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gpg.conf"
+    dest: ~/.gnupg/gpg.conf
+    force: yes
+    mode: 0600
