@@ -37,12 +37,6 @@ apt_packages:
   - tree
   - w3m
   - xsel
-  # pandoc
-  - pandoc
-  - texlive-font-utils
-  - texlive-fonts-recommended
-  - texlive-latex-recommended
-  - texlive-latex-base
   # Development
   - autoconf
   - exuberant-ctags
