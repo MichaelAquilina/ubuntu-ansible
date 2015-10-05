@@ -18,6 +18,7 @@
     scrollPastEnd: true
     preferredLineLength: 120
     showIndentGuide: true
+    fontSize: 15
   "linter-flake8":
     maxLineLength: 120
   "linter-shellcheck":
@@ -29,3 +30,7 @@
   "python-tools": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "exception-reporting":
+    userId: "75a2fc7d-cc12-e132-a7a0-04b46b7671ff"
+  "atom-beautify":
+    _analyticsUserId: "43673052-f867-4090-b85e-bcfd5eaea796"
