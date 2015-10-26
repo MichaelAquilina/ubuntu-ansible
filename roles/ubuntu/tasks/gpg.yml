@@ -5,6 +5,12 @@
      - /etc/xdg/autostart/gnome-keyring-gpg.desktop
      - /usr/share/upstart/sessions/gnome-keyring-gpg.conf
 
+- name: Create GNUPG Directory
+  file:
+    state: directory
+    mode: 0700
+    path: ~/.gnupg
+
 - name: Create GPG Configuration File
   copy:
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gpg.conf"
