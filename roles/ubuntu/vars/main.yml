@@ -2,12 +2,9 @@ apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
   - 'ppa:fkrull/deadsnakes'
   - 'ppa:hansjorg/rust'
-  - 'ppa:linrunner/tlp'
-  - 'deb https://deb.nodesource.com/iojs_2.x {{ ansible_distribution_release }} main'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
-  - {keyserver: keyserver.ubuntu.com, id: 9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280}  # nodejs
 
 apt_packages:
   # other
@@ -42,10 +39,6 @@ apt_packages:
   - exuberant-ctags
   - g++
   - gfortran
-  - gocode
-  - golang
-  - golang-go.tools
-  - iojs
   - libblas3
   - liblapack3
   - libncurses5-dev
