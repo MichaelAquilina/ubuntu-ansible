@@ -9,7 +9,7 @@ ui_apt_repos:
   - 'deb http://repository.spotify.com testing non-free'
   - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
   - 'ppa:bitcoin/bitcoin'
-  - 'ppa:caffeine-developers/ppa'
+  - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:numix/ppa'
   - 'ppa:webupd8team/atom'
   - 'ppa:webupd8team/sublime-text-3'
@@ -21,7 +21,8 @@ ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
   - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
   - {keyserver: keyserver.ubuntu.com, id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E}  # Dropbox
-  - {keyserver: keyserver.ubuntu.com, id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991} # Google
+  - {keyserver: keyserver.ubuntu.com, id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991}  # Google
+  - {keyserver: keyserver.ubuntu.com, id: DC2887936B4153CA9AFB151B0F678A01569113AE}  # Caffeine Developers
 
 ui_apt_packages:
   - atom
