@@ -19,11 +19,6 @@
   apt: pkg={{ item }} state=latest update_cache=yes
   with_items: apt_packages
 
-- name: Install PIP Packages
-  sudo: yes
-  pip: name={{ item }} state=latest
-  with_items: pip_packages
-
 - name: Setup Conifguration Files
   file: dest={{ item.dest }} force=yes state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
   with_items:
