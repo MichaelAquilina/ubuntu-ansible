@@ -19,7 +19,13 @@
   apt: pkg={{ item }} state=latest update_cache=yes
   with_items: apt_packages
 
-- name: Setup Conifguration Files
+- name: Create htop config folder
+  file:
+    state: directory
+    mode: 0700
+    path: ~/.config/htop
+
+- name: Setup Configuration Files
   file: dest={{ item.dest }} force=yes state=link src={{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}
   with_items:
     - {filename: tigrc, dest: ~/.tigrc }
