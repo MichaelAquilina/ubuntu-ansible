@@ -50,6 +50,7 @@ apt_packages:
   - python3-dev
   - rust-stable
   - shellcheck
+  - virtualenvwrapper
   # Revision Control
   - git
   - mercurial
