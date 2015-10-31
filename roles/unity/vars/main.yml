@@ -1,7 +1,7 @@
 ---
 ui_apt_repos:
   - 'deb http://archive.canonical.com/ trusty partner'
-  - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
+  - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://ppa.launchpad.net/meebey/ppa/ubuntu trusty main'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
