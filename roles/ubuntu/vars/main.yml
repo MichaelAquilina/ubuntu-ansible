@@ -31,6 +31,7 @@ apt_packages:
   - htop
   - jq
   - pass
+  - unrar
   - tree
   - w3m
   - xsel
