@@ -9,6 +9,7 @@
     - file-icons
     - git-blame
     - highlight-selected
+    - hyperclick
     - keybinding-cheatsheet
     - linter
     - linter-flake8
