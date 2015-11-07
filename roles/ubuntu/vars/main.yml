@@ -43,6 +43,7 @@ apt_packages:
   - libblas3
   - liblapack3
   - libncurses5-dev
+  - libmysqlclient-dev
   - python-dbg
   - python-dev
   - python-setuptools
