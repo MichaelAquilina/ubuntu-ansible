@@ -38,6 +38,11 @@
   sudo: yes
   copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
 
+# Dont install this on default so that it can be used anywhere
+- name: Install MyCLI
+  pip: name=mycli state=latest
+  sudo: yes
+
 - name: Install PIP Requirements
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements.txt"
