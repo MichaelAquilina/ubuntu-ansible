@@ -1,10 +1,10 @@
 ---
 ui_apt_repos:
-  - 'deb http://archive.canonical.com/ trusty partner'
+  - 'deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner'
   - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://ppa.launchpad.net/meebey/ppa/ubuntu trusty main'
-  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
+  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
   - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
@@ -12,7 +12,6 @@ ui_apt_repos:
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:numix/ppa'
   - 'ppa:webupd8team/atom'
-  - 'ppa:webupd8team/sublime-text-3'
   - 'ppa:rael-gc/scudcloud'
 
 ui_apt_keys:
@@ -46,7 +45,6 @@ ui_apt_packages:
   - skype
   - smuxi
   - spotify-client
-  - sublime-text-installer
   - synapse
   - synaptic
   - terminator
