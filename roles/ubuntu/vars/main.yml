@@ -45,6 +45,7 @@ apt_packages:
   - liblapack3
   - libncurses5-dev
   - libmysqlclient-dev
+  - mysql-server-5.6
   - python-dbg
   - python-dev
   - python-setuptools
