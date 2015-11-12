@@ -34,6 +34,7 @@ apt_packages:
   - mesa-utils
   - unrar
   - tree
+  - vorbis-tools
   - w3m
   - xsel
   # Development
