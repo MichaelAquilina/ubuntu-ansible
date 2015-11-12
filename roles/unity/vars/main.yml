@@ -40,7 +40,6 @@ ui_apt_packages:
   - numix-gtk-theme
   - numix-icon-theme
   - pinentry-gtk2
-  - redshift
   - scudcloud
   - skype
   - smuxi

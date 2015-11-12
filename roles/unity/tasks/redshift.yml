@@ -1,0 +1,9 @@
+- name: Install Redshift
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - redshift-gtk
+
+
+- name: Configure Redshift
+  file: state=link force=yes src={{ ansible_env.PWD }}/roles/unity/files/redshift.config dest=~/.config/redshift.config
