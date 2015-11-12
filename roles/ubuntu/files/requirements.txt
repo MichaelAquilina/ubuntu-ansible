@@ -1,5 +1,6 @@
 ansible
+ec2-ssh
 flake8
 ipython
 isort
-ec2-ssh
+tox
