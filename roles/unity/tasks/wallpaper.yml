@@ -1,5 +1,10 @@
 - name: Set wallpaper
   gsettings: "schema=org.gnome.desktop.background key={{ item.key }} value={{ item.value }}"
   with_items:
-    - {key: picture-options, value: "\\'zoom\\'"}
+    - {key: color-shading-type, value: "\\'solid\\'"}
+    - {key: picture-options, value: "\\'centered\\'"}
+    - {key: picture-opacity, value: "100"}
     - {key: picture-uri, value: "\\'file://{{ ansible_env.PWD }}/roles/unity/files/wallpaper.jpg\\'"}
+    - {key: primary-color, value: "\\'#000000\\'"}
+    - {key: secondary-color, value: "\\'#000000\\'"}
+    - {key: show-desktop-icons, value: "true"}
