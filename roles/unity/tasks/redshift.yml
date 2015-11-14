@@ -5,4 +5,4 @@
     - redshift-gtk
 
 - name: Configure Redshift
-  file: state=link force=yes src={{ ansible_env.PWD }}/roles/unity/files/redshift.config dest=~/.config/redshift.config
+  file: state=link force=yes src={{ ansible_env.PWD }}/roles/unity/files/redshift.conf dest=~/.config/redshift.conf
