@@ -3,7 +3,7 @@
 Configure a Ubuntu machine using my personal preferences and usual tools and applications installed.
 After installing a fresh Ubuntu installation all you need to do is install ansible:
 
-    sudo apt-get install python-setuptools
+    sudo apt-get install python-pip
     sudo pip install ansible
 
 Once thats done then run the playbook found in this repo:

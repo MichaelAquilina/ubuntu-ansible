@@ -7,7 +7,6 @@
     - atom-material-syntax
     - autocomplete-python
     - file-icons
-    - git-blame
     - highlight-selected
     - hyperclick
     - keybinding-cheatsheet
