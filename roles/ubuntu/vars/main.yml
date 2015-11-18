@@ -32,6 +32,7 @@ apt_packages:
   - jq
   - pass
   - mesa-utils
+  - nfs-kernel-server
   - unrar
   - tree
   - vorbis-tools
