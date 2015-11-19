@@ -12,7 +12,6 @@ ui_apt_repos:
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:numix/ppa'
   - 'ppa:webupd8team/atom'
-  - 'ppa:rael-gc/scudcloud'
 
 ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: FE1538238AE2A998398D61CA5C39B6F9FC6D77D5}  # smuxi-release
@@ -40,7 +39,6 @@ ui_apt_packages:
   - numix-gtk-theme
   - numix-icon-theme
   - pinentry-gtk2
-  - scudcloud
   - skype
   - smuxi
   - spotify-client
