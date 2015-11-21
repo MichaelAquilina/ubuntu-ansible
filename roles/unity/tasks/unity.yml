@@ -75,7 +75,6 @@
             'application://google-chrome.desktop',
             'application://atom.desktop',
             'application://spotify.desktop',
-            'application://scudcloud.desktop',
             'unity://running-apps',
             'unity://devices']
 
