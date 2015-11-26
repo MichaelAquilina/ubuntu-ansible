@@ -7,47 +7,37 @@ apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
 
 apt_packages:
-  # other
-  - cowsay
-  - cmatrix
-  - lame
-  - lolcat
-  - zsh
-  # networking
-  - axel
-  - curl
-  - iftop
-  - nmap
-  - whois
-  # editors
-  - most
-  - vim
-  # utilities
   - at
+  - autoconf
+  - axel
   - cabal-debian
   - cabal-install
-  - figlet
-  - ffmpeg
-  - htop
-  - jq
-  - pass
-  - mesa-utils
-  - nfs-kernel-server
-  - unrar
-  - tree
-  - vorbis-tools
-  - w3m
-  - xsel
-  # Development
-  - autoconf
+  - cmatrix
+  - cowsay
+  - curl
   - exuberant-ctags
+  - ffmpeg
+  - figlet
   - g++
   - gfortran
+  - git
+  - htop
+  - iftop
+  - jq
+  - lame
   - libblas3
   - liblapack3
-  - libncurses5-dev
   - libmysqlclient-dev
+  - libncurses5-dev
+  - lnav
+  - lolcat
+  - mercurial
+  - mesa-utils
+  - most
   - mysql-server-5.6
+  - nfs-kernel-server
+  - nmap
+  - pass
   - python-dbg
   - python-dev
   - python-setuptools
@@ -56,9 +46,14 @@ apt_packages:
   - python3-dev
   - rust-stable
   - shellcheck
-  - virtualenvwrapper
-  # Revision Control
-  - git
-  - mercurial
   - subversion
   - tig
+  - tree
+  - unrar
+  - vim
+  - virtualenvwrapper
+  - vorbis-tools
+  - w3m
+  - whois
+  - xsel
+  - zsh
