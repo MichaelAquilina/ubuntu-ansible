@@ -73,7 +73,7 @@
     value: >
            ['application://terminator.desktop',
             'application://google-chrome.desktop',
-            'application://atom.desktop',
+            'application://atom-beta.desktop',
             'application://spotify.desktop',
             'unity://running-apps',
             'unity://devices']
