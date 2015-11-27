@@ -218,8 +218,6 @@
   'ctrl-v': 'vim-mode:activate-blockwise-visual-mode'
 
   'u': 'vim-mode:undo'
-  'ctrl-r': 'core:redo'
-
   'O': 'vim-mode:insert-above-with-newline'
   'o': 'vim-mode:insert-below-with-newline'
   'a': 'vim-mode:insert-after'
