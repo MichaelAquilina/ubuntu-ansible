@@ -5,8 +5,7 @@
 [keybindings]
 [profiles]
   [[default]]
-    use_system_font = False
-    font = Monospace Bold 12
+    use_system_font = True
     background_image = None
     foreground_color = "#ffffff"
     copy_on_selection = True
@@ -19,5 +18,4 @@
     [[[window0]]]
       type = Window
       parent = ""
-      size = 1100, 650
 [plugins]

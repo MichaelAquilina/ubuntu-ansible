@@ -24,11 +24,11 @@
     dest: ~/.atom/config.cson
     force: yes
     state: link
-    src: "{{ ansible_env.PWD }}/roles/unity/files/config.cson"
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_config.cson"
 
 - name: Setup linking to Atom keymap file
   file:
     dest: ~/.atom/keymap.cson
     force: yes
     state: link
-    src: "{{ ansible_env.PWD }}/roles/unity/files/keymap.cson"
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_keymap.cson"

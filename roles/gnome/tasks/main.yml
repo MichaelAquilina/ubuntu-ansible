@@ -1,0 +1,5 @@
+- include: atom.yml
+
+- include: redshift.yml
+
+- include: terminator.yml

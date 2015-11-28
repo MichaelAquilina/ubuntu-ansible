@@ -33,12 +33,6 @@
 
 - include: powersettings.yml
 
-- include: terminator.yml
-
 - include: synapse.yml
 
 - include: unity.yml
-
-- include: atom.yml
-
-- include: redshift.yml

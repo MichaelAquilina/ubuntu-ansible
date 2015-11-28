@@ -13,6 +13,7 @@
     packagesWithKeymapsDisabled: [
       "vim-mode"
     ]
+    autoHideMenuBar: true
   editor:
     invisibles: {}
     scrollPastEnd: true
@@ -29,3 +30,5 @@
   "python-tools": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "exception-reporting":
+    userId: "634732cd-fd66-d3cd-55cc-dfed1d7083bb"
