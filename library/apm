@@ -47,7 +47,7 @@ def main():
             changed = True
             install_package(name, version)
     except subprocess.CalledProcessError as e:
-        module.fail_json(msg=e.msg)
+        module.fail_json(msg=e.output)
     else:
         module.exit_json(changed=changed)
 
