@@ -42,7 +42,7 @@ def main():
         if changed and not module.check_mode:
             set_value(schema, key, value)
     except subprocess.CalledProcessError as e:
-        module.fail_json(msg=e.msg)
+        module.fail_json(msg=e.message)
     else:
         module.exit_json(
             changed=changed,
