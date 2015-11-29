@@ -4,12 +4,6 @@
     key: clock-show-date
     value: "true"
 
-- name: Always open windows in the center
-  gsettings:
-    schema: org.gnome.desktop.wm.preferences
-    key: focus-new-windows
-    value:  "'center'"
-
 - name: Set theme
   gsettings:
     schema: org.gnome.desktop.interface
