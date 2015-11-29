@@ -3,18 +3,13 @@ ui_apt_repos:
   - 'deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner'
   - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
-  - 'deb http://ppa.launchpad.net/meebey/ppa/ubuntu trusty main'
-  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
   - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
-  - 'ppa:bitcoin/bitcoin'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
-  - 'ppa:numix/ppa'
   - 'ppa:webupd8team/atom'
 
 ui_apt_keys:
-  - {keyserver: keyserver.ubuntu.com, id: FE1538238AE2A998398D61CA5C39B6F9FC6D77D5}  # smuxi-release
   - {keyserver: keyserver.ubuntu.com, id: BBEBDCB318AD50EC6865090613B00F1FD2C19886}  # Spotify
   - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
   - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
@@ -24,28 +19,15 @@ ui_apt_keys:
 
 ui_apt_packages:
   - atom
-  - bitcoin-qt
-  - caffeine
-  - compizconfig-settings-manager
-  - dconf-tools
   - dropbox
   - gdebi
   - gimp
   - gnome-dictionary
-  - hunspell-en-us
-  - indicator-multiload
   - kdiff3
   - network-manager-openvpn
-  - numix-gtk-theme
-  - numix-icon-theme
-  - pinentry-gtk2
   - skype
-  - smuxi
   - spotify-client
-  - synapse
   - synaptic
   - terminator
-  - tomboy
-  - unity-tweak-tool
   - virtualbox-5.0
   - vlc

@@ -1,29 +1,3 @@
-- name: Add VirtualBox APT Key
-  sudo: yes
-  apt_key:
-    url: https://www.virtualbox.org/download/oracle_vbox.asc
-    state: present
-    id: 98AB5139
-
-- name: Add Additional APT Keys
-  sudo: yes
-  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
-  with_items: ui_apt_keys
-
-- name: Add Additional APT Repostories
-  sudo: yes
-  apt_repository: "repo='{{ item }}' state=present update_cache=yes"
-  with_items: ui_apt_repos
-
-- name: Install APT Packages
-  sudo: yes
-  apt: pkg={{ item }} state=latest
-  with_items: ui_apt_packages
-
-- name: Make sure Flash player is uninstalled
-  sudo: yes
-  apt: pkg=flashplugin-installer state=absent
-
 - name: Enable pinentry-gtk2
   copy: dest=~/.gnupg/gpg-agent.conf src={{ ansible_env.PWD }}/roles/unity/files/gpg-agent.conf
 
