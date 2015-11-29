@@ -29,3 +29,5 @@
 - include: redshift.yml
 
 - include: terminator.yml
+
+- include: powersettings.yml

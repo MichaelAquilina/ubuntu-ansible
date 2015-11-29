@@ -5,8 +5,6 @@
 
 - include: flatabulous.yml
 
-- include: powersettings.yml
-
 - include: synapse.yml
 
 - include: unity.yml
