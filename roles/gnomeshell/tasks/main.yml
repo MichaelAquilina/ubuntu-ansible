@@ -1,0 +1,5 @@
+- name: Show Date
+  gsettings:
+    schema: org.gnome.desktop.interface
+    key: clock-show-date
+    value: "true"
