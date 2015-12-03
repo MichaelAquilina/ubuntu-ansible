@@ -10,6 +10,7 @@
     - highlight-selected
     - hyperclick
     - keybinding-cheatsheet
+    - language-r
     - linter
     - linter-flake8
     - linter-shellcheck
