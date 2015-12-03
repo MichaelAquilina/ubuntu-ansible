@@ -43,7 +43,11 @@
   pip: name=mycli state=latest
   sudo: yes
 
-- name: Install PIP Requirements
+- name: Install Flake8 Linter
+  pip: name=flake8 state=latest
+  sudo: yes
+
+- name: Install Default PIP Requirements
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements.txt"
     virtualenv: ~/.virtualenvs/default
