@@ -12,7 +12,7 @@ def get_extension_state(name):
         'gsettings', 'get', 'org.gnome.shell', 'enabled-extensions'
     ])
     result = json.loads(result.replace("'", '"'))
-    return name in result
+    return 'enabled' if name in result else 'disabled'
 
 
 def clone_git_repo(uri, target_path):
@@ -27,6 +27,17 @@ def toggle_extension(name, state='enable'):
     ])
 
 
+def disable_extension(uri, name):
+    toggle_extension(name, state='disable')
+
+
+def enable_extension(uri, name):
+    path = os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name))
+    if not os.path.exists(path):
+        install_extension(uri, name)
+    toggle_extension(name, state='enable')
+
+
 def install_extension(uri, name):
     temp_dir = tempfile.mkdtemp()
     clone_git_repo(uri, temp_dir)
@@ -34,7 +45,6 @@ def install_extension(uri, name):
         '{}/{}'.format(temp_dir, name),
         os.path.expanduser('~/.local/share/gnome-shell/extensions'),
     )
-    toggle_extension(name, state='enable')
 
 
 def main():
@@ -49,14 +59,17 @@ def main():
 
     uri = module.params['uri']
     name = module.params['name']
-    state = True if module.params['state'] == 'enabled' else False
+    state = module.params['state']
 
     try:
         old_state = get_extension_state(name)
         changed = old_state != state
 
         if changed and not module.check_mode:
-            install_extension(uri, name)
+            if state == 'enabled':
+                enable_extension(uri, name)
+            else:
+                disable_extension(uri, name)
     except subprocess.CalledProcessError as e:
         module.fail_json(msg=e.output)
     else:
