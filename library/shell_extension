@@ -1,0 +1,72 @@
+#!/usr/bin/python
+
+import json
+import subprocess
+import tempfile
+
+from ansible.module_utils.basic import *
+
+
+def get_extension_state(name):
+    result = subprocess.check_output([
+        'gsettings', 'get', 'org.gnome.shell', 'enabled-extensions'
+    ])
+    result = json.loads(result.replace("'", '"'))
+    return name in result
+
+
+def clone_git_repo(uri, target_path):
+    subprocess.check_output([
+        'git', 'clone', uri, target_path,
+    ])
+
+
+def toggle_extension(name, state='enable'):
+    subprocess.check_output([
+        'gnome-shell-extension-tool', '--{}-extension={}'.format(state, name)
+    ])
+
+
+def install_extension(uri, name):
+    temp_dir = tempfile.mkdtemp()
+    clone_git_repo(uri, temp_dir)
+    shutil.move(
+        '{}/{}'.format(temp_dir, name),
+        os.path.expanduser('~/.local/share/gnome-shell/extensions'),
+    )
+    toggle_extension(name, state='enable')
+
+
+def main():
+    module = AnsibleModule(
+        argument_spec={
+            'state': {'choices': ['enabled', 'disabled'], 'default': 'enabled'},
+            'uri': {'required': True},
+            'name': {'required': True},
+        },
+        supports_check_mode=True,
+    )
+
+    uri = module.params['uri']
+    name = module.params['name']
+    state = True if module.params['state'] == 'enabled' else False
+
+    try:
+        old_state = get_extension_state(name)
+        changed = old_state != state
+
+        if changed and not module.check_mode:
+            install_extension(uri, name)
+    except subprocess.CalledProcessError as e:
+        module.fail_json(msg=e.output)
+    else:
+        module.exit_json(
+            changed=changed,
+            state=state,
+            uri=uri,
+            old_state=old_state,
+        )
+
+if __name__ == '__main__':
+    get_extension_state('pixel-saver@deadalnix.me')
+    main()
