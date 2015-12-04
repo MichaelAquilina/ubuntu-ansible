@@ -4,6 +4,15 @@
     key: clock-show-date
     value: "true"
 
+- name: Install Gnome Shell Extensions
+  shell_extension: "uri={{ item.uri }} name={{ item.name }} state=enabled"
+  with_items:
+    - {uri: "https://github.com/kgshank/gse-refresh-wifi", name: "refresh-wifi@kgshank.net"}
+    - {uri: "https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet", name: "system-monitor@paradoxxx.zero.gmail.com"}
+    - {uri: "https://github.com/deadalnix/pixel-saver", name: "pixel-saver@deadalnix.me"}
+
+# TODO: Restart gnome shell on change with `gnome-shell --replace`
+
 - name: Focus windows on creation
   gsettings:
     schema: org.gnome.desktop.wm.preferences
