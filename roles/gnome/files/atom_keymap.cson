@@ -27,6 +27,7 @@
 '.workspace':
   'alt-left': 'window:focus-pane-on-left'
   'alt-right': 'window:focus-pane-on-right'
+  'f6': 'dot-atom:to-snake-case'
 
 'atom-text-editor.vim-mode':
   'escape': 'vim-mode:reset-normal-mode'
