@@ -21,6 +21,9 @@
     showIndentGuide: true
   "linter-flake8":
     maxLineLength: 120
+    ignoreErrorCodes: [
+      "E702"
+    ]
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/bin/shellcheck"
   "spell-check": {}
