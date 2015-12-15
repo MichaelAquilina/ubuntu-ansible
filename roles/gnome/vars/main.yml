@@ -26,6 +26,7 @@ ui_apt_packages:
   - gnome-dictionary
   - kdiff3
   - network-manager-openvpn
+  - pavucontrol
   - skype
   - spotify-client
   - synaptic
