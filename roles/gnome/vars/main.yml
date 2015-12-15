@@ -8,6 +8,7 @@ ui_apt_repos:
   - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
+  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
 
 ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: BBEBDCB318AD50EC6865090613B00F1FD2C19886}  # Spotify
@@ -28,6 +29,7 @@ ui_apt_packages:
   - skype
   - spotify-client
   - synaptic
+  - synapse
   - terminator
   - virtualbox-5.0
   - vlc
