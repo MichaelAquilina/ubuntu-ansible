@@ -1,6 +1,6 @@
 '.source.python':
-  'UTF8 Yplan Header':
-    'prefix': 'utf8'
+  'Yplan Header':
+    'prefix': 'yheader'
     'body': """
     # -*- encoding:utf-8 -*-
     from __future__ import absolute_import, division, print_function, unicode_literals
