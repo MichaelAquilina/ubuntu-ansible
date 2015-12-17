@@ -6,6 +6,7 @@
     - atom-jinja2
     - atom-material-syntax
     - autocomplete-python
+    - dash
     - file-icons
     - highlight-selected
     - hyperclick
