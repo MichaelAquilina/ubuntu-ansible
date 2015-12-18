@@ -33,6 +33,7 @@
     - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
     - {filename: htoprc, dest: ~/.config/htop/htoprc }
+    - {filename: xprofile, dest: ~/.xprofile}
 
 - name: Setup Insults
   sudo: yes
