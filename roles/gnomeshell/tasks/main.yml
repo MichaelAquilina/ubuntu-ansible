@@ -19,6 +19,12 @@
     key: focus-new-windows
     value: "'strict'"
 
+- name: Center Windows
+  gsettings:
+    schema: org.gnome.mutter
+    key: center-new-windows
+    value: "true"
+
 - name: Set theme
   gsettings:
     schema: org.gnome.desktop.interface
