@@ -12,6 +12,7 @@
     - hyperclick
     - keybinding-cheatsheet
     - language-r
+    - language-restructuredtext
     - language-vala
     - linter
     - linter-flake8
