@@ -13,6 +13,21 @@
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
+- name: Spotify autoscaling script
+  sudo: yes
+  file:
+    src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/spotify-autoscale"
+    dest: /usr/bin/spotify-autoscale
+    state: link
+
+- name: Update Spotify Desktop File to use AutoScale
+  sudo: yes
+  lineinfile:
+    dest: /usr/share/applications/spotify.desktop
+    regexp: "^Exec="
+    state: present
+    line: "Exec=spotify-autoscale"
+
 - name: Focus windows on creation
   gsettings:
     schema: org.gnome.desktop.wm.preferences

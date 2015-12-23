@@ -1,0 +1,4 @@
+#! /bin/bash
+GDK_SCALE="$(gsettings get org.gnome.settings-daemon.plugins.xsettings overrides)"
+SCALE="${GDK_SCALE: -3:1}"
+spotify --force-device-scale-factor="$SCALE"
