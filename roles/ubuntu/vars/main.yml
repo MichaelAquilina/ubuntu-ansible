@@ -15,6 +15,9 @@ apt_packages:
   - cmatrix
   - cowsay
   - curl
+  - dict
+  - dictd
+  - dict-gcide
   - exuberant-ctags
   - ffmpeg
   - figlet
