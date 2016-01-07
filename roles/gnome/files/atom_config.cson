@@ -8,7 +8,7 @@
     excludeVcsIgnoredPaths: false
     themes: [
       "nucleus-dark-ui"
-      "an-old-hope-syntax"
+      "seti-syntax"
     ]
     packagesWithKeymapsDisabled: [
       "vim-mode"

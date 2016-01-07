@@ -21,6 +21,7 @@
     - linter-shellcheck
     - nucleus-dark-ui
     - python-isort
+    - seti-syntax
     - sort-lines
     - vim-mode
 
