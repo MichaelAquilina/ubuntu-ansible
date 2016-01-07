@@ -33,3 +33,5 @@
   "python-tools": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "atom-beautify":
+    _analyticsUserId: "386bfecf-675f-49e0-9c20-1204af65717a"

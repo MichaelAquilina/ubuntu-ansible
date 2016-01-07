@@ -2,6 +2,7 @@ apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
   - 'ppa:fkrull/deadsnakes'
   - 'ppa:hansjorg/rust'
+  - 'ppa:git-core/ppa'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
