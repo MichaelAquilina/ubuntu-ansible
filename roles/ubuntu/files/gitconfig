@@ -23,3 +23,5 @@
 	kdiff = difftool
 [dif]
 	tool = diffuse
+[rebase]
+	autostash = true
