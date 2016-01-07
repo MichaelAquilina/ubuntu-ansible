@@ -19,6 +19,8 @@
     scrollPastEnd: true
     preferredLineLength: 120
     showIndentGuide: true
+    showInvisibles: true
+    tabType: "soft"
   "linter-flake8":
     maxLineLength: 120
     ignoreErrorCodes: [
