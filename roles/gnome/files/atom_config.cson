@@ -8,7 +8,7 @@
     excludeVcsIgnoredPaths: false
     themes: [
       "nucleus-dark-ui"
-      "atom-dark-fusion-syntax"
+      "an-old-hope-syntax"
     ]
     packagesWithKeymapsDisabled: [
       "vim-mode"

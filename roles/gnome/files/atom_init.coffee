@@ -1,3 +1,5 @@
+document.body.classList.add('an-old-hope-modify-ui')
+
 atom.commands.add 'atom-workspace', 'dot-atom:to-snake-case', ->
   console.log 'converting to snake case! (From Camel Case)'
   editor = atom.workspace.getActiveTextEditor()

@@ -1,6 +1,7 @@
 - name: Setup Atom Packages
   apm: name={{ item }}
   with_items:
+    - an-old-hope-syntax
     - atom-beautify
     - atom-dark-fusion-syntax
     - atom-jinja2
