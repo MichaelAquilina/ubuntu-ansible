@@ -1,0 +1,2 @@
+- name: Setup Zim
+  command: "{{ ansible_env.PWD}}/roles/ubuntu/files/zim_setup.sh"

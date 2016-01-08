@@ -17,9 +17,7 @@
     dest: '{{ ansible_env.HOME }}/.zim'
     recursive: yes
     update: no
-
-- name: Setup Zim
-  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zim.sh
+  notify: Setup Zim
 
 - name: Setup dircolors
   file:
