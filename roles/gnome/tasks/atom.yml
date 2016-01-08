@@ -8,6 +8,7 @@
     - atom-material-syntax
     - autocomplete-python
     - blame
+    - color-picker
     - dash
     - file-icons
     - highlight-selected
@@ -20,6 +21,7 @@
     - linter-flake8
     - linter-shellcheck
     - nucleus-dark-ui
+    - pigments
     - python-isort
     - seti-syntax
     - sort-lines
