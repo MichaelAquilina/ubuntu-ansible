@@ -4,6 +4,13 @@
     name: '{{ ansible_env.USER }}'
     shell: /bin/zsh
 
+- name: Setup zshrc
+  file:
+    state: link
+    dest: "{{ ansible_env.HOME }}/.zshrc"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshrc"
+    force: yes
+
 - name: Download Zprezto Git Repo
   git:
     repo: git@github.com:MichaelAquilina/zim.git
@@ -15,4 +22,7 @@
   command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zim.sh
 
 - name: Setup dircolors
-  file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai
+  file:
+    state: link
+    dest: "{{ ansible_env.HOME }}/.dircolors"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/dircolors.molokai"

@@ -1,0 +1,161 @@
+#
+# User configuration sourced by interactive shells
+#
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
+# Customize to your needs...
+
+prompt gitster
+
+export shrug='¯_(ツ)_/¯'
+
+date
+echo "Is the Internet on Fire? $shrug"
+# istheinternetonfire?
+host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
+
+Blue="$(tput setaf 4)"
+Color_Off="$(tput sgr0)"
+
+public_ip="$(curl ifconfig.co -s --connect-timeout 1)"
+local_ips="$(ip -4 addr | grep inet | awk '{print $2}' | tr '
+' '	')"
+
+echo "${Blue}Public${Color_Off}: $public_ip 	 ${Blue}Local${Color_Off}: $local_ips"
+
+# Disable ansible from using cowsay
+export ANSIBLE_NOCOWS=1
+
+# Local executable binaries
+export PATH="$PATH:$HOME/.bin"
+
+# Include arcanist if available
+if [[ -s "/opt/arc/arcanist/bin" ]]; then
+  export PATH="$PATH:/opt/arc/arcanist/bin"
+fi
+
+# Source virtualenvwrapper if it's installed
+if [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
+  source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
+  if ! workon default; then
+    mkvirtualenv default
+    workon default
+  fi
+fi
+
+# Read boto vars into env
+if [[ -s ~/.boto ]]; then
+  export AWS_ACCESS_KEY_ID=$(grep aws_access_key_id ~/.boto | awk '{print $3;}')
+  export AWS_SECRET_ACCESS_KEY=$(grep aws_secret_access_key ~/.boto | awk '{print $3;}')
+  export AWS_EC2_REGION=$(grep ec2_region_name ~/.boto | awk '{print $3;}')
+fi
+
+# Read logentries account key if available
+if [[ -s ~/.logentries ]]; then
+  export LOGENTRIES_ACCOUNT_KEY=$(cat ~/.logentries)
+fi
+
+setopt INC_APPEND_HISTORY
+
+function google () {
+   xopen "https://www.google.co.uk/search?q=$1"
+}
+
+# Allow ctrl+left and ctrl+right movement
+bindkey ';5D' emacs-backward-word
+bindkey ';5C' emacs-forward-word
+
+export WORDCHARS=''
+
+dircolors ~/.dircolors > /dev/null
+
+export PAGER="most"
+export EDITOR="vim"
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL="ignoreboth"
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+SAVEHIST=2000
+
+# Git Aliases
+alias gs="git status"
+alias gc="git commit"
+alias gca="git commit --amend"
+alias gco="git checkout"
+alias gap="git add -p"
+alias gk="git kdiff"
+alias gd="git difftool"
+alias gpl="git pull"
+alias gr="git rebase"
+alias gm="git merge"
+alias gst="git stash"
+alias gf="git fetch --prune"
+
+# Tig Aliases
+alias ta="tig --all"
+alias t="tig"
+
+# Vagrant Aliases
+alias vs="vagrant ssh"
+alias vc="vagrant ssh -c"
+alias vu="vagrant up"
+alias vd="vagrant_down"  # Custom function
+alias vh="vagrant halt"
+alias vp="vagrant provision"
+
+# Utilities
+alias xopen="xdg-open"
+alias LS="LS -e"  # Allow interrupt by Ctrl+C
+alias explore="nautilus"
+alias dmesg="dmesg --color=always | less +cmdG"
+alias grepc="grep --color=always"
+alias netinfo="netstat --tcp --udp --numeric-ports -a --program | most"
+alias rand="openssl rand -base64"
+alias xcopy="xsel -i -b"
+alias xpaste="xsel -o -b"
+alias xc="xcopy"
+alias xp="xpaste"
+
+# Enable 256 color mode
+export TERM="xterm-256color"
+
+# Allow setting the tab title in terminator and other x-term style shells
+function set_title() {
+  printf "]2;%s" "$*";
+}
+
+function google() {
+  query_args=$@
+  xopen "https://www.google.co.uk/search?q=${query_args// /+}"
+}
+
+# Recursively list all values in gsettings
+function list_all_gsettings() {
+  for schema in $(gsettings list-schemas)
+  do
+      gsettings list-recursively "$schema"
+  done
+}
+
+function repeat() {
+  for i in "$(seq 1 $1)";
+  do
+      ${@:2}
+  done
+}
+
+function set_title_preexec() {
+  set_title "$2"
+}
+
+function reset_title_precmd() {
+  set_title "$SHELL"
+}
+
+preexec_functions+=(set_title_preexec)
+precmd_functions+=(reset_title_precmd)
