@@ -6,13 +6,13 @@
 
 - name: Download Zprezto Git Repo
   git:
-    repo: git@github.com:MichaelAquilina/prezto.git
+    repo: git@github.com:MichaelAquilina/zim.git
     dest: '{{ ansible_env.HOME }}/.zprezto'
     recursive: yes
     update: no
 
-- name: Setup Zprezto
-  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zprezto_setup.sh
+- name: Setup Zim
+  command: creates={{ ansible_env.HOME }}/.zshrc roles/ubuntu/files/zim.sh
 
 - name: Setup dircolors
   file: state=link dest={{ ansible_env.HOME }}/.dircolors src=~/.zprezto/dircolors.molokai

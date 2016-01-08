@@ -19,6 +19,7 @@
     scrollPastEnd: true
     preferredLineLength: 120
     showIndentGuide: true
+    fontSize: 13
     showInvisibles: true
     tabType: "soft"
   "linter-flake8":
@@ -35,5 +36,7 @@
   "python-tools": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
+  "keybinding-cheatsheet": {}
   "atom-beautify":
-    _analyticsUserId: "386bfecf-675f-49e0-9c20-1204af65717a"
+    _analyticsUserId: "815d035e-29de-46cd-90be-0c90b5cc4d64"
+  blame: {}
