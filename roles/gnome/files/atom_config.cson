@@ -20,8 +20,8 @@
     preferredLineLength: 120
     showIndentGuide: true
     fontSize: 13
-    showInvisibles: true
     tabType: "soft"
+    showInvisibles: true
   "linter-flake8":
     maxLineLength: 120
     ignoreErrorCodes: [
