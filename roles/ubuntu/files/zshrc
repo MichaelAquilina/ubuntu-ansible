@@ -79,8 +79,8 @@ export EDITOR="vim"
 HISTCONTROL="ignoreboth"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-SAVEHIST=2000
+export HISTSIZE=1000
+export SAVEHIST=2000
 
 # Git Aliases
 alias gs="git status"
