@@ -1,1 +1,9 @@
-atom-text-editor::shadow .invisible-character { color: rgb(70, 70, 70) }
+@import 'ui-variables';
+
+atom-text-editor::shadow {
+    .line.cursor-line {
+      background: rgb(60, 60, 60,) !important
+    }
+
+    .invisible-character { color: rgb(70, 70, 70) }
+}
