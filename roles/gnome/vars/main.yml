@@ -28,6 +28,7 @@ ui_apt_packages:
   - kdiff3
   - network-manager-openvpn
   - pavucontrol
+  - powerline
   - skype
   - spotify-client
   - synaptic

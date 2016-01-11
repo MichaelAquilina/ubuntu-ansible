@@ -7,7 +7,7 @@ if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
 fi
 # Customize to your needs...
 
-prompt gitster
+prompt eriner
 
 export shrug='¯_(ツ)_/¯'
 
