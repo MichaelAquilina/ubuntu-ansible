@@ -1,12 +1,17 @@
 @import 'ui-variables';
 
 atom-text-editor::shadow {
+    .line.comment {
+      color: rgb(76, 102, 113)
+    }
+
+
     .line.cursor-line {
-      background: rgb(60, 60, 60) !important
+      background: rgba(60, 60, 60, 0.70) !important
     }
 
      .selection .region {
-       background-color: rgb(60, 60, 90) !important
+      background-color: rgb(60, 60, 90) !important
      }
 
     .invisible-character { color: rgb(70, 70, 70) }
