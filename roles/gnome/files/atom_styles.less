@@ -16,3 +16,71 @@ atom-text-editor::shadow {
 
     .invisible-character { color: rgb(70, 70, 70) }
 }
+
+// vim powerline status bar
+
+// green
+@normal-bg: rgb(105, 238, 103);
+// blue
+@insert-bg: rgb(7, 193, 242);
+// yellowish
+@visual-bg: rgb(255, 206, 98);
+
+
+// change the current cursor-line background color
+// based on vim mode
+atom-text-editor.is-focused {
+  &::shadow {
+    .cursor-line {
+      background: fadeout(@normal-bg, 80%);
+    }
+  }
+  &.insert-mode::shadow {
+    .cursor-line {
+      background: fadeout(@insert-bg, 92%);
+    }
+  }
+}
+
+
+// vim mode in the status bar at the bottom
+// make it nice and big so you can see it out of the corner of your eye
+// without thinking about it.
+.status-bar-vim-mode-normal,
+.status-bar-vim-mode-insert,
+.status-bar-vim-mode-visual {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+
+.status-bar-vim-mode-normal {
+  background: @normal-bg;
+  color: rgb(4, 111, 11);
+}
+
+.status-bar-vim-mode-insert {
+  background: @insert-bg;
+  color: white;
+}
+
+.status-bar-vim-mode-visual {
+  background: @visual-bg;
+  color: rgb(168, 117, 5);
+}
+
+// change cursor color in normal mode
+atom-text-editor.vim-mode.normal-mode.is-focused {
+  &::shadow, // shadow-DOM enabled
+  &          // shadow-DOM disabled
+  {
+    .cursor {
+      background-color: @normal-bg;
+    }
+  }
+}
