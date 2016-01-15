@@ -5,7 +5,6 @@
     enabled: true
   core:
     projectHome: "/home/michael/Development"
-    excludeVcsIgnoredPaths: false
     themes: [
       "nucleus-dark-ui"
       "seti-syntax"
@@ -40,3 +39,6 @@
   "atom-beautify":
     _analyticsUserId: "815d035e-29de-46cd-90be-0c90b5cc4d64"
   blame: {}
+  minimap: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
