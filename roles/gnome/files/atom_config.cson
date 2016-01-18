@@ -13,6 +13,10 @@
       "vim-mode"
     ]
     autoHideMenuBar: true
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      "*.pyc"
+    ]
   editor:
     invisibles: {}
     scrollPastEnd: true
