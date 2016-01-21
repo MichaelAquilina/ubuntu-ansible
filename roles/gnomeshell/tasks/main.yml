@@ -51,3 +51,15 @@
     schema: org.gnome.desktop.wm.preferences
     key: resize-with-right-button
     value: "true"
+
+- name: Remove NoDisplay from Gnome Shortucts
+  sudo: yes
+  ini_file: "dest={{ item }} option=NoDisplay value=false section='Desktop Entry'"
+  with_items:
+    - "/usr/share/applications/gnome-bluetooth-panel.desktop"
+    - "/usr/share/applications/gnome-printers-panel.desktop"
+    - "/usr/share/applications/gnome-display-panel.desktop"
+    - "/usr/share/applications/gnome-power-panel.desktop"
+    - "/usr/share/applications/gnome-datetime-panel.desktop"
+    - "/usr/share/applications/gnome-background-panel.desktop"
+    - "/usr/share/applications/gnome-network-panel.desktop"
