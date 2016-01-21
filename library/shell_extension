@@ -31,19 +31,25 @@ def disable_extension(uri, name):
     toggle_extension(name, state='disable')
 
 
-def enable_extension(uri, name):
+def enable_extension(uri, name, subfolder):
     path = os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name))
     if not os.path.exists(path):
-        install_extension(uri, name)
+        install_extension(uri, name, subfolder)
     toggle_extension(name, state='enable')
 
 
-def install_extension(uri, name):
+def install_extension(uri, name, subfolder):
     temp_dir = tempfile.mkdtemp()
     clone_git_repo(uri, temp_dir)
+
+    if subfolder:
+        src_path = '{}/{}'.format(temp_dir, subfolder)
+    else:
+        src_path = temp_dir
+
     shutil.move(
-        '{}/{}'.format(temp_dir, name),
-        os.path.expanduser('~/.local/share/gnome-shell/extensions'),
+        src_path,
+        os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name)),
     )
 
 
@@ -53,6 +59,7 @@ def main():
             'state': {'choices': ['enabled', 'disabled'], 'default': 'enabled'},
             'uri': {'required': True},
             'name': {'required': True},
+            'subfolder': {'default': '', 'required': False},
         },
         supports_check_mode=True,
     )
@@ -60,6 +67,7 @@ def main():
     uri = module.params['uri']
     name = module.params['name']
     state = module.params['state']
+    subfolder = module.params['subfolder']
 
     try:
         old_state = get_extension_state(name)
@@ -67,10 +75,10 @@ def main():
 
         if changed and not module.check_mode:
             if state == 'enabled':
-                enable_extension(uri, name)
+                enable_extension(uri, name, subfolder)
             else:
                 disable_extension(uri, name)
-    except subprocess.CalledProcessError as e:
+    except Exception as e:
         module.fail_json(msg=e.output)
     else:
         module.exit_json(
@@ -81,5 +89,4 @@ def main():
         )
 
 if __name__ == '__main__':
-    get_extension_state('pixel-saver@deadalnix.me')
     main()

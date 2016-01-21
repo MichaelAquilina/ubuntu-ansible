@@ -5,11 +5,12 @@
     value: "true"
 
 - name: Install Gnome Shell Extensions
-  shell_extension: "uri={{ item.uri }} name={{ item.name }} state=enabled"
+  shell_extension: "uri=git@github.com:{{ item.uri }}.git name={{ item.name }} state=enabled subfolder={{ item.subfolder }}"
   with_items:
-    - {uri: "https://github.com/kgshank/gse-refresh-wifi", name: "refresh-wifi@kgshank.net"}
-    - {uri: "https://github.com/paradoxxxzero/gnome-shell-system-monitor-applet", name: "system-monitor@paradoxxx.zero.gmail.com"}
-    - {uri: "https://github.com/deadalnix/pixel-saver", name: "pixel-saver@deadalnix.me"}
+    - {uri: "kgshank/gse-refresh-wifi", name: "refresh-wifi@kgshank.net", subfolder: "refresh-wifi@kgshank.net"}
+    - {uri: "paradoxxxzero/gnome-shell-system-monitor-applet", name: "system-monitor@paradoxxx.zero.gmail.com", subfolder: "system-monitor@paradoxxx.zero.gmail.com"}
+    - {uri: "deadalnix/pixel-saver", name: "pixel-saver@deadalnix.me", subfolder: "pixel-saver@deadalnix.me"}
+    - {uri: "kagesenshi/gnome-shell-extension-stealmyfocus", name: "steal-my-focus@kagesenshi.org", subfolder: ""}
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
