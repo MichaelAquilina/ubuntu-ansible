@@ -64,3 +64,4 @@
     - "/usr/share/applications/gnome-datetime-panel.desktop"
     - "/usr/share/applications/gnome-background-panel.desktop"
     - "/usr/share/applications/gnome-network-panel.desktop"
+    - "/usr/share/applications/gnome-sound-panel.desktop"
