@@ -24,6 +24,8 @@
   sudo: yes
   apt: pkg=flashplugin-installer state=absent
 
+- include: tomboy.yml
+
 - include: atom.yml
 
 - include: redshift.yml

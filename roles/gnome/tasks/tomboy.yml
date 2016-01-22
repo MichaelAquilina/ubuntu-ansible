@@ -1,0 +1,8 @@
+- name: Setup Tomboy TODO Shell Script
+  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/tomboy_todo.sh dest=~/.todo.sh
+
+- name: Setup Tomboy TODO Desktop Shortcut
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/tomboy_todo.desktop"
+    dest: "~/.local/share/applications/tomboy_todo.desltop"
