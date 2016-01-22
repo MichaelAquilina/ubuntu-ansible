@@ -1,7 +1,6 @@
-
 [Desktop Entry]
 Name=TODO
-Exec=~/.todo.sh
+Exec=todo
 Icon=tomboy
 StartupNotify=true
 Terminal=false
