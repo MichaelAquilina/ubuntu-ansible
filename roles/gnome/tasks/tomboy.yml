@@ -10,3 +10,9 @@
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/tomboy_todo.desktop"
     dest: "~/.local/share/applications/tomboy_todo.desktop"
+
+- name: Setup Tombyoy New Note Desktop Shortcut
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/tomboy_newnote.desktop"
+    dest: "~/.local/share/applications/tomboy_newnote.desktop"
