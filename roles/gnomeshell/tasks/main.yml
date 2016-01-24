@@ -54,16 +54,11 @@
     key: center-new-windows
     value: "true"
 
-- name: Install Elementary Icon theme
-  sudo: yes
-  apt:
-    name: elementary-icon-theme
-
 - name: Set Icon and Theme
   gsettings: schema=org.gnome.desktop.interface key={{ item.key }} value={{ item.value }}
   with_items:
     - {key: gtk-theme, value: "\\'Numix\\'"}
-    - {key: icon-theme, value: "\\'Elementary\\'"}
+    - {key: icon-theme, value: "\\'Gnome\\'"}
 
 - name: Resize with right button
   gsettings:
