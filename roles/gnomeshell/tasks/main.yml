@@ -17,7 +17,7 @@
     - {uri: "kgshank/gse-refresh-wifi", name: "refresh-wifi@kgshank.net", subfolder: "refresh-wifi@kgshank.net"}
     - {uri: "paradoxxxzero/gnome-shell-system-monitor-applet", name: "system-monitor@paradoxxx.zero.gmail.com", subfolder: "system-monitor@paradoxxx.zero.gmail.com"}
     - {uri: "deadalnix/pixel-saver", name: "pixel-saver@deadalnix.me", subfolder: "pixel-saver@deadalnix.me"}
-    - {uri: "kagesenshi/gnome-shell-extension-stealmyfocus", name: "steal-my-focus@kagesenshi.org", subfolder: ""}
+    - {uri: "MichaelAquilina/gnome-shell-extension-stealmyfocus", name: "steal-my-focus@kagesenshi.org", subfolder: ""}
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
