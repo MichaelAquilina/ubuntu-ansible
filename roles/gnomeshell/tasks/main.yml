@@ -14,6 +14,12 @@
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
+- name: Gtk3 Settings
+  file:
+    src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/gtk3_settings.ini"
+    dest: ~/.config/gtk-3.0/settings.ini
+    state: link
+
 - name: Spotify autoscaling script
   sudo: yes
   file:
@@ -41,11 +47,16 @@
     key: center-new-windows
     value: "true"
 
-- name: Set theme
-  gsettings:
-    schema: org.gnome.desktop.interface
-    key: gtk-theme
-    value: "'Numix'"
+- name: Install Elementary Icon theme
+  sudo: yes
+  apt:
+    name: elementary-icon-theme
+
+- name: Set Icon and Theme
+  gsettings: schema=org.gnome.desktop.interface key={{ item.key }} value={{ item.value }}
+  with_items:
+    - {key: gtk-theme, value: "\\'Numix\\'"}
+    - {key: icon-theme, value: "\\'Elementary\\'"}
 
 - name: Resize with right button
   gsettings:
