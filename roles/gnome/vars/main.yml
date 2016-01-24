@@ -25,6 +25,7 @@ ui_apt_packages:
   - gdebi
   - gimp
   - gnome-dictionary
+  - google-chrome-stable
   - kdiff3
   - network-manager-openvpn
   - pavucontrol
