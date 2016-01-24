@@ -4,4 +4,5 @@
   roles:
     - ubuntu
     - gnome
+    - developer
     - gnomeshell

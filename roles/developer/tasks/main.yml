@@ -1,0 +1,21 @@
+- name: Install Developer Packages
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+    - intltool
+    - python-dbg
+    - python-dev
+    - g++
+    - python3-dev
+    - rust-stable
+    - libmysqlclient-dev
+    - libncurses5-dev
+    - gfortran
+    - libtool
+    - valac
+    - libjson-glib-dev
+    - libgee-0.8-dev
+    - libnotify-dev
+    - libkeybinder-3.0-dev
+    - libgtk-3-dev
+    - libzeitgeist-2.0-dev
