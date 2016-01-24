@@ -3,6 +3,7 @@
 import json
 import subprocess
 import tempfile
+import traceback
 
 from ansible.module_utils.basic import *
 
@@ -11,6 +12,9 @@ def get_extension_state(name):
     result = subprocess.check_output([
         'gsettings', 'get', 'org.gnome.shell', 'enabled-extensions'
     ])
+    if result.startswith('@as'):
+        result = result.replace('@as', '')
+
     result = json.loads(result.replace("'", '"'))
     return 'enabled' if name in result else 'disabled'
 
@@ -79,7 +83,7 @@ def main():
             else:
                 disable_extension(uri, name)
     except Exception as e:
-        module.fail_json(msg=e.output)
+        module.fail_json(msg=traceback.format_exc())
     else:
         module.exit_json(
             changed=changed,
