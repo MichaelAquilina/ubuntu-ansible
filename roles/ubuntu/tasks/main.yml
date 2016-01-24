@@ -48,6 +48,10 @@
   pip: name=flake8 state=latest
   sudo: yes
 
+- name: Update to latest PIP
+  sudo: yes
+  pip: name=pip state=latest
+
 - name: Install Default PIP Requirements
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements.txt"
