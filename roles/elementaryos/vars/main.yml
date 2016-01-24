@@ -1,0 +1,13 @@
+---
+elementary_apt_repos:
+  - 'ppa:mpstark/elementary-tweaks-daily'
+  - 'ppa:gslin/powerline-fonts'
+  - 'ppa:atareao/atareao'
+
+elementary_apt_packages:
+  - elementary-tweaks
+  - powerline-fonts
+  - gedit
+  - transmission
+  - my-weather-indicator
+  - indicator-multiload

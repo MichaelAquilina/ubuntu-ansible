@@ -1,0 +1,5 @@
+#! /bin/bash
+SCALE="$(gsettings get org.gnome.desktop.interface scaling-factor)"
+SCALE="${SCALE: -1}"
+echo "Requesting scale $SCALE for spotify}"
+spotify --force-device-scale-factor=$SCALE

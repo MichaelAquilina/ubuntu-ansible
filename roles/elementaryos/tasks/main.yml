@@ -1,0 +1,37 @@
+- name: Add Additional APT Repostories
+  sudo: yes
+  apt_repository: "repo='{{ item }}' state=present update_cache=yes"
+  with_items: elementary_apt_repos
+
+- name: Install APT Packages
+  sudo: yes
+  apt: pkg={{ item }} state=latest
+  with_items: elementary_apt_packages
+
+- name: Remove NoDisplay from Gnome Shortucts
+  sudo: yes
+  ini_file: "dest={{ item }} option=NoDisplay value=false section='Desktop Entry'"
+  with_items:
+    - "/usr/share/applications/gnome-bluetooth-panel.desktop"
+    - "/usr/share/applications/gnome-printers-panel.desktop"
+    - "/usr/share/applications/gnome-display-panel.desktop"
+    - "/usr/share/applications/gnome-power-panel.desktop"
+    - "/usr/share/applications/gnome-datetime-panel.desktop"
+    - "/usr/share/applications/gnome-background-panel.desktop"
+    - "/usr/share/applications/gnome-network-panel.desktop"
+    - "/usr/share/applications/gnome-sound-panel.desktop"
+
+- name: Spotify autoscaling script
+  sudo: yes
+  file:
+    src: "{{ ansible_env.PWD }}/roles/elementaryos/files/spotify-autoscale"
+    dest: /usr/bin/spotify-autoscale
+    state: link
+
+- name: Update Spotify Desktop File to use AutoScale
+  sudo: yes
+  lineinfile:
+    dest: /usr/share/applications/spotify.desktop
+    regexp: "^Exec="
+    state: present
+    line: "Exec=spotify-autoscale"

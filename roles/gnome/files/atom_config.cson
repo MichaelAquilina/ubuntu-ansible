@@ -1,48 +1,50 @@
 "*":
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    _analyticsUserId: "815d035e-29de-46cd-90be-0c90b5cc4d64"
+  "atom-ternjs": {}
   autosave:
     enabled: true
+  blame: {}
   core:
-    projectHome: "/home/michael/Development"
-    themes: [
-      "nucleus-dark-ui"
-      "seti-syntax"
-    ]
-    packagesWithKeymapsDisabled: [
-      "vim-mode"
-    ]
     autoHideMenuBar: true
     excludeVcsIgnoredPaths: false
     ignoredNames: [
       "*.pyc"
     ]
+    packagesWithKeymapsDisabled: [
+      "vim-mode"
+    ]
+    projectHome: "/home/michael/Development"
+    themes: [
+      "nucleus-dark-ui"
+      "seti-syntax"
+    ]
   editor:
-    invisibles: {}
-    scrollPastEnd: true
-    preferredLineLength: 120
-    showIndentGuide: true
     fontSize: 13
-    tabType: "soft"
+    invisibles: {}
+    preferredLineLength: 120
+    scrollPastEnd: true
+    showIndentGuide: true
     showInvisibles: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "217c5684-4dee-a811-f2be-6fe095085837"
+  "keybinding-cheatsheet": {}
+  linter: {}
   "linter-flake8":
-    maxLineLength: 120
     ignoreErrorCodes: [
       "E702"
     ]
+    maxLineLength: 120
   "linter-shellcheck":
     shellcheckExecutablePath: "/usr/bin/shellcheck"
-  "spell-check": {}
-  "rst-preview": {}
-  linter: {}
-  "atom-ternjs": {}
-  "python-tools": {}
-  "vim-mode":
-    useClipboardAsDefaultRegister: true
-  "keybinding-cheatsheet": {}
-  "atom-beautify":
-    _analyticsUserId: "815d035e-29de-46cd-90be-0c90b5cc4d64"
-  blame: {}
   minimap: {}
+  "python-tools": {}
+  "rst-preview": {}
+  "spell-check": {}
   "tree-view":
     hideVcsIgnoredFiles: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  welcome:
+    showOnStartup: false

@@ -3,6 +3,7 @@ apt_repos:
   - 'ppa:fkrull/deadsnakes'
   - 'ppa:hansjorg/rust'
   - 'ppa:git-core/ppa'
+  - 'ppa:aguignard/ppa'
 
 apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
@@ -20,7 +21,6 @@ apt_packages:
   - dictd
   - dict-gcide
   - exuberant-ctags
-  - ffmpeg
   - figlet
   - g++
   - gfortran

@@ -4,13 +4,13 @@
   with_items:
     - redshift-gtk
 
-- name: Allow Redshift to use geoclue2
-  sudo: yes
-  ini_file: dest=/etc/geoclue/geoclue.conf section=redshift option={{ item.option }} value={{ item.value }}
-  with_items:
-    - {option: allowed, value: "true"}
-    - {option: system, value: "false"}
-    - {option: users, value: ""}
+# - name: Allow Redshift to use geoclue2
+#   sudo: yes
+#   ini_file: dest=/etc/geoclue/geoclue.conf section=redshift option={{ item.option }} value={{ item.value }}
+#   with_items:
+#     - {option: allowed, value: "true"}
+#     - {option: system, value: "false"}
+#     - {option: users, value: ""}
 
 - name: Configure Redshift
   file: state=link force=yes src={{ ansible_env.PWD }}/roles/gnome/files/redshift.conf dest=~/.config/redshift.conf

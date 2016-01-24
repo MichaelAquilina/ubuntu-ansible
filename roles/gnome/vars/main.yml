@@ -1,14 +1,13 @@
 ---
 ui_apt_repos:
-  - 'deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner'
-  - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
+  - 'deb http://archive.canonical.com/ trusty partner'
+  - 'deb http://download.virtualbox.org/virtualbox/debian trusty contrib'
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
-  - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
   - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
-  - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
+  - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu trusty main '
   - 'ppa:webupd8team/atom'
-  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
+  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu trusty main'
   - 'ppa:zeal-developers/ppa'
 
 ui_apt_keys:
@@ -28,7 +27,6 @@ ui_apt_packages:
   - kdiff3
   - network-manager-openvpn
   - pavucontrol
-  - powerline
   - runsnakerun
   - skype
   - spotify-client
