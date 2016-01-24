@@ -1,2 +1,5 @@
 - name: Setup Zim
   command: "{{ ansible_env.PWD}}/roles/ubuntu/files/zim_setup.sh"
+
+- name: Setup Zprezto
+  command: "{{ ansible_env.PWD}}/roles/ubuntu/files/zprezto_setup.sh"

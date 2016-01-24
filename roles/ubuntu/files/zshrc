@@ -1,9 +1,9 @@
 #
 # User configuration sourced by interactive shells
 #
-# Source zim
-if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
-  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+# Source zprezto
+if [[ -s ${ZDOTDIR:-${HOME}}/.zprezto/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zprezto/init.zsh
 fi
 # Customize to your needs...
 
