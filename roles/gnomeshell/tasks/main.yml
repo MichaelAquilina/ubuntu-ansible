@@ -4,6 +4,13 @@
     key: clock-show-date
     value: "true"
 
+- name: System Monitor Dependencies
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+    - gir1.2-gtop-2.0
+    - gir1.2-networkmanager-1.0
+
 - name: Install Gnome Shell Extensions
   shell_extension: "uri=git@github.com:{{ item.uri }}.git name={{ item.name }} state=enabled subfolder={{ item.subfolder }}"
   with_items:
