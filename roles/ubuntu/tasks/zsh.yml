@@ -11,13 +11,13 @@
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshrc"
     force: yes
 
-- name: Download Prezto Git Repo
+- name: Download Zim Git Repo
   git:
-    repo: git@github.com:MichaelAquilina/prezto.git
-    dest: '{{ ansible_env.HOME }}/.zprezto'
+    repo: git@github.com:MichaelAquilina/zim.git
+    dest: '{{ ansible_env.HOME }}/.zim'
     recursive: yes
     update: no
-  notify: Setup Zprezto
+  notify: Setup Zim
 
 - name: Setup dircolors
   file:
