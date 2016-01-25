@@ -25,6 +25,7 @@
   file:
     src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/gtk3_settings.ini"
     dest: ~/.config/gtk-3.0/settings.ini
+    force: yes
     state: link
 
 - name: Spotify autoscaling script
