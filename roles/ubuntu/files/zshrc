@@ -1,7 +1,3 @@
-#
-# User configuration sourced by interactive shells
-#
-
 # Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
@@ -9,6 +5,8 @@ fi
 prompt eriner
 
 export shrug='¯_(ツ)_/¯'
+
+prompt eriner
 
 date
 echo "Is the Internet on Fire? $shrug"
