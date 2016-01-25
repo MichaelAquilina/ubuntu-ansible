@@ -59,7 +59,7 @@
   gsettings: schema=org.gnome.desktop.interface key={{ item.key }} value={{ item.value }}
   with_items:
     - {key: gtk-theme, value: "\\'Numix\\'"}
-    - {key: icon-theme, value: "\\'Gnome\\'"}
+    - {key: icon-theme, value: "\\'gnome\\'"}
 
 - name: Resize with right button
   gsettings:
