@@ -1,6 +1,4 @@
 "*":
-  welcome:
-    showOnStartup: false
   autosave:
     enabled: true
   blame: {}
