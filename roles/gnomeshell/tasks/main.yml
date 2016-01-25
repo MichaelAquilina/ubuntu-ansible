@@ -79,3 +79,9 @@
     - "/usr/share/applications/gnome-background-panel.desktop"
     - "/usr/share/applications/gnome-network-panel.desktop"
     - "/usr/share/applications/gnome-sound-panel.desktop"
+
+- name: Set Wallpaper
+  gsettings:
+    schema: org.gnome.desktop.background
+    key: picture-uri
+    value: "{{ ansible_env.PWD }}/roles/gnomeshell/files/wallpaper.jpeg"
