@@ -18,6 +18,7 @@
     - language-r
     - language-restructuredtext
     - language-vala
+    - last-cursor-position
     - linter
     - linter-flake8
     - linter-shellcheck
