@@ -25,6 +25,7 @@
     - nucleus-dark-ui
     - pigments
     - python-isort
+    - python-tools
     - seti-syntax
     - sort-lines
     - vim-mode
