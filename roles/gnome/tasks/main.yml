@@ -24,6 +24,13 @@
   sudo: yes
   apt: pkg=flashplugin-installer state=absent
 
+- name: Set file type associations
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/mimeapps.list"
+    dest: ~/.config/mimeapps.list
+    force: yes
+
 - include: tomboy.yml
 
 - include: atom.yml

@@ -1,0 +1,5 @@
+[Default Applications]
+application/x-deb=gdebi.desktop
+
+[Added Associations]
+application/x-deb=gdebi.desktop;
