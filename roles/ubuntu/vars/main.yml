@@ -14,6 +14,7 @@ apt_packages:
   - cabal-debian
   - cabal-install
   - cmatrix
+  - colordiff
   - cowsay
   - curl
   - dict
