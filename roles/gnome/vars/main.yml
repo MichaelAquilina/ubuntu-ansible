@@ -22,6 +22,7 @@ ui_apt_keys:
 ui_apt_packages:
   - atom
   - dropbox
+  - caffeine
   - gdebi
   - gimp
   - gnome-dictionary
