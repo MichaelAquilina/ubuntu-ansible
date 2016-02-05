@@ -1,5 +1,5 @@
 #! /bin/sh
-title="Retrospective $(date +"%U -%b")"
+title="Retrospective $(date +"%U - %b")"
 
 # Opens a tomboy note with today's date as a title or creates it if it doesnt exist
 grep "<title>$title</title>" -r ~/.local/share/tomboy -h
