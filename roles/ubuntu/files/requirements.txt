@@ -3,4 +3,5 @@ ec2-ssh
 flake8
 ipython
 isort
+speedtest-cli
 tox
