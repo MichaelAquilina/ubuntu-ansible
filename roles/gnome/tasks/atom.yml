@@ -23,6 +23,7 @@
     - linter-flake8
     - linter-shellcheck
     - nucleus-dark-ui
+    - pdf-view
     - pigments
     - python-isort
     - python-tools
