@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Dim Lifx Mode
+Exec=lifx --fade-time 0 rgb .4 .4 .4
+Icon=applications-system
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;
