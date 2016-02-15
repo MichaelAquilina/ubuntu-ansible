@@ -48,6 +48,10 @@
   pip: name=flake8 state=latest
   sudo: yes
 
+- name: Install Lifx-Cmd globally
+  pip: name=lifx-cmd state=latest
+  sudo: yes
+
 - name: Update to latest PIP
   sudo: yes
   pip: name=pip state=latest
