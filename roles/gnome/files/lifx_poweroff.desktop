@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Turn Lifx Off
+Exec=lifx power off
+Icon=applications-system
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;

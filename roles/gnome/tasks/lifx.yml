@@ -1,0 +1,9 @@
+- name: Setup Lifx Shortcuts
+  file:
+    state: link
+    force: yes
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item }}"
+    dest: "~/.local/share/applications/{{ item }}"
+  with_items:
+    - lifx_poweron.desktop
+    - lifx_poweroff.desktop

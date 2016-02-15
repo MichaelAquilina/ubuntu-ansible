@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Turn Lifx On
+Exec=lifx power on
+Icon=applications-system
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;
