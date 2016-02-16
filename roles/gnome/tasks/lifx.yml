@@ -7,6 +7,6 @@
   with_items:
     - lifx_poweron.desktop
     - lifx_poweroff.desktop
-    - lifx_bright.desktop
-    - lifx_dim.desktop
     - lifx_red.desktop
+    - lifx_warm.desktop
+    - lifx_white.desktop

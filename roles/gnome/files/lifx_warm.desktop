@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Bright Lifx Mode
-Exec=lifx --fade-time 0 rgb 1 1 1
+Name=Warm Lifx Mode
+Exec=lifx -f 0 temperature 1000
 Icon=dialog-information
 Terminal=false
 Type=Application
