@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Midrange Lifx Mode
+Exec=lifx -f 0 temperature 32800
+Icon=dialog-information
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;
