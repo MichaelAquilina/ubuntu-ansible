@@ -39,10 +39,13 @@
 - name: Update Spotify Desktop File to use AutoScale
   sudo: yes
   lineinfile:
-    dest: /usr/share/applications/spotify.desktop
+    dest: "{{ item }}"
     regexp: "^Exec="
     state: present
     line: "Exec=spotify-autoscale"
+  with_items:
+    - /usr/share/spotify/spotify.desktop
+    - /usr/local/share/applications/spotify.desktop
 
 - name: Focus windows on creation
   gsettings:
