@@ -4,7 +4,7 @@ if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
 fi
 prompt eriner
 
-export shrug='¯_(ツ)_/¯'
+export shrug='¯\_(ツ)_/¯'
 
 prompt eriner
 
