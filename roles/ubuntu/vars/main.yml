@@ -11,6 +11,8 @@ apt_packages:
   - at
   - autoconf
   - axel
+  - bzr
+  - bzr-builder
   - cabal-debian
   - cabal-install
   - cmatrix
@@ -18,8 +20,8 @@ apt_packages:
   - cowsay
   - curl
   - dict
-  - dictd
   - dict-gcide
+  - dictd
   - exuberant-ctags
   - ffmpeg
   - figlet
