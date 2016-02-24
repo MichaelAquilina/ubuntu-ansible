@@ -32,7 +32,6 @@ ui_apt_packages:
   - pavucontrol
   - powerline
   - runsnakerun
-  - skype
   - spotify-client
   - synaptic
   - synapse
