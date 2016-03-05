@@ -5,7 +5,7 @@ ui_apt_repos:
   - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
-  - 'deb http://dl.google.com/linux/chrome/deb/ stable main'
+  - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
   - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
