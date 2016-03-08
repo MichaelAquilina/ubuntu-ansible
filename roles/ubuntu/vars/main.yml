@@ -43,6 +43,7 @@ apt_packages:
   - nfs-kernel-server
   - nmap
   - pass
+  - python-dev
   - python-setuptools
   - python-software-properties
   - python-sqlparse
