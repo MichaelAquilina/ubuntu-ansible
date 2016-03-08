@@ -75,3 +75,5 @@
 - include: vim.yml
 
 - include: development.yml
+
+- include: docker.yml
