@@ -8,13 +8,11 @@ ui_apt_repos:
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
-  - 'deb http://ppa.launchpad.net/synapse-core/ppa/ubuntu vivid main'
   - 'ppa:zeal-developers/ppa'
 
 ui_apt_keys:
   - {keyserver: keyserver.ubuntu.com, id: BBEBDCB318AD50EC6865090613B00F1FD2C19886}  # Spotify
   - {keyserver: keyserver.ubuntu.com, id: BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7}  # Valve
-  - {keyserver: keyserver.ubuntu.com, id: 3DD99294193A09EF9270EEAFE4010F076C2225A4}  # Synapse Core Team
   - {keyserver: keyserver.ubuntu.com, id: 1C61A2656FB57B7E4DE0F4C1FC918B335044912E}  # Dropbox
   - {keyserver: keyserver.ubuntu.com, id: 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991}  # Google
   - {keyserver: keyserver.ubuntu.com, id: DC2887936B4153CA9AFB151B0F678A01569113AE}  # Caffeine Developers
@@ -34,7 +32,6 @@ ui_apt_packages:
   - runsnakerun
   - spotify-client
   - synaptic
-  - synapse
   - terminator
   - tomboy
   - virtualbox-5.0
