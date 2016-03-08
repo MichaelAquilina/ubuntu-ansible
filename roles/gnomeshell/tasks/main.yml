@@ -89,3 +89,9 @@
     schema: org.gnome.desktop.background
     key: picture-uri
     value: "'{{ ansible_env.PWD }}/roles/gnomeshell/files/wallpaper.jpeg'"
+
+- name: Set Screensaver Wallpaper
+  gsettings:
+    schema: org.gnome.desktop.screensaver
+    key: picture-uri
+    value: "'file:///usr/share/backgrounds/Greenish_by_EstebanMitnick.jpg'"
