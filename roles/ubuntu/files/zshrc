@@ -1,10 +1,17 @@
+#
+# User configuration sourced by interactive shells
+#
+
 # Source zim
 if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
   source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
 fi
-prompt eriner
+# Source zim
+if [[ -s ${ZDOTDIR:-${HOME}}/.zim/init.zsh ]]; then
+  source ${ZDOTDIR:-${HOME}}/.zim/init.zsh
+fi
 
-export shrug='¯\_(ツ)_/¯'
+export shrug='¯_(ツ)_/¯'
 
 prompt eriner
 
