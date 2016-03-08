@@ -2,7 +2,11 @@
   file: state=directory dest=~/.config/terminator
 
 - name: Setup terminator
-  file: state=link src={{ ansible_env.PWD }}/roles/gnome/files/terminator_config dest=~/.config/terminator/config
+  file:
+    state: link
+    force: yes
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/terminator_config"
+    dest: ~/.config/terminator/config
 
 - name: Set Terminator as default terminal
   gsettings:
