@@ -28,6 +28,7 @@
   user:
     name: "{{ ansible_env.USER }}"
     groups: docker
+    append: yes
 
 - name: Start Docker Service
   sudo: yes
