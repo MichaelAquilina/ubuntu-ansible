@@ -19,7 +19,7 @@
   editor:
     fontSize: 13
     invisibles: {}
-    preferredLineLength: 120
+    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
