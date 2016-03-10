@@ -96,6 +96,10 @@ alias gm="git merge"
 alias gst="git stash"
 alias gf="git fetch --prune"
 
+# Docker Aliases
+alias dc="docker-compose"
+alias dcr="docker-compose run"
+
 # Tig Aliases
 alias ta="tig --all"
 alias t="tig"
