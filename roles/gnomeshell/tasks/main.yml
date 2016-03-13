@@ -52,7 +52,7 @@
     line: "Exec=spotify-autoscale"
   with_items:
     - /usr/share/spotify/spotify.desktop
-    - /usr/share/applications/spotify.desktop
+    - /usr/local/share/applications/spotify.desktop
 
 - name: Focus windows on creation
   gsettings:
