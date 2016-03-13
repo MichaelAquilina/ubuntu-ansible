@@ -34,6 +34,7 @@
     - {filename: vimrc, dest: ~/.vimrc }
     - {filename: htoprc, dest: ~/.config/htop/htoprc }
     - {filename: xprofile, dest: ~/.xprofile}
+    - {filename: ansible.cfg, dest: ~/.ansible.cfg}
 
 - name: Setup Insults
   sudo: yes
