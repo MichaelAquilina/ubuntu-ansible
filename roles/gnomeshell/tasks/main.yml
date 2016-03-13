@@ -4,6 +4,12 @@
     key: clock-show-date
     value: "true"
 
+- name: Set Close Window Shortcuts
+  gsettings:
+    schema: org.gnome.desktop.wm.keybindings
+    key: close
+    value: "['<Alt>q', '<Alt>F4']"
+
 - name: System Monitor Dependencies
   sudo: yes
   apt: name={{ item }}
