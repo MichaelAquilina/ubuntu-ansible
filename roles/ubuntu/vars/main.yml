@@ -15,6 +15,7 @@ apt_packages:
   - axel
   - bzr
   - bzr-builder
+  - ruby2.2
   - cabal-debian
   - cabal-install
   - cmatrix
