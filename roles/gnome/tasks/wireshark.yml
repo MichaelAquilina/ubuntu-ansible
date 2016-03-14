@@ -1,0 +1,11 @@
+- name: Wireshark is Installed
+  sudo: yes
+  apt:
+    name: wireshark
+
+- name: User is in Wireshark group
+  sudo: yes
+  user:
+    name: "{{ ansible_env.USER }}"
+    groups: wireshark
+    append: yes
