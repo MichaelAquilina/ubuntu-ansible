@@ -82,6 +82,22 @@ HISTCONTROL="ignoreboth"
 export HISTSIZE=1000
 export SAVEHIST=2000
 
+# Lyst functions
+function migrate() {
+  docker-compose run $1 django-admin migrate $1 $2
+}
+
+function makemigrations() {
+  docker-compose run $1 django-admin makemigrations $1 -n $2
+}
+
+function showmigrations() {
+  docker-compose run $1 django-admin showmigrations $1
+}
+
+# Grep Aliases
+alias igrep="grep -i"
+
 # Git Aliases
 alias gs="git status"
 alias gc="git commit"
