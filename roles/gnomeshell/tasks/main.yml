@@ -16,6 +16,12 @@
     key: sort-directories-first
     value: "true"
 
+- name: List Folder View
+  gsettings:
+    schema: org.gnome.nautilus.preferences
+    key: default-folder-viewer
+    value: "'list-view'"
+
 - name: System Monitor Dependencies
   sudo: yes
   apt: name={{ item }}
