@@ -10,6 +10,12 @@
     key: close
     value: "['<Alt>q', '<Alt>F4']"
 
+- name: Sort Directories First
+  gsettings:
+    schema: org.gnome.nautilus.preferences
+    key: sort-directories-first
+    value: "true"
+
 - name: System Monitor Dependencies
   sudo: yes
   apt: name={{ item }}
