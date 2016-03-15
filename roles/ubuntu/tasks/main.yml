@@ -78,3 +78,5 @@
 - include: development.yml
 
 - include: docker.yml
+
+- include: password_sync.yml
