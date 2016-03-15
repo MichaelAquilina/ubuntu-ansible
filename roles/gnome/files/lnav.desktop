@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=lnav
+Comment=ncurses-based log file viewer
+Keywords=logs;debug;error;
+Exec=lnav
+Icon=logview
+Terminal=true
+Type=Application
+StartupNotify=false

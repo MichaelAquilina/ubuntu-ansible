@@ -31,6 +31,13 @@
     dest: ~/.config/mimeapps.list
     force: yes
 
+- name: Setup lnav shortcut
+  file:
+    state: link
+    force: yes
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/lnav.desktop"
+    dest: "~/.local/share/applications/lnav.desktop"
+
 - include: wireshark.yml
 
 - include: lifx.yml
