@@ -29,6 +29,7 @@ ui_apt_packages:
   - kdiff3
   - network-manager-openvpn
   - pavucontrol
+  - polari
   - powerline
   - runsnakerun
   - spotify-client
