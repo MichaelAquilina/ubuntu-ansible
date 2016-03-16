@@ -16,8 +16,15 @@
     repo: git@github.com:MichaelAquilina/zprezto.git
     dest: '{{ ansible_env.HOME }}/.zprezto'
     recursive: yes
-    update: no
+    update: yes
   notify: Setup Zprezto
+
+- name: Setup zpreztorc
+  file:
+    state: link
+    dest: "{{ ansible_env.HOME }}/.zpreztorc"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zpreztorc"
+    force: yes
 
 - name: Setup dircolors
   file:
