@@ -13,7 +13,7 @@
 
 - name: Download Zprezto Git Repo
   git:
-    repo: git@github.com:MichaelAquilina/zprezto.git
+    repo: git@github.com:MichaelAquilina/prezto.git
     dest: '{{ ansible_env.HOME }}/.zprezto'
     recursive: yes
     update: yes
