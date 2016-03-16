@@ -169,13 +169,3 @@ function repeat() {
   done
 }
 
-function set_title_preexec() {
-  set_title "$2"
-}
-
-function reset_title_precmd() {
-  set_title "$SHELL"
-}
-
-preexec_functions+=(set_title_preexec)
-precmd_functions+=(reset_title_precmd)
