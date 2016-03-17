@@ -30,11 +30,15 @@
   with_items:
     - {filename: tigrc, dest: ~/.tigrc }
     - {filename: nanorc, dest: ~/.nanorc }
-    - {filename: gitconfig, dest: ~/.gitconfig }
     - {filename: vimrc, dest: ~/.vimrc }
     - {filename: htoprc, dest: ~/.config/htop/htoprc }
     - {filename: xprofile, dest: ~/.xprofile}
     - {filename: ansible.cfg, dest: ~/.ansible.cfg}
+
+- name: Setup gitconfig
+  template:
+    dest: ~/.gitconfig
+    src: gitconfig.j2
 
 - name: Setup Insults
   sudo: yes
