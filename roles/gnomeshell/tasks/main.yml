@@ -90,6 +90,12 @@
     key: resize-with-right-button
     value: "true"
 
+- name: Set Gnomeshell favourites
+  gsettings:
+    schema: org.gnome.shell
+    key: favorite-apps
+    value: "['google-chrome.desktop', 'terminator.desktop', 'org.gnome.Polari.desktop', 'org.gnome.Nautilus.desktop', 'wireshark.desktop']"
+
 - name: Remove NoDisplay from Gnome Shortucts
   sudo: yes
   ini_file: "dest={{ item }} option=NoDisplay value=false section='Desktop Entry'"
