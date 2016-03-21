@@ -73,12 +73,14 @@
     - "~/Public"
     - "~/examples.desktop"
 
+- name: Create Dev Directory
+  file: path={{ ansible_env.HOME}}/Development
+        state=directory
+
 - include: gpg.yml
 
 - include: zsh.yml
 
 - include: vim.yml
-
-- include: development.yml
 
 - include: docker.yml

@@ -1,9 +1,0 @@
-- name: Create Dev Directory
-  file: path={{ ansible_env.HOME}}/Development
-        state=directory
-
-- name: Setup local bin folder
-  file: path=~/.bin state=directory
-
-- name: Setup Custom Executables
-  file: state=link dest=~/.bin/unescape src={{ ansible_env.PWD }}/roles/ubuntu/files/unescape
