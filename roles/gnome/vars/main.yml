@@ -19,8 +19,9 @@ ui_apt_keys:
 
 ui_apt_packages:
   - atom
-  - dropbox
   - caffeine
+  - dropbox
+  - elementary-icon-theme  # Installs hi-res icons on all icon themes
   - gdebi
   - gimp
   - gnome-dictionary
