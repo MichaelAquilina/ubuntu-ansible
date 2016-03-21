@@ -29,7 +29,7 @@ echo "${Blue}Public${Color_Off}: $public_ip 	 ${Blue}Local${Color_Off}: $local_i
 export ANSIBLE_NOCOWS=1
 
 # Local executable binaries
-export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Include arcanist if available
 if [[ -s "/opt/arc/arcanist/bin" ]]; then
