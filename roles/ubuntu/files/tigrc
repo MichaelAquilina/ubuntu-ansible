@@ -11,7 +11,7 @@ bind generic Y !@sh -c "echo -n %(commit) | xclip -selection c"
 set vertical-split = false
 set line-graphics = utf-8
 set id-width = 4
-set main-view = date author id:yes,width=6 commit-title:graph=true,refs=true
+set main-view = date author id:yes,width=6 commit-title:graph=false,refs=true
 
 # general
 color   default                 15      235
