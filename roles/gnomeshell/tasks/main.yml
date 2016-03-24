@@ -4,6 +4,12 @@
     key: clock-show-date
     value: "true"
 
+- name: Never Auto-run with Removable Media
+  gsettings:
+    schema: org.gnome.desktop.media-handling
+    key: autorun-never
+    value: "true"
+
 - name: Set Close Window Shortcuts
   gsettings:
     schema: org.gnome.desktop.wm.keybindings
