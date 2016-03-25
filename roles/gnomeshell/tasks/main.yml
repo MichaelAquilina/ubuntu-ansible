@@ -72,6 +72,16 @@
     - /usr/share/spotify/spotify.desktop
     - /usr/local/share/applications/spotify.desktop
 
+- name: Automatically clean Temp/Trash files
+  gsettings:
+    schema: org.gnome.desktop.privacy
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {key: remove-old-temp-files, value: "true"}
+    - {key: remove-old-trash-files, value: "true"}
+    - {key: old-files-age, value: "uint32 1"}
+
 - name: Focus windows on creation
   gsettings:
     schema: org.gnome.desktop.wm.preferences
