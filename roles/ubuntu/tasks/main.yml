@@ -74,8 +74,9 @@
     - "~/examples.desktop"
 
 - name: Create Dev Directory
-  file: path={{ ansible_env.HOME}}/Development
-        state=directory
+  file:
+    path: "{{ ansible_env.HOME}}/Development"
+    state: directory
 
 - include: gpg.yml
 
