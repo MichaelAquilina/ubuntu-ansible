@@ -2,7 +2,6 @@
 ui_apt_repos:
   - 'deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner'
   - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
-  - 'deb http://linux.dropbox.com/ubuntu trusty main'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
@@ -20,7 +19,6 @@ ui_apt_keys:
 ui_apt_packages:
   - atom
   - caffeine
-  - dropbox
   - elementary-icon-theme  # Installs hi-res icons on all icon themes
   - gdebi
   - gimp
