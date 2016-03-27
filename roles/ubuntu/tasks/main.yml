@@ -78,6 +78,12 @@
     path: "{{ ansible_env.HOME}}/Development"
     state: directory
 
+- name: Crontab - Clear Downloads every 4 hours
+  cron:
+    job: "find ~/Downloads -type f -mtime +0 -delete"
+    hour: "*/4"
+    name: "Clear Downloads"
+
 - include: gpg.yml
 
 - include: zsh.yml
