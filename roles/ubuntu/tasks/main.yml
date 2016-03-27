@@ -82,6 +82,7 @@
   cron:
     job: "find ~/Downloads -type f -mtime +0 -delete"
     hour: "*/4"
+    minute: "0"
     name: "Clear Downloads"
 
 - include: gpg.yml
