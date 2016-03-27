@@ -125,6 +125,7 @@
     - "/usr/share/applications/gnome-network-panel.desktop"
     - "/usr/share/applications/gnome-power-panel.desktop"
     - "/usr/share/applications/gnome-printers-panel.desktop"
+    - "/usr/share/applications/gnome-privacy-panel.desktop"
     - "/usr/share/applications/gnome-sound-panel.desktop"
 
 - name: Set Wallpaper
