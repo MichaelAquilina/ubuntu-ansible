@@ -1,12 +1,11 @@
 - name: Setup Tomboy TODO Shell Script
-  sudo: yes
   file:
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"
     dest: "{{ item.dest }}"
   with_items:
-    - {src: tomboy_todo.sh, dest: /usr/bin/todo}
-    - {src: tomboy_retrospective.sh, dest: /usr/bin/retrospective}
+    - {src: tomboy_todo.sh, dest: ~/.local/bin/todo}
+    - {src: tomboy_retrospective.sh, dest: ~/.local/bin/retrospective}
 
 - name: Setup Tomboy TODO Desktop Shortcut
   file:
