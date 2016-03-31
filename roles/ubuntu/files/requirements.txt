@@ -1,5 +1,4 @@
 ansible==1.9.4
-ec2-ssh
 flake8
 httpie
 ipython
