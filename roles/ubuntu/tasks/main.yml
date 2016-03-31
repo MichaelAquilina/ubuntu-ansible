@@ -64,6 +64,7 @@
 - name: Install Default PIP Requirements
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements.txt"
+    state: latest
     virtualenv: ~/.virtualenvs/default3
 
 - name: Remove useless items
