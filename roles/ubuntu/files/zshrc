@@ -39,9 +39,8 @@ fi
 # Source virtualenvwrapper if it's installed
 if [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
   source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-  if ! workon default; then
-    mkvirtualenv default
-    workon default
+  if ! workon default3; then
+    mkvirtualenv --python=/usr/bin/python3 default3
   fi
 fi
 
