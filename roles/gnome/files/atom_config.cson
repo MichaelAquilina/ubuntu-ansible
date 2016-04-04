@@ -14,7 +14,7 @@
     projectHome: "/home/michael/Development"
     themes: [
       "nucleus-dark-ui"
-      "seti-syntax"
+      "firewatch-syntax"
     ]
   editor:
     fontSize: 13
