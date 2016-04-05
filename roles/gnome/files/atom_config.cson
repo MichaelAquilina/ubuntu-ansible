@@ -40,6 +40,7 @@
   "spell-check": {}
   "tree-view":
     hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
   welcome:
