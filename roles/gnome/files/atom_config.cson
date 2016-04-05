@@ -4,7 +4,7 @@
   blame: {}
   core:
     autoHideMenuBar: true
-    excludeVcsIgnoredPaths: false
+    excludeVcsIgnoredPaths: true
     ignoredNames: [
       "*.pyc"
     ]
