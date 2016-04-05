@@ -7,6 +7,7 @@
     excludeVcsIgnoredPaths: true
     ignoredNames: [
       "*.pyc"
+      "__pycache__"
     ]
     packagesWithKeymapsDisabled: [
       "vim-mode"
