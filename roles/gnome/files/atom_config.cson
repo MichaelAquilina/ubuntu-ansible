@@ -40,8 +40,8 @@
   "rst-preview": {}
   "spell-check": {}
   "tree-view":
-    hideVcsIgnoredFiles: true
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
   welcome:
