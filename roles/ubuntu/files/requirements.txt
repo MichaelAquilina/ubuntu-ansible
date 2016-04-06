@@ -1,4 +1,3 @@
-ansible==1.9.4
 flake8
 httpie
 ipython
