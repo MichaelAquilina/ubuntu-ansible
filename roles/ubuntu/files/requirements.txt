@@ -6,3 +6,5 @@ jupyter
 isort
 speedtest-cli
 tox
+numpy
+pandas
