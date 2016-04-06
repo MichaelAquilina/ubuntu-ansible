@@ -173,6 +173,15 @@ function repeat() {
   done
 }
 
+function tupload() {
+  cat $1|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/$1
+}
+
+function tdownload() {
+  curl "$1" -X GET | gpg -o- > "$(basename $1)"
+}
+
+
 color_cheatsheet() {
    x=`tput op`
    y=`printf %$((${COLUMNS}-6))s`
