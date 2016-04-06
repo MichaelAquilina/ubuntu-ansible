@@ -15,3 +15,7 @@
     - name: email
       prompt: "Enter Git email address"
       private: no
+
+    - name: signingkey
+      prompt: "Enter your GPG signing key"
+      private: no
