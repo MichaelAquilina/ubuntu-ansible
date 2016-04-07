@@ -58,6 +58,7 @@ color   'diff_tree '              81      default
 color   'diff_stat '              81      default
 color   "Reported-by:"          156     default
 
+color   'gpg: '                  51     default
 color   'Author: '               156     default
 color   'Commit: '               213     default
 color   'Author Date: '                221     default
