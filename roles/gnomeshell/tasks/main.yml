@@ -128,6 +128,17 @@
     - "/usr/share/applications/gnome-privacy-panel.desktop"
     - "/usr/share/applications/gnome-sound-panel.desktop"
 
+- name: Set Startup applications
+  file:
+    state: link
+    force: yes
+    src: "{{ ansible_env.PWD}}/roles/gnomeshell/files/autostart/{{ item }}"
+    dest: ~/.config/autostart/{{ item }}
+  with_items:
+    - caffeine.desktop
+    - redshift-gtk.desktop
+    - tomboy.desktop
+
 - name: Set Wallpaper
   gsettings:
     schema: org.gnome.desktop.background
