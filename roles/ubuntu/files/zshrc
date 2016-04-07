@@ -104,8 +104,8 @@ alias igrep="grep -i"
 
 # Git Aliases
 alias gs="git status"
-alias gc="git commit -S"
-alias gca="git commit --amend -S"
+alias gc="git commit"
+alias gca="git commit --amend"
 alias gco="git checkout"
 alias gap="git add -p"
 alias gk="git kdiff"
