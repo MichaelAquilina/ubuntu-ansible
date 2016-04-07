@@ -173,8 +173,20 @@ function repeat() {
   done
 }
 
+TUPLOAD_HISTORY=~/.tupload_history
+
+function thistory() {
+  cat $TUPLOAD_HISTORY
+}
+
 function tupload() {
-  cat $1|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/$1
+  URL=$(cat $1|gpg -ac -o- 2>/dev/null|curl -s -X PUT --upload-file "-" https://transfer.sh/$1)
+
+  touch $TUPLOAD_HISTORY
+  TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+
+  echo "[$TIMESTAMP]:   $URL" >> $TUPLOAD_HISTORY
+  echo $URL
 }
 
 function tdownload() {
