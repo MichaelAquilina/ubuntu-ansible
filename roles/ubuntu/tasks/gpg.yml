@@ -12,8 +12,8 @@
     path: ~/.gnupg
 
 - name: Create GPG Configuration File
-  copy:
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gpg.conf"
+  template:
+    src: "gpg.conf.j2"
     dest: ~/.gnupg/gpg.conf
     force: yes
     mode: 0600
