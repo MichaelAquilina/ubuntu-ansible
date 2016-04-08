@@ -190,7 +190,7 @@ function tupload() {
 }
 
 function tdownload() {
-  curl "$1" -X GET | gpg -o- > "$(basename $1)"
+  curl "$1" -X GET | gpg -o- 2>/dev/null >! "$(basename $1)"
 }
 
 
