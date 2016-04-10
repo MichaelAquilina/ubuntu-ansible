@@ -6,6 +6,8 @@ After installing a fresh Ubuntu installation all you need to do is install ansib
     sudo apt-get install python-pip
     sudo pip install ansible
 
+NOTE: The playbooks in this repo currently only work with ansible 1.9.4. Install using `pip install ansible==1.9.4`
+
 Once thats done then run one of the playbooks found in this repo.
 
 `setup_gnome.yml` is used for setting up a Ubuntu Gnome environment using Gnome Shell.
