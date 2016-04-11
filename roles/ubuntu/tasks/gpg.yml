@@ -10,10 +10,3 @@
     state: directory
     mode: 0700
     path: ~/.gnupg
-
-- name: Create GPG Configuration File
-  template:
-    src: "gpg.conf.j2"
-    dest: ~/.gnupg/gpg.conf
-    force: yes
-    mode: 0600
