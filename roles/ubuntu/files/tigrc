@@ -8,7 +8,7 @@ bind generic Y !@sh -c "echo -n %(commit) | xclip -selection c"
 # vim: set expandtab sw=4 tabstop=4:
 # *color* 'area' 'fgcolor' 'bgcolor' '[attributes]'
 
-set vertical-split = false
+set vertical-split = auto
 set line-graphics = utf-8
 set id-width = 4
 set main-view = date author id:yes,width=6 commit-title:graph=false,refs=true
