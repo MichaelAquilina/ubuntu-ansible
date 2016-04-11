@@ -38,6 +38,15 @@
     src: "{{ ansible_env.PWD }}/roles/gnome/files/lnav.desktop"
     dest: "~/.local/share/applications/lnav.desktop"
 
+- name: Meld Settings
+  gsettings:
+    schema: org.gnome.meld
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {key: highlight-syntax, value: "true"}
+    - {key: style-scheme, value: "'cobalt'"}
+
 - include: wireshark.yml
 
 - include: lifx.yml
