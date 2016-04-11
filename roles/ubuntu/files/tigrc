@@ -12,6 +12,8 @@ set vertical-split = auto
 set line-graphics = utf-8
 set id-width = 4
 set main-view = date author id:yes,width=6 commit-title:graph=false,refs=true
+set log-options = --show-signature
+set diff-options = --show-signature
 
 # general
 color   default                 15      235
