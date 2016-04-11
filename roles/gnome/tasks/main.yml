@@ -46,6 +46,7 @@
   with_items:
     - {key: highlight-syntax, value: "true"}
     - {key: style-scheme, value: "'cobalt'"}
+    - {key: show-line-numbers, value: "true"}
 
 - include: wireshark.yml
 
