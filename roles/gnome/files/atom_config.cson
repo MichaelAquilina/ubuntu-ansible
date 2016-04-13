@@ -4,6 +4,10 @@
   blame: {}
   core:
     autoHideMenuBar: true
+    customFileTypes:
+      "text.html.jinja": [
+        "jinja"
+      ]
     excludeVcsIgnoredPaths: true
     ignoredNames: [
       "*.pyc"
