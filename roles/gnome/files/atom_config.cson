@@ -19,7 +19,7 @@
     projectHome: "/home/michael/Development"
     themes: [
       "nucleus-dark-ui"
-      "firewatch-syntax"
+      "an-old-hope-syntax"
     ]
   editor:
     fontSize: 13
