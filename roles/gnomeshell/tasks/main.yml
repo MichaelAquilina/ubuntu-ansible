@@ -44,6 +44,7 @@
     - {uri: "MichaelAquilina/gnome-shell-extension-stealmyfocus", name: "steal-my-focus@kagesenshi.org", subfolder: ""}
     - {uri: "MichaelAquilina/gnome-shell-extension-appindicator", name: "appindicatorsupport@rgcjonas.gmail.com", subfolder: ""}
     - {uri: "HROMANO/nohotcorner", name: "nohotcorner@azuri.free.fr", subfolder: ""}
+    - {uri: "MichaelAquilina/vibou.gTile", name: "gTile@vibou", subfolder: ""}
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
