@@ -127,6 +127,7 @@
     - "/usr/share/applications/gnome-printers-panel.desktop"
     - "/usr/share/applications/gnome-privacy-panel.desktop"
     - "/usr/share/applications/gnome-sound-panel.desktop"
+    - "/usr/share/applications/gnome-user-accounts-panel.desktop"
 
 - name: Set Startup applications
   file:
