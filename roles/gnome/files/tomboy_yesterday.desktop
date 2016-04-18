@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=TODO
-Exec=tomboy_todo
+Name=YESTERDAY
+Exec=tomboy_todo yesterday
 Icon=tomboy
 StartupNotify=true
 Terminal=false

@@ -1,12 +1,19 @@
 #! /bin/sh
-today=$(date +%Y-%m-%d)
+if [ -n "$1" ]; then
+  echo $1
+  DATE="$1"
+else
+  DATE="today"
+fi
 
-# Opens a tomboy note with today's date as a title or creates it if it doesnt exist
-grep "<title>$today</title>" -r ~/.local/share/tomboy -h
+target=$(date +%Y-%m-%d -d $DATE)
+
+# Opens a tomboy note with target's date as a title or creates it if it doesnt exist
+grep "<title>$target</title>" -r ~/.local/share/tomboy -h
 echo $?
 if [ $? -eq 0 ];
 then
-  tomboy --new-note "$today"
+  tomboy --new-note "$target"
 else
-  tomboy --open-note "$today"
+  tomboy --open-note "$target"
 fi

@@ -5,7 +5,7 @@
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"
     dest: "{{ item.dest }}"
   with_items:
-    - {src: tomboy_todo.sh, dest: /usr/bin/todo}
+    - {src: tomboy_todo.sh, dest: /usr/bin/tomboy_todo}
     - {src: tomboy_retrospective.sh, dest: /usr/bin/retrospective}
 
 - name: Setup Tomboy TODO Desktop Shortcut
@@ -15,6 +15,7 @@
     dest: "~/.local/share/applications/{{ item }}"
   with_items:
     - tomboy_todo.desktop
+    - tomboy_yesterday.desktop
     - tomboy_retrospective.desktop
 
 - name: Setup Tomboy New Note Desktop Shortcut
