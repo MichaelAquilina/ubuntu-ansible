@@ -133,6 +133,7 @@ alias vh="vagrant halt"
 alias vp="vagrant provision"
 
 # Utilities
+alias pm="pygmentize"
 alias xopen="xdg-open"
 alias LS="LS -e"  # Allow interrupt by Ctrl+C
 alias explore="nautilus"
