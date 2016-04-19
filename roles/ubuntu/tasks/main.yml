@@ -82,6 +82,13 @@
     minute: "0"
     name: "Clear Downloads"
 
+- name: Global Git Status Script
+  file:
+    state: link
+    force: yes
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/git_status.sh"
+    dest: ~/bin/git_status
+
 - include: gpg.yml
 
 - include: zsh.yml
