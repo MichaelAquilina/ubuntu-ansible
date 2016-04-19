@@ -119,6 +119,22 @@ alias gf="git fetch --prune"
 # Docker Aliases
 alias dc="docker-compose"
 alias dcr="docker-compose run"
+function did() {
+  docker ps -qa -f="name=$1"
+}
+
+function dl() {
+  container_id=$(did $1)
+  docker logs $container_id
+}
+function ds() {
+  container_id=$(did $1)
+  docker stop $container_id
+}
+function dr() {
+  container_id=$(did $1)
+  docker rm $container_id
+}
 
 # Tig Aliases
 alias ta="tig --all"
