@@ -30,6 +30,7 @@
     - python-tools
     - seti-syntax
     - sort-lines
+    - tab-title
     - vim-mode
 
 - name: Setup Atom configuration
