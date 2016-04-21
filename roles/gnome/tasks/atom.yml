@@ -16,11 +16,13 @@
     - highlight-selected
     - hyperclick
     - keybinding-cheatsheet
+    - language-docker
     - language-r
     - language-restructuredtext
     - language-vala
     - last-cursor-position
     - linter
+    - linter-docker
     - linter-flake8
     - linter-shellcheck
     - nucleus-dark-ui
