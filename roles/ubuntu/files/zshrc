@@ -12,6 +12,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle zsh-users/zsh-autosuggestions
 
+DISABLE_VENV_CD=1
 antigen bundle virtualenvwrapper
 
 antigen bundle history
