@@ -10,6 +10,8 @@ antigen bundle zsh-users/zsh-completions
 
 antigen bundle virtualenvwrapper
 
+antigen bundle history
+
 antigen apply
 
 workon default3
