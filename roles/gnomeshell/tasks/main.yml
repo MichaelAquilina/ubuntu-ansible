@@ -79,7 +79,7 @@
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - {key: remove-old-temp-files, value: "true"}
+    - {key: remove-old-temp-files, value: "false"}
     - {key: remove-old-trash-files, value: "true"}
     - {key: old-files-age, value: "uint32 1"}
 
