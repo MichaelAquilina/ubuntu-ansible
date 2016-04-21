@@ -1,71 +1,33 @@
-#
-# User configuration sourced by interactive shells
-#
+#! /bin/zsh
+source ~/.antigen.zsh
 
-# Source zim
-if [[ -s ${ZDOTDIR:-${HOME}}/.zprezto/init.zsh ]]; then
-  source ${ZDOTDIR:-${HOME}}/.zprezto/init.zsh
-fi
+antigen use oh-my-zsh
+
+antigen theme graingert/agnoster-zsh-theme agnoster
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-completions
+
+antigen bundle virtualenvwrapper
+
+antigen apply
+
+workon default3
 
 export shrug='¯\_(ツ)_/¯'
 
-prompt agnoster
-
-date
 echo "Is the Internet on Fire? $shrug"
-# istheinternetonfire?
 host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
-
-Blue="$(tput setaf 4)"
-Color_Off="$(tput sgr0)"
-
-public_ip="$(curl ifconfig.co -s --connect-timeout 1)"
-local_ips="$(ip -4 addr | grep inet | awk '{print $2}' | tr '
-' '	')"
-
-echo "${Blue}Public${Color_Off}: $public_ip 	 ${Blue}Local${Color_Off}: $local_ips"
 
 # Disable ansible from using cowsay
 export ANSIBLE_NOCOWS=1
 
-# Local executable binaries
-export PATH="$PATH:$HOME/.local/bin"
-
-# Include arcanist if available
-if [[ -s "/opt/arc/arcanist/bin" ]]; then
-  export PATH="$PATH:/opt/arc/arcanist/bin"
-fi
-
-# Source virtualenvwrapper if it's installed
-if [[ -s "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]]; then
-  source "/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
-  if ! workon default3; then
-    mkvirtualenv --python=/usr/bin/python3 default3
-  fi
-fi
-
 # Source any additional configuration specific to this machine
-if [[ -s ~/.machinerc ]]; then
+if [[ -f ~/.machinerc ]]; then
   source ~/.machinerc
 fi
 
-# Read boto vars into env
-if [[ -s ~/.boto ]]; then
-  export AWS_ACCESS_KEY_ID=$(grep aws_access_key_id ~/.boto | awk '{print $3;}')
-  export AWS_SECRET_ACCESS_KEY=$(grep aws_secret_access_key ~/.boto | awk '{print $3;}')
-  export AWS_EC2_REGION=$(grep ec2_region_name ~/.boto | awk '{print $3;}')
-fi
-
-# Read logentries account key if available
-if [[ -s ~/.logentries ]]; then
-  export LOGENTRIES_ACCOUNT_KEY=$(cat ~/.logentries)
-fi
-
 setopt INC_APPEND_HISTORY
-
-function google () {
-   xopen "https://www.google.co.uk/search?q=$1"
-}
 
 # Allow ctrl+left and ctrl+right movement
 bindkey ';5D' emacs-backward-word
@@ -83,21 +45,8 @@ export EDITOR="vim"
 HISTCONTROL="ignoreboth"
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=1000
-export SAVEHIST=2000
-
-# Lyst functions
-function migrate() {
-  docker-compose run $1 django-admin migrate $1 $2
-}
-
-function makemigrations() {
-  docker-compose run $1 django-admin makemigrations $1 -n $2
-}
-
-function showmigrations() {
-  docker-compose run $1 django-admin showmigrations $1
-}
+export HISTSIZE=9999999
+export SAVEHIST=9999999
 
 # Grep Aliases
 alias igrep="grep -i"
@@ -116,26 +65,6 @@ alias gm="git merge"
 alias gst="git stash"
 alias gf="git fetch --prune"
 
-# Docker Aliases
-alias dc="docker-compose"
-alias dcr="docker-compose run"
-function did() {
-  docker ps -qa -f="name=$1"
-}
-
-function dl() {
-  container_id=$(did $1)
-  docker logs $container_id
-}
-function ds() {
-  container_id=$(did $1)
-  docker stop $container_id
-}
-function dr() {
-  container_id=$(did $1)
-  docker rm $container_id
-}
-
 # Tig Aliases
 alias ta="tig --all"
 alias t="tig"
@@ -144,7 +73,6 @@ alias t="tig"
 alias vs="vagrant ssh"
 alias vc="vagrant ssh -c"
 alias vu="vagrant up"
-alias vd="vagrant_down"  # Custom function
 alias vh="vagrant halt"
 alias vp="vagrant provision"
 
@@ -153,65 +81,28 @@ alias pm="pygmentize"
 alias xopen="xdg-open"
 alias LS="LS -e"  # Allow interrupt by Ctrl+C
 alias explore="nautilus"
-alias dmesg="dmesg --color=always | less +cmdG"
 alias grepc="grep --color=always"
 alias netinfo="netstat --tcp --udp --numeric-ports -a --program | most"
 alias rand="openssl rand -base64"
 alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
-alias xc="xcopy"
-alias xp="xpaste"
 
 # Enable 256 color mode
 export TERM="xterm-256color"
 
-# Allow setting the tab title in terminator and other x-term style shells
-function set_title() {
-  printf "]2;%s" "$*";
-}
-
-function google() {
-  query_args=$@
-  xopen "https://www.google.co.uk/search?q=${query_args// /+}"
+function whatismyip() {
+  curl ifconfig.co -s --connect-timeout 1
 }
 
 # Recursively list all values in gsettings
-function list_all_gsettings() {
+function all_gsettings() {
   for schema in $(gsettings list-schemas)
   do
       gsettings list-recursively "$schema"
   done
 }
 
-function repeat() {
-  for i in "$(seq 1 $1)";
-  do
-      ${@:2}
-  done
-}
-
-TUPLOAD_HISTORY=~/.tupload_history
-
-function thistory() {
-  cat $TUPLOAD_HISTORY
-}
-
-function tupload() {
-  URL=$(cat $1|gpg -ac -o- 2>/dev/null|curl -s -X PUT --upload-file "-" https://transfer.sh/$1)
-
-  touch $TUPLOAD_HISTORY
-  TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-
-  echo "[$TIMESTAMP]:   $URL" >> $TUPLOAD_HISTORY
-  echo $URL
-}
-
-function tdownload() {
-  curl "$1" -X GET | gpg -o- 2>/dev/null >! "$(basename $1)"
-}
-
-
-color_cheatsheet() {
+function color_cheatsheet() {
    x=`tput op`
    y=`printf %$((${COLUMNS}-6))s`
    for i in {0..256}; do

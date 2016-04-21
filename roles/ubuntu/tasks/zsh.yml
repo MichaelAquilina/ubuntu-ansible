@@ -4,21 +4,6 @@
     name: '{{ ansible_env.USER }}'
     shell: /bin/zsh
 
-- name: Download Zprezto Git Repo
-  git:
-    repo: git@github.com:MichaelAquilina/prezto.git
-    dest: '{{ ansible_env.HOME }}/.zprezto'
-    recursive: yes
-    update: yes
-  notify: Setup Zprezto
-
-- name: Setup zpreztorc
-  file:
-    state: link
-    dest: "{{ ansible_env.HOME }}/.zpreztorc"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zpreztorc"
-    force: yes
-
 - name: Setup dircolors
   file:
     state: link
