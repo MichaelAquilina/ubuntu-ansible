@@ -10,6 +10,11 @@
     dest: "{{ ansible_env.HOME }}/.dircolors"
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/dircolors.molokai"
 
+- name: Download antigen
+  get_url:
+    url: https://raw.githubusercontent.com/MichaelAquilina/antigen/master/antigen.zsh
+    dest: ~/.antigen.zsh
+
 - name: Setup zshrc
   file:
     state: link

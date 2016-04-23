@@ -63,4 +63,3 @@ apt_packages:
   - whois
   - xsel
   - zsh
-  - zsh-antigen

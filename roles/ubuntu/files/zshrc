@@ -1,5 +1,5 @@
 #! /bin/zsh
-source /usr/share/zsh-antigen/antigen.zsh
+source ~/.antigen.zsh
 
 antigen use oh-my-zsh
 
