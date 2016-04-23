@@ -5,20 +5,20 @@ antigen use oh-my-zsh
 
 antigen theme MichaelAquilina/agnoster-zsh-theme agnoster --branch=python_virtualenv
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-completions
+antigen bundle MichaelAquilina/zsh-syntax-highlighting
+antigen bundle MichaelAquilina/zsh-completions
 
-antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle MichaelAquilina/zsh-history-substring-search
 
-antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle MichaelAquilina/zsh-autosuggestions
 
 DISABLE_VENV_CD=1
-antigen bundle virtualenvwrapper
 
 antigen bundle history
 
 antigen apply
 
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 workon default3
 
 export shrug='¯\_(ツ)_/¯'
