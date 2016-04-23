@@ -1,3 +1,11 @@
+- name: Setup Atom NPM package Dependencies
+  sudo: yes
+  npm:
+    name: "{{ item }}"
+    global: yes
+  with_items:
+    - dockerlint
+
 - name: Setup Atom Packages
   apm: name={{ item }}
   with_items:
