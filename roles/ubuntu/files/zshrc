@@ -12,8 +12,6 @@ antigen bundle MichaelAquilina/zsh-history-substring-search
 
 antigen bundle MichaelAquilina/zsh-autosuggestions
 
-DISABLE_VENV_CD=1
-
 antigen bundle history
 
 antigen apply
