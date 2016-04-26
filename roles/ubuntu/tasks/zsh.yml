@@ -8,7 +8,7 @@
   file:
     state: link
     dest: "{{ ansible_env.HOME }}/.dircolors"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/dircolors.molokai"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/dircolors"
 
 - name: Download antigen
   get_url:
