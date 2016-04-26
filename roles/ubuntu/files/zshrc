@@ -58,6 +58,9 @@ export SAVEHIST=9999999
 # Grep Aliases
 alias igrep="grep -i"
 
+alias ll="ls -l --group-directories-first"
+alias l="ls -la --group-directories-first"
+
 # Git Aliases
 alias gs="git status"
 alias gc="git commit"
