@@ -83,6 +83,9 @@ alias vu="vagrant up"
 alias vh="vagrant halt"
 alias vp="vagrant provision"
 
+# Docker Aliases
+alias dcr="docker-compose run"
+
 # Utilities
 alias pm="pygmentize"
 alias xopen="xdg-open"
