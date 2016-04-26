@@ -48,6 +48,8 @@ TERM rxvt-unicode-256color
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
 
 # Custom Colors Start Here
+DIR 01;07;38;5;105
+
 .tgz    01;31
 .tar.gz 01;31
 .zip    01;31
@@ -58,10 +60,21 @@ TERM rxvt-unicode-256color
 
 .yml    00;38;5;220
 .json   00;38;5;220
-.conf    00;38;5;220
+.cson   00;38;5;220
+.conf   00;38;5;220
 .cfg    00;38;5;220
 .ini    00;38;5;220
 
 .jpg    00;38;5;198
 .jpeg   00;38;5;198
 .png    00;38;5;198
+
+.py     00;38;5;112
+
+.md     01;38;5;75
+
+.desktop      00;38;5;81
+
+*Dockerfile   04;01;38;5;204
+*Makefile     04;01;38;5;204
+*Vagrantfile  04;01;38;5;204
