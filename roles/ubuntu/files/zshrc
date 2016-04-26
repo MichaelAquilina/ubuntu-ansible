@@ -19,6 +19,8 @@ antigen apply
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 workon default3
 
+eval $(dircolors ~/.dircolors)
+
 export shrug='¯\_(ツ)_/¯'
 
 echo "Is the Internet on Fire? $shrug"
