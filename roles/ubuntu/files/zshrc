@@ -3,7 +3,7 @@ source ~/.antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen theme MichaelAquilina/agnoster-zsh-theme agnoster --branch=python_virtualenv
+antigen theme MichaelAquilina/agnoster-zsh-theme agnoster
 
 antigen bundle MichaelAquilina/zsh-syntax-highlighting
 antigen bundle MichaelAquilina/zsh-completions
