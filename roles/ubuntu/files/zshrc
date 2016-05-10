@@ -103,6 +103,12 @@ alias xpaste="xsel -o -b"
 # Enable 256 color mode
 export TERM="xterm-256color"
 
+# Configure boto
+if [[ -f ~/.botorc ]]; then
+  export AWS_ACCESS_KEY_ID="$(grep "AWS_ACCESS_KEY_ID" ~/.botorc | cut -d '=' -f2)"
+  export AWS_SECRET_ACCESS_KEY="$(grep "AWS_SECRET_ACCESS_KEY" ~/.botorc | cut -d '=' -f2)"
+fi
+
 function whatismyip() {
   curl ifconfig.co -s --connect-timeout 1
 }
