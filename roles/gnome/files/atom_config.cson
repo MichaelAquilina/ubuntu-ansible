@@ -22,7 +22,7 @@
       "an-old-hope-syntax"
     ]
   editor:
-q    fontSize: 14
+    fontSize: 14
     invisibles: {}
     preferredLineLength: 100
     scrollPastEnd: true
