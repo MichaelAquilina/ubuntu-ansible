@@ -18,8 +18,8 @@
     ]
     projectHome: "/home/michael/Development"
     themes: [
-      "one-dark-ui"
-      "an-old-hope-syntax"
+      "nucleus-dark-ui"
+      "atom-dark-fusion-syntax"
     ]
   editor:
     fontSize: 14
