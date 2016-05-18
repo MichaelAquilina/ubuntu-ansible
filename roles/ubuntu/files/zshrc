@@ -34,6 +34,10 @@ if [[ -f ~/.machinerc ]]; then
   source ~/.machinerc
 fi
 
+if [[ -f ~/.github ]]; then
+  export GITHUB_TOKEN="$(cat ~/.gitub)"
+fi
+
 setopt INC_APPEND_HISTORY
 
 # Allow ctrl+left and ctrl+right movement
