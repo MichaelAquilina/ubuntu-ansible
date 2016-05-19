@@ -25,6 +25,7 @@ ui_apt_packages:
   - gnome-dictionary
   - google-chrome-stable
   - gparted
+  - gpick
   - kdiff3
   - meld
   - network-manager-openvpn
