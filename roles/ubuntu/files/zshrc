@@ -35,7 +35,7 @@ if [[ -f ~/.machinerc ]]; then
 fi
 
 if [[ -f ~/.github ]]; then
-  export GITHUB_TOKEN="$(cat ~/.gitub)"
+  export GITHUB_TOKEN="$(cat ~/.github)"
 fi
 
 setopt INC_APPEND_HISTORY
