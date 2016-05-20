@@ -28,6 +28,15 @@
     key: default-folder-viewer
     value: "'list-view'"
 
+- name: Only Display Windows from current Workspace in switchers
+  gsettings:
+    schema: "{{ item }}"
+    key: current-workspace-only
+    value: 'true'
+  with_items:
+    - org.gnome.shell.app-switcher
+    - org.gnome.shell.window-switcher
+
 - name: System Monitor Dependencies
   sudo: yes
   apt: name={{ item }}
