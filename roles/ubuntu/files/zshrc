@@ -16,6 +16,10 @@ antigen bundle history
 
 antigen apply
 
+# Infinite History
+HISTSIZE=-1
+HISTFILESIZE=-1
+
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 workon default3
 
