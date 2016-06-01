@@ -59,10 +59,6 @@ export EDITOR="vim"
 # See bash(1) for more options
 export HISTCONTROL="ignoreboth"
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=9999999
-export SAVEHIST=9999999
-
 # Grep Aliases
 alias igrep="grep -i"
 
