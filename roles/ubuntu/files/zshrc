@@ -20,8 +20,11 @@ antigen apply
 HISTSIZE=-1
 HISTFILESIZE=-1
 
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-workon default3
+VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+if [[ -f "$VIRTUALENVWRAPPER" ]]; then
+  source "$VIRTUALENVWRAPPER"
+  workon default3
+fi
 
 eval $(dircolors ~/.dircolors)
 
