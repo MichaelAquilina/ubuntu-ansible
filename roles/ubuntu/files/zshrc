@@ -20,7 +20,7 @@ antigen apply
 export HISTSIZE="999999999999999"
 export HISTFILESIZE="-1"
 
-VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
 if [[ -f "$VIRTUALENVWRAPPER" ]]; then
   source "$VIRTUALENVWRAPPER"
   workon default3
