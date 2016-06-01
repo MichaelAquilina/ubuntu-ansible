@@ -17,8 +17,8 @@ antigen bundle history
 antigen apply
 
 # Infinite History
-HISTSIZE=-1
-HISTFILESIZE=-1
+export HISTSIZE="999999999999999"
+export HISTFILESIZE="-1"
 
 VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
 if [[ -f "$VIRTUALENVWRAPPER" ]]; then
