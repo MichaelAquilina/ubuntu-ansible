@@ -122,6 +122,12 @@
     key: favorite-apps
     value: "['google-chrome.desktop', 'terminator.desktop', 'org.gnome.Polari.desktop', 'org.gnome.Nautilus.desktop', 'wireshark.desktop']"
 
+- name: Display Reminders in Notification Area Only
+  gsettings:
+    schema: org.gnome.evolution.calendar
+    key: notify-with-tray
+    value: "true"
+
 - name: Remove NoDisplay from Gnome Shortucts
   sudo: yes
   ini_file: "dest={{ item }} option=NoDisplay value=false section='Desktop Entry'"
