@@ -25,6 +25,7 @@ apt_packages:
   - dict
   - dict-gcide
   - dictd
+  - etckeeper
   - exuberant-ctags
   - ffmpeg
   - figlet
