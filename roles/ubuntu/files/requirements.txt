@@ -8,3 +8,4 @@ tox
 numpy
 pandas
 pygments
+youtube-dl
