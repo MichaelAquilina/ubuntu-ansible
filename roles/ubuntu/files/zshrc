@@ -31,6 +31,7 @@ eval $(dircolors ~/.dircolors)
 export shrug='¯\_(ツ)_/¯'
 export fliptable='(╯°□°）╯︵ ┻━┻'
 export angry='ლ(ಠ益ಠ)ლ'
+export lennyface='( ͡° ͜ʖ ͡°)'
 
 echo "Is the Internet on Fire? $shrug"
 host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
