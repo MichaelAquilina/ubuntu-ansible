@@ -66,6 +66,7 @@ export EDITOR="vim"
 export HISTCONTROL="ignoreboth"
 
 # Grep Aliases
+alias gr="grep"
 alias igrep="grep -i"
 
 alias ll="ls -lh --group-directories-first"
