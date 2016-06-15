@@ -33,7 +33,7 @@ export fliptable='(╯°□°）╯︵ ┻━┻'
 export angry='ლ(ಠ益ಠ)ლ'
 export lennyface='( ͡° ͜ʖ ͡°)'
 
-echo "Is the Internet on Fire? $shrug"
+echo "Is the Internet on Fire? $fliptable"
 host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
 
 # Disable ansible from using cowsay
