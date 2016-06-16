@@ -1,29 +1,29 @@
 [user]
-	name = {{ username }}
-	email = {{ email }}
-	signingkey = {{ gpgkey }}
+  name = {{ username }}
+  email = {{ email }}
+  signingkey = {{ gpgkey }}
 [commit]
-	gpgsign = true
+  gpgsign = true
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
+  editor = vim
+  excludesfile = ~/.gitignore_global
 [merge]
-	tool = kdiff3
+  tool = kdiff3
 [diff]
-	tool = meld
+  tool = meld
 [diff "gpg"]
   textconv = gpg --no-tty --decrypt
 [color]
-	ui = true
+  ui = true
 [push]
-	default = simple
+  default = simple
 [difftool]
-	prompt = false
+  prompt = false
 [mergetool]
-	prompt = false
+  prompt = false
 [pull]
-	rebase = true
+  rebase = true
 [rebase]
-	autostash = true
+  autostash = true
 [gpg]
-	program = gpg2
+  program = gpg2
