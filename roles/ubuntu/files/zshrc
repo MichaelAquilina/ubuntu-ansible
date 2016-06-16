@@ -110,6 +110,8 @@ alias netinfo="netstat --tcp --udp --numeric-ports -a --program | most"
 alias rand="openssl rand -base64"
 alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
+alias xc="xcopy"
+alias xp="xpaste"
 
 # Enable 256 color mode
 export TERM="xterm-256color"
