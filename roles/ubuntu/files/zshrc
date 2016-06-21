@@ -155,6 +155,7 @@ function maybeworkon() {
   fi
 }
 
+# Automatically switch virtualenv when .venv file detected
 function check_venv()
 {
     if [ "$PWD" != "$MYOLDPWD" ]; then
