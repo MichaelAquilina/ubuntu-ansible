@@ -64,6 +64,10 @@ export EDITOR="vim"
 # don't put duplicate lines or lines starting with space in the history.
 setopt HIST_IGNORE_DUPS
 
+# Use pushd instead of cd
+setopt AUTO_PUSHD
+setopt PUSHD_SILENT
+
 # Grep Aliases
 alias g="grep"
 alias igrep="grep -i"
