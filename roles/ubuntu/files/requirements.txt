@@ -1,3 +1,4 @@
+csvkit
 flake8
 httpie
 ipython
