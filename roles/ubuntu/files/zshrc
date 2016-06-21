@@ -80,13 +80,9 @@ alias gc="git commit"
 alias gca="git commit --amend"
 alias gco="git checkout"
 alias gap="git add -p"
-alias gk="git kdiff"
-alias gd="git difftool"
 alias gpl="git pull"
 alias gr="git rebase"
-alias gm="git merge"
 alias gst="git stash"
-alias gf="git fetch --prune"
 
 # Tig Aliases
 alias ta="tig --all"
