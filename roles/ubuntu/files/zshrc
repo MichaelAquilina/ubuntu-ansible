@@ -48,7 +48,6 @@ if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(cat ~/.github)"
 fi
 
-setopt INC_APPEND_HISTORY
 
 # Allow ctrl+left and ctrl+right movement
 bindkey ';5D' emacs-backward-word
@@ -61,8 +60,8 @@ dircolors ~/.dircolors > /dev/null
 export PAGER="most"
 export EDITOR="vim"
 
-# don't put duplicate lines or lines starting with space in the history.
 setopt HIST_IGNORE_DUPS
+setopt INC_APPEND_HISTORY
 
 # Use pushd instead of cd
 setopt AUTO_PUSHD
