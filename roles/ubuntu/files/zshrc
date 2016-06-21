@@ -107,7 +107,6 @@ alias LS="LS -e"  # Allow interrupt by Ctrl+C
 alias explore="nautilus"
 alias grepc="grep --color=always"
 alias netinfo="netstat --tcp --udp --numeric-ports -a --program | most"
-alias rand="openssl rand -base64"
 alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
 alias xc="xcopy"
