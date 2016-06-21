@@ -1,11 +1,11 @@
 flake8
 httpie
 ipython
-jupyter
 isort
-speedtest-cli
-tox
+jupyter
 numpy
 pandas
 pygments
+speedtest-cli
+tox
 youtube-dl
