@@ -8,7 +8,7 @@
     - {src: tomboy_todo.sh, dest: /usr/bin/tomboy_todo}
     - {src: tomboy_retrospective.sh, dest: /usr/bin/retrospective}
 
-- name: Setup Tomboy TODO Desktop Shortcut
+- name: Setup Tomboy Desktop Shortcuts
   file:
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item }}"
