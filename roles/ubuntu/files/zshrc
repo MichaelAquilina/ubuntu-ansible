@@ -60,6 +60,8 @@ export WORDCHARS=''
 
 dircolors ~/.dircolors > /dev/null
 
+setopt extended_glob
+
 export PAGER="most"
 export EDITOR="vim"
 
