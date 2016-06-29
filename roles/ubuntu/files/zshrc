@@ -74,6 +74,11 @@ setopt INC_APPEND_HISTORY
 setopt AUTO_PUSHD
 setopt PUSHD_SILENT
 
+alias H="history"
+alias h="head"
+alias t="tail"
+alias NE="2>/dev/null"
+
 # Grep Aliases
 alias g="grep"
 alias ig="grep -i"
