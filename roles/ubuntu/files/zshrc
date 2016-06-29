@@ -19,6 +19,8 @@ antigen bundle history
 
 antigen apply
 
+plugins=()
+
 # Infinite History
 export HISTSIZE="999999999999999"
 export HISTFILESIZE="-1"
