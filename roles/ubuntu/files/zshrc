@@ -74,7 +74,7 @@ setopt PUSHD_SILENT
 
 # Grep Aliases
 alias g="grep"
-alias igrep="grep -i"
+alias ig="grep -i"
 
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
