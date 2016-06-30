@@ -21,9 +21,9 @@ set_window_title = ->
   editor = atom.workspace.getActiveTextEditor()
   if editor
     [project_path, relative_path] = atom.project.relativizePath(editor.getPath())
-    window.setTitle(relative_path)
+    window.setTitle("Atom - #{relative_path}")
   else
-    window.setTitle("Atom Text Editor - None")
+    window.setTitle("Atom - None")
 
 atom.workspace.onDidChangeActivePaneItem(set_window_title)
 set_window_title()
