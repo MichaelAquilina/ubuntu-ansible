@@ -13,3 +13,17 @@ atom.commands.add 'atom-workspace', 'dot-atom:to-snake-case', ->
     output.push(t.toLowerCase())
 
   editor.insertText(output.join('_'))
+
+
+set_window_title = ->
+  window = atom.getCurrentWindow()
+  editor = atom.workspace.getActiveTextEditor()
+  if editor
+    window.setTitle(editor.getPath())
+  else
+    window.setTitle("Atom Text Editor - None")
+
+
+# Use full file path as Window title
+atom.workspace.onDidChangeActivePaneItem(set_window_title)
+set_window_title()
