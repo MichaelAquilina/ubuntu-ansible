@@ -29,6 +29,9 @@
   'alt-right': 'window:focus-pane-on-right'
   'f6': 'dot-atom:to-snake-case'
 
+'atom-text-editor':
+  'ctrl-shift-x': 'dot-atom:copy-relative-path'
+
 'atom-text-editor.vim-mode':
   'escape': 'vim-mode:reset-normal-mode'
   'ctrl-[': 'vim-mode:reset-normal-mode'

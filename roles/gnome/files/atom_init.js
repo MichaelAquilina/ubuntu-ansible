@@ -17,6 +17,13 @@ atom.commands.add("atom-text-editor", "dot-atom:to-snake-case", () => {
 })
 
 
+atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
+  let editor = atom.workspace.getActiveTextEditor();
+  let relative_path = atom.project.relativizePath(editor.getPath())[1];
+  atom.clipboard.write(relative_path);
+});
+
+
 // Use full file path as Window title
 set_window_title = function() {
   let window = atom.getCurrentWindow();
