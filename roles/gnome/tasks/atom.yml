@@ -49,5 +49,5 @@
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_config.cson", dest: ~/.atom/config.cson}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_keymap.cson", dest: ~/.atom/keymap.cson}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_snippets.cson", dest: ~/.atom/snippets.cson}
-    - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_init.coffee", dest: ~/.atom/init.coffee}
+    - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_init.js", dest: ~/.atom/init.js}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_styles.less", dest: ~/.atom/styles.less}
