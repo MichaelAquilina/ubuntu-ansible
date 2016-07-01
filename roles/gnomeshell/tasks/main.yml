@@ -54,6 +54,7 @@
     - {uri: "gnome-shell-extension-appindicator", name: "appindicatorsupport@rgcjonas.gmail.com", subfolder: ""}
     - {uri: "nohotcorner", name: "nohotcorner@azuri.free.fr", subfolder: ""}
     - {uri: "vibou.gTile", name: "gTile@vibou", subfolder: ""}
+    - {uri: "status-title-bar", name: "StatusTitleBar@devpower.org", subfolder: "src"}
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
