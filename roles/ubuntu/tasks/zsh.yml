@@ -21,3 +21,11 @@
     dest: "{{ ansible_env.HOME }}/.zshrc"
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshrc"
     force: yes
+
+- name: Setup zsh cheatsheet
+  sudo: yes
+  file:
+    state: link
+    dest: "/usr/share/man/man1/zshcheatsheet.1"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshcheatsheet"
+    force: yes

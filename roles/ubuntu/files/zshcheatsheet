@@ -1,0 +1,21 @@
+.TH ZSH CHEATSHEET
+
+.SH SUMMARY
+A list of useful zsh commands for quick reference
+
+.SH COMMANDS
+
+.B Ctrl+X Ctrl+E
+- Open Command in
+.B $EDITOR
+
+.SH EXPANSIONS
+
+.B !$
+expands to the first argument of the last command
+
+.B !:n
+expands to the nth argument of the last command
+
+.B !^
+expands to the last argument of the last command
