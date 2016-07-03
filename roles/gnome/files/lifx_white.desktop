@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=White Lifx Mode
-Exec=lifx -f 0 temperature 65535
-Icon=dialog-information
-Terminal=false
-Type=Application
-Categories=GNOME;GTK;Utility;

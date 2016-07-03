@@ -44,10 +44,6 @@
   sudo: yes
   copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
 
-- name: Install Lifx-Cmd globally
-  pip: name=lifx-cmd state=latest
-  sudo: yes
-
 - name: Update to latest PIP
   sudo: yes
   pip: name=pip state=latest

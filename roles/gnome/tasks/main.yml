@@ -50,8 +50,6 @@
 
 - include: wireshark.yml
 
-- include: lifx.yml
-
 - include: tomboy.yml
 
 - include: atom.yml

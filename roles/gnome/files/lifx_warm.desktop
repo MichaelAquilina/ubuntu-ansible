@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Warm Lifx Mode
-Exec=lifx -f 0 temperature 1000
-Icon=dialog-information
-Terminal=false
-Type=Application
-Categories=GNOME;GTK;Utility;
