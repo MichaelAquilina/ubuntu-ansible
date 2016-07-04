@@ -10,3 +10,6 @@ Switch to a specified database
 
 .B \edt \-
 list all tables in the current database
+
+.B \ed+ \-
+describe specified table columns and indexes
