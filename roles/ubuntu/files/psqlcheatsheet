@@ -2,14 +2,18 @@
 
 .SH SHELL COMMANDS
 
-.B \el \elist \-
+.TP
+.B "\el, \elist"
 list all databases
 
-.B \econnect \-
+.TP
+.B "\econnect DATABASENAME"
 Switch to a specified database
 
-.B \edt \-
+.TP
+.B "\edt"
 list all tables in the current database
 
-.B \ed+ \-
+.TP
+.B "\ed+"
 describe specified table columns and indexes
