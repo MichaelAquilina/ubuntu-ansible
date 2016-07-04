@@ -80,6 +80,15 @@
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/git_status.sh"
     dest: ~/bin/git_status
 
+
+- name: Setup Postgres Cheatsheet
+  sudo: yes
+  file:
+    state: link
+    dest: "/usr/share/man/man1/psqlcheatsheet.1"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/psqlcheatsheet"
+    force: yes
+
 - include: gpg.yml
 
 - include: zsh.yml

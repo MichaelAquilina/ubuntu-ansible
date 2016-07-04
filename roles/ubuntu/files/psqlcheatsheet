@@ -1,0 +1,12 @@
+.TH "Postgres Cheatsheet"
+
+.SH SHELL COMMANDS
+
+.B \el \elist \-
+list all databases
+
+.B \econnect \-
+Switch to a specified database
+
+.B \edt \-
+list all tables in the current database
