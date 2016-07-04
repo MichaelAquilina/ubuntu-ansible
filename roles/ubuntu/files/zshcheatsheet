@@ -11,6 +11,17 @@ A list of useful zsh commands for quick reference
 
 .SH EXPANSIONS
 
+placing an
+.B =
+before an executable command will expand it to its full path
+
+E.g.
+.B echo =cat
+results in the output
+.B /bin/cat
+
+.SH ARGUMENT REUSE
+
 .B !$
 expands to the first argument of the last command
 
