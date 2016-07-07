@@ -20,5 +20,4 @@
       type = Window
       parent = ""
       profile = None
-      size = 1000, 600
 [plugins]
