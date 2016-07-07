@@ -1,7 +1,10 @@
 [global_config]
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#d64937"
+  title_transmit_fg_color = "#f9f9f9"
+  title_inactive_fg_color = "#2d2d2d"
   suppress_multiple_term_dialog = True
+  title_transmit_bg_color = "#d64937"
+  title_inactive_bg_color = "#dedede"
 [keybindings]
 [profiles]
   [[default]]
