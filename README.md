@@ -23,7 +23,6 @@ This repo is currently designed so that core UNIX tools like curl and git which 
 
   * Ubuntu: core Ubuntu Linux tools
   * Gnome: Gnome core-related settings and applications
-  * Unity: Unity desktop environment settings and applications.
   * Gnomeshell: Gnome shell specific configurations.
 
 Further desktop environment roles may be added in the future (e.g. gnome, kde etc...)
