@@ -29,10 +29,10 @@ set_window_title = function() {
   let window = atom.getCurrentWindow();
   let editor = atom.workspace.getActiveTextEditor();
 
-  let window_title = 'Atom'
+  let window_title = 'Atom';
 
   if (editor) {
-    window_title += ' -'
+    window_title += ' -';
 
     let output = atom.project.relativizePath(editor.getPath());
 
