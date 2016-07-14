@@ -15,7 +15,6 @@ apt_packages:
   - axel
   - bzr
   - bzr-builder
-  - ruby2.2
   - cabal-debian
   - cabal-install
   - cmatrix
@@ -25,7 +24,6 @@ apt_packages:
   - dict
   - dict-gcide
   - dictd
-  - etckeeper
   - exuberant-ctags
   - ffmpeg
   - figlet
