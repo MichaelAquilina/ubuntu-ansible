@@ -44,6 +44,8 @@ apt_packages:
   - most
   - nfs-kernel-server
   - nmap
+  - nodejs
+  - npm
   - pass
   - ppa-purge
   - python-dev

@@ -19,6 +19,13 @@
   apt: pkg={{ item }} state=present update_cache=yes
   with_items: apt_packages
 
+- name: Setup node symbolic link
+  sudo: yes
+  file:
+    src: /usr/bin/nodejs
+    dest: /usr/bin/node
+    state: link
+
 - name: Create htop config folder
   file:
     state: directory
