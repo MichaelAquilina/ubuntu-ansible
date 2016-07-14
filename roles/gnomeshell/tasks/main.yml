@@ -81,7 +81,6 @@
     line: "Exec=spotify-autoscale"
   with_items:
     - /usr/share/spotify/spotify.desktop
-    - /usr/local/share/applications/spotify.desktop
 
 - name: Automatically clean Temp/Trash files
   gsettings:
