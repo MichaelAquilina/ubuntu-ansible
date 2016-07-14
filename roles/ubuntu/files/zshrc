@@ -12,7 +12,7 @@ antigen bundle MichaelAquilina/zsh-history-substring-search
 
 antigen bundle MichaelAquilina/zsh-autosuggestions
 
-export DEFAULT_VIRTUALENV="default3"
+export AUTOSWITCH_DEFAULTENV="default3"
 antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 
 antigen bundle history
