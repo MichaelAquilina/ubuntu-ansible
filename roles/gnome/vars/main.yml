@@ -7,7 +7,6 @@ ui_apt_repos:
   - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
-  - 'ppa:zeal-developers/ppa'
   - 'ppa:m.eik/seafile'
 
 ui_apt_keys:
