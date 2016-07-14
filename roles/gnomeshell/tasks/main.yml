@@ -65,6 +65,13 @@
     force: yes
     state: link
 
+- name: Gtk3 Custom CSS Theming
+  file:
+    src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/gtk.css"
+    dest: ~/.config/gtk-3.0/gtk.css
+    force: yes
+    state: link
+
 - name: Spotify autoscaling script
   sudo: yes
   file:
