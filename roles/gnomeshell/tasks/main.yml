@@ -146,6 +146,11 @@
     - "/usr/share/applications/gnome-sound-panel.desktop"
     - "/usr/share/applications/gnome-user-accounts-panel.desktop"
 
+- name: Create autostart directory
+  file:
+    path: ~/.config/autostart
+    state: directory
+
 - name: Set Startup applications
   file:
     state: link

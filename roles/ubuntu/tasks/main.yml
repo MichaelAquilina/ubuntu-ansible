@@ -73,6 +73,11 @@
     minute: "0"
     name: "Clear Downloads"
 
+- name: Create bin home Directory
+  file:
+    path: "{{ ansible_env.HOME }}/bin"
+    state: directory
+
 - name: Global Git Status Script
   file:
     state: link
