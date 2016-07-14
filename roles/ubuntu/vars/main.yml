@@ -5,7 +5,7 @@ apt_repos:
   - 'ppa:git-core/ppa'
 
 apt_keys:
-  - {keyserver: keyserver.ubuntu.com, id: 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE}  # Mercurial
+  - 41BD8711B1F0EC2B0D85B91CF59CE3A8323293EE  # Mercurial
 
 apt_packages:
   - aria2

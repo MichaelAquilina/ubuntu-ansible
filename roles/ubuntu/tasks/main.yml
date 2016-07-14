@@ -6,7 +6,9 @@
 
 - name: Add Apt Keys
   sudo: yes
-  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "{{ item }}"
   with_items: apt_keys
 
 - name: Add Apt Repos

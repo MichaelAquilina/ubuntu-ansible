@@ -1,6 +1,8 @@
 - name: Add Additional APT Keys
   sudo: yes
-  apt_key: keyserver={{ item.keyserver }} id={{ item.id }}
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: "{{ item }}"
   with_items: ui_apt_keys
 
 - name: Add Additional APT Repostories
