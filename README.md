@@ -27,4 +27,4 @@ This repo is currently designed so that core UNIX tools like curl and git which 
 
 Further desktop environment roles may be added in the future (e.g. gnome, kde etc...)
 
-The playbooks provided in this repo are currently being tested on a Ubuntu Gnome 15.10 machine
+The playbooks provided in this repo are currently being tested on a Ubuntu Gnome 16.04 machine
