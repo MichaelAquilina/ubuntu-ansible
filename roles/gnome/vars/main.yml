@@ -8,6 +8,7 @@ ui_apt_repos:
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
   - 'ppa:m.eik/seafile'
+  - 'ppa:transmissionbt/ppa'
 
 ui_apt_keys:
   - BBEBDCB318AD50EC6865090613B00F1FD2C19886  # Spotify
@@ -40,6 +41,7 @@ ui_apt_packages:
   - synaptic
   - terminator
   - tomboy
+  - transmission-gtk
   - virtualbox-5.0
   - vlc
   - zeal
