@@ -37,6 +37,7 @@
     - org.gnome.shell.app-switcher
     - org.gnome.shell.window-switcher
 
+# Not installed automatically
 - name: System Monitor Dependencies
   sudo: yes
   apt: name={{ item }}
