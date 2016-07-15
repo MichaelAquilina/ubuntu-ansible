@@ -30,3 +30,23 @@ expands to the nth argument of the last command
 
 .B !^
 expands to the last argument of the last command
+
+.SH PARAMETER EXPANSION
+
+.SS Replace:
+
+.nf
+$ a = "hello world"
+$ echo "${a/#hello/goodbye}"
+goodbye world
+$ echo "${a/$hello/mike}"
+hello mike
+.if
+
+.SS Field Separation:
+
+.nf
+$ line = "one,two,three"
+$ echo "${(@s:,:)line}"
+one two three
+.if
