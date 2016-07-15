@@ -57,6 +57,13 @@
     - {uri: "vibou.gTile", name: "gTile@vibou", subfolder: ""}
     - {uri: "status-title-bar", name: "StatusTitleBar@devpower.org", subfolder: "src"}
 
+- name: Enable inbuilt Gnome Shell extensions
+  shell_extension:
+    name: "{{ item }}"
+    state: enabled
+  with_items:
+    - drive-menu@gnome-shell-extensions.gcampax.github.com
+
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
 - name: Gtk3 Settings
