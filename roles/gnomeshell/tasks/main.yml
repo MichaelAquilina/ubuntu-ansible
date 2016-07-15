@@ -169,6 +169,12 @@
     - redshift-gtk.desktop
     - tomboy.desktop
 
+- name: Setup Gnome Bookmarks
+  template:
+    src: bookmarks.j2
+    dest: ~/.config/gtk-3.0/bookmarks
+    force: yes
+
 - name: Set Wallpaper
   gsettings:
     schema: org.gnome.desktop.background
