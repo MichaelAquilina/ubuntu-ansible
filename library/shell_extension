@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import json
+import os
 import subprocess
 import tempfile
 import traceback
@@ -36,9 +37,11 @@ def disable_extension(uri, name):
 
 
 def enable_extension(uri, name, subfolder):
-    path = os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name))
-    if not os.path.exists(path):
-        install_extension(uri, name, subfolder)
+    if uri is not None:
+        path = os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name))
+        if not os.path.exists(path):
+            install_extension(uri, name, subfolder)
+
     toggle_extension(name, state='enable')
 
 
@@ -51,7 +54,7 @@ def install_extension(uri, name, subfolder):
     else:
         src_path = temp_dir
 
-    shutil.move(
+    os.rename(
         src_path,
         os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name)),
     )
@@ -61,7 +64,7 @@ def main():
     module = AnsibleModule(
         argument_spec={
             'state': {'choices': ['enabled', 'disabled'], 'default': 'enabled'},
-            'uri': {'required': True},
+            'uri': {'required': False},
             'name': {'required': True},
             'subfolder': {'default': '', 'required': False},
         },
@@ -69,7 +72,7 @@ def main():
     )
 
     uri = module.params['uri']
-    name = module.params['name']
+    name = module.params.get('name')
     state = module.params['state']
     subfolder = module.params['subfolder']
 
