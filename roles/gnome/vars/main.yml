@@ -30,7 +30,6 @@ ui_apt_packages:
   - gpick
   - kdiff3
   - meld
-  - network-manager-openvpn
   - pavucontrol
   - polari
   - powerline

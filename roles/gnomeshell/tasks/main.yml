@@ -28,6 +28,12 @@
     key: default-folder-viewer
     value: "'list-view'"
 
+- name: Install OpenVPN gnome
+  sudo: yes
+  apt:
+    pkg: network-manager-openvpn-gnome
+    state: latest
+
 - name: Only Display Windows from current Workspace in switchers
   gsettings:
     schema: "{{ item }}"
