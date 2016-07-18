@@ -36,11 +36,16 @@ expands to the last argument of the last command
 .SS Replace:
 
 .nf
-$ a = "hello world"
+$ a = "hello world hello world"
+# Start from Beginning
 $ echo "${a/#hello/goodbye}"
-goodbye world
+goodbye world hello world
+# Start from End
 $ echo "${a/$hello/mike}"
-hello mike
+hello world hello mike
+# All
+$ echo "${a//hello/mike}"
+hello mike hello mike
 .if
 
 .SS Field Separation:
