@@ -54,9 +54,13 @@ def install_extension(uri, name, subfolder):
     else:
         src_path = temp_dir
 
+    extensions_path = os.path.expanduser('~/.local/share/gnome-shell/extensions')
+    if not os.path.exists(extensions_path):
+        os.makedirs(extensions_path)
+
     os.rename(
         src_path,
-        os.path.expanduser('~/.local/share/gnome-shell/extensions/{}'.format(name)),
+        '{}/{}'.format(extensions_path, name),
     )
 
 
