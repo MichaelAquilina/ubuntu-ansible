@@ -24,6 +24,16 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
 });
 
 
+atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
+  let editor = atom.workspace.getActiveTextEditor();
+  let current_path = editor.getPath()
+  editor.destroy()
+  atom.workspace.open(
+      current_path,
+      {'split': 'right', 'searchAllPanes': true}
+  )
+});
+
 // Use full file path as Window title
 set_window_title = function() {
   let window = atom.getCurrentWindow();
