@@ -51,6 +51,7 @@ apt_packages:
   - python-software-properties
   - python-sqlparse
   - shellcheck
+  - smartmontools
   - subversion
   - tig
   - traceroute
