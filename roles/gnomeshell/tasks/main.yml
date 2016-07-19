@@ -180,8 +180,8 @@
   with_items:
     - caffeine.desktop
     - redshift-gtk.desktop
-    - tomboy.desktop
     - seafile-applet.desktop
+    - tomboy.desktop
 
 - name: Setup Gnome Bookmarks
   template:
