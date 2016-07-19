@@ -181,6 +181,7 @@
     - caffeine.desktop
     - redshift-gtk.desktop
     - tomboy.desktop
+    - seafile-applet.desktop
 
 - name: Setup Gnome Bookmarks
   template:

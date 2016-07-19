@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=seafile-applet
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_GB]=Seafile
+Name=Seafile
+Comment[en_GB]=
+Comment=
