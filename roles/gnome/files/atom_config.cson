@@ -8,6 +8,9 @@
       "text.html.jinja": [
         "jinja"
       ]
+      "text.xml": [
+        "glade"
+      ]
     excludeVcsIgnoredPaths: true
     ignoredNames: [
       "*.pyc"
@@ -16,7 +19,6 @@
     packagesWithKeymapsDisabled: [
       "vim-mode"
     ]
-    projectHome: "/home/michael/Development"
     themes: [
       "nucleus-dark-ui"
       "atom-dark-fusion-syntax"
