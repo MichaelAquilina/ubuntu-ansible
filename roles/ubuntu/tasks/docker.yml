@@ -12,10 +12,13 @@
 - name: Install Docker
   sudo: yes
   apt:
-    name: "{{ item }}"
-  with_items:
-    - docker-engine
-    - docker-compose
+    name: docker-engine
+
+- name: Install Docker Compose
+  sudo: yes
+  pip:
+    name: docker-compose
+    version: 1.7.1
 
 - name: Create Docker group
   sudo: yes
