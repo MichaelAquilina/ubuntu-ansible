@@ -4,7 +4,6 @@ ui_apt_repos:
   - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
   - 'deb http://repo.steampowered.com/steam/ precise steam'
   - 'deb http://repository.spotify.com testing non-free'
-  - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
   - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
   - 'ppa:webupd8team/atom'
   - 'ppa:m.eik/seafile'
@@ -22,11 +21,11 @@ ui_apt_keys:
 ui_apt_packages:
   - atom
   - caffeine
+  - chromium-browser
   - elementary-icon-theme  # Installs hi-res icons on all icon themes
   - gdebi
   - gimp
   - gnome-dictionary
-  - google-chrome-stable
   - gparted
   - gpick
   - kdiff3

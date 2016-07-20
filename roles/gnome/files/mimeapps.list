@@ -1,18 +1,18 @@
 [Default Applications]
 application/x-deb=gdebi.desktop
-x-scheme-handler/http=google-chrome.desktop
-text/html=google-chrome.desktop
-text/xml=google-chrome.desktop
-application/xhtml_xml=google-chrome.desktop
-image/webp=google-chrome.desktop
-x-scheme-handler/https=google-chrome.desktop
-x-scheme-handler/ftp=google-chrome.desktop
+x-scheme-handler/http=chromium-browser.desktop
+text/html=chromium-browser.desktop
+text/xml=chromium-browser.desktop
+application/xhtml_xml=chromium-browser.desktop
+image/webp=chromium-browser.desktop
+x-scheme-handler/https=chromium-browser.desktop
+x-scheme-handler/ftp=chromium-browser.desktop
 
 [Added Associations]
 application/x-deb=gdebi.desktop;
-text/html=google-chrome.desktop;
-text/xml=google-chrome.desktop;
-application/xhtml_xml=google-chrome.desktop;
-image/webp=google-chrome.desktop;
-x-scheme-handler/https=google-chrome.desktop;
-x-scheme-handler/ftp=google-chrome.desktop;
+text/html=chromium-browser.desktop;
+text/xml=chromium-browser.desktop;
+application/xhtml_xml=chromium-browser.desktop;
+image/webp=chromium-browser.desktop;
+x-scheme-handler/https=chromium-browser.desktop;
+x-scheme-handler/ftp=chromium-browser.desktop;
