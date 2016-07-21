@@ -99,6 +99,7 @@ alias gap="git add -p"
 alias gpl="git pull"
 alias gr="git rebase"
 alias gst="git stash"
+alias gpum="git pull upstream master"
 
 # Tig Aliases
 alias ta="tig --all"
