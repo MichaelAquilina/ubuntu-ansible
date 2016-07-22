@@ -25,6 +25,6 @@
     scrollback_infinite = True
     scrollbar_position = hidden
   [[Admin Commands]]
-    background_color = "#cd5757"
+    background_color = "#995252"
     background_image = None
     foreground_color = "#ffffff"
