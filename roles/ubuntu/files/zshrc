@@ -24,9 +24,12 @@ plugins=()
 # Infinite History
 export HISTSIZE="999999999999999"
 export HISTFILESIZE="-1"
-export EXTENDED_HISTORY="1"
-export INC_APPEND_HISTORY_TIME="1"
-alias history="fc -lE 1"
+
+setopt HIST_IGNORE_DUPS
+setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY_TIME
+
+alias history="fc -li 1"
 
 VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
 if [[ -f "$VIRTUALENVWRAPPER" ]]; then
@@ -73,9 +76,6 @@ setopt extended_glob
 
 export PAGER="most"
 export EDITOR="vim"
-
-setopt HIST_IGNORE_DUPS
-setopt INC_APPEND_HISTORY
 
 # Use pushd instead of cd
 setopt AUTO_PUSHD
