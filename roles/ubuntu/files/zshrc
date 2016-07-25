@@ -24,6 +24,9 @@ plugins=()
 # Infinite History
 export HISTSIZE="999999999999999"
 export HISTFILESIZE="-1"
+export EXTENDED_HISTORY="1"
+export INC_APPEND_HISTORY_TIME="1"
+alias history="fc -lE 1"
 
 VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
 if [[ -f "$VIRTUALENVWRAPPER" ]]; then
