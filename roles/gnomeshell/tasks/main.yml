@@ -58,7 +58,7 @@
     - {uri: "gnome-shell-system-monitor-applet", name: "system-monitor@paradoxxx.zero.gmail.com", subfolder: "system-monitor@paradoxxx.zero.gmail.com"}
     - {uri: "pixel-saver", name: "pixel-saver@deadalnix.me", subfolder: "pixel-saver@deadalnix.me"}
     - {uri: "gnome-shell-extension-stealmyfocus", name: "steal-my-focus@kagesenshi.org", subfolder: ""}
-    - {uri: "gnome-shell-extension-appindicator", name: "appindicatorsupport@rgcjonas.gmail.com", subfolder: ""}
+    - {uri: "topicons", name: "topIcons@kevinboxhoorn.yahoo.com", subfolder: ""}
     - {uri: "nohotcorner", name: "nohotcorner@azuri.free.fr", subfolder: ""}
     - {uri: "vibou.gTile", name: "gTile@vibou", subfolder: ""}
     - {uri: "status-title-bar", name: "StatusTitleBar@devpower.org", subfolder: "src"}
