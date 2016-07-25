@@ -29,6 +29,7 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY_TIME
 
+# show ISO8601 timestamp with history
 alias history="fc -li 1"
 
 VIRTUALENVWRAPPER="/usr/share/virtualenvwrapper/virtualenvwrapper.sh"
