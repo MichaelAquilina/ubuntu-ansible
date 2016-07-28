@@ -137,6 +137,12 @@
     key: resize-with-right-button
     value: "true"
 
+- name: Move Windows with Alt Key
+  gsettings:
+    schema: org.gnome.desktop.wm.preferences
+    key: mouse-button-modifier
+    value: "<Alt>"
+
 - name: Set Gnomeshell favourites
   gsettings:
     schema: org.gnome.shell
