@@ -152,3 +152,9 @@ function color_cheatsheet() {
      echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
    done
 }
+
+function mkvenv() {
+   venv_name="$(basename $PWD)"
+   echo "$venv_name" > ".venv"
+   mkvirtualenv "$venv_name"
+}
