@@ -14,7 +14,7 @@ def set_value(schema, key, value):
 def get_value(schema, key):
     return subprocess.check_output([
         'gsettings', 'get', schema, key
-    ]).strip()
+    ]).strip().strip("'")  # strip automatically added single quotes
 
 
 def main():
