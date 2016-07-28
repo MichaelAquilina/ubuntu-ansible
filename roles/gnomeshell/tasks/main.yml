@@ -143,6 +143,12 @@
     key: mouse-button-modifier
     value: "<Alt>"
 
+- name: Switch Windows with Alt+Tab
+  gsettings:
+    schema: org.gnome.desktop.wm.keybindings
+    key: switch-windows
+    value: "['<Alt>Tab']"
+
 - name: Set Gnomeshell favourites
   gsettings:
     schema: org.gnome.shell
