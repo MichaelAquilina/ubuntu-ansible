@@ -49,6 +49,13 @@
     dest: ~/.gitconfig
     src: gitconfig.j2
 
+- name: Setup gitignore
+  file:
+    dest: ~/.gitignore
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/gitignore"
+    force: yes
+    state: link
+
 - name: Setup Insults
   sudo: yes
   copy: src=roles/ubuntu/files/sudoers_insults dest=/etc/sudoers.d/insults mode=0440
