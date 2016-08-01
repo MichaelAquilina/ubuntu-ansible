@@ -4,6 +4,7 @@ httpie
 ipython
 isort
 jupyter
+magic-wormhole
 numpy
 pandas
 pygments
