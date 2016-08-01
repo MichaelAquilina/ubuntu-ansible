@@ -23,6 +23,13 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
   atom.clipboard.write(relative_path);
 });
 
+atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path-and-line", () => {
+  let editor = atom.workspace.getActiveTextEditor();
+  let relative_path = atom.project.relativizePath(editor.getPath())[1];
+  let line_number = editor.getCursorBufferPosition().row
+
+  atom.clipboard.write(`${relative_path}:${line_number}`);
+});
 
 atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
   let editor = atom.workspace.getActiveTextEditor();
