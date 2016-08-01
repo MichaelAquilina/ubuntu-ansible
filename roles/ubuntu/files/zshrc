@@ -156,5 +156,5 @@ function color_cheatsheet() {
 function mkvenv() {
    venv_name="$(basename $PWD)"
    echo "$venv_name" > ".venv"
-   mkvirtualenv "$venv_name"
+   mkvirtualenv "$venv_name" $@
 }
