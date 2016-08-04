@@ -129,6 +129,14 @@ alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
 
+
+# Synchronise pass account
+function psync() {
+  pass git pull
+  pass git push
+}
+
+
 # Enable 256 color mode
 export TERM="xterm-256color"
 
