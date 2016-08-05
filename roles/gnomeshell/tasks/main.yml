@@ -155,8 +155,8 @@
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - {key: next, value: "<Primary>KP_6"}
-    - {key: previous, value: "<Primary>KP_4"}
+    - {key: next, value: "<Primary>KP_Right"}
+    - {key: previous, value: "<Primary>KP_Left"}
     - {key: play, value: "<Primary>KP_5"}
 
 - name: Set Gnomeshell favourites
