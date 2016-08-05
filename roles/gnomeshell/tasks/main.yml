@@ -149,6 +149,16 @@
     key: switch-windows
     value: "['<Alt>Tab']"
 
+- name: Set Media Control Key Shortcuts
+  gsettings:
+    schema: org.gnome.settings-daemon.plugins.media-keys
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  with_items:
+    - {key: next, value: "<Primary>KP_6"}
+    - {key: previous, value: "<Primary>KP_4"}
+    - {key: play, value: "<Primary>KP_5"}
+
 - name: Set Gnomeshell favourites
   gsettings:
     schema: org.gnome.shell
