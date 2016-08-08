@@ -18,5 +18,4 @@
     - python-dev
     - python3-dev
     - ruby-dev
-    - rust-stable
     - valac
