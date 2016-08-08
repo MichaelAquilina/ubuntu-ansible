@@ -1,3 +1,10 @@
+- name: Install Developer PPAs
+  sudo: yes
+  apt_repository:
+    repo: "{{ item }}"
+  with_items:
+    - 'ppa:alexlarsson/flatpak'
+
 - name: Install Developer Packages
   sudo: yes
   apt: name={{ item }}
@@ -5,6 +12,7 @@
     - g++
     - gfortran
     - intltool
+    - flatpak
     - libgee-0.8-dev
     - libgtk-3-dev
     - libjson-glib-dev
