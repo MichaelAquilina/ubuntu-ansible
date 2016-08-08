@@ -16,6 +16,22 @@ atom.commands.add("atom-text-editor", "dot-atom:to-snake-case", () => {
   editor.insertText(output.join("_"));
 })
 
+atom.commands.add("atom-text-editor", "dot-atom:to-camel-case", () => {
+  console.log("converting to camel case! (From Snake Case)");
+  let editor = atom.workspace.getActiveTextEditor();
+  let text = editor.getSelectedText();
+  console.log(text);
+
+  let output = [];
+  tokens = text.split('_');
+
+  tokens.forEach((t) => {
+    output.push(t.substr(0, 1).toUpperCase() + t.substr(1));
+  });
+
+  editor.insertText(output.join(""));
+})
+
 
 atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
   let editor = atom.workspace.getActiveTextEditor();
