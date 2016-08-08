@@ -3,8 +3,8 @@
   connection: local
   roles:
     - ubuntu
-    - gnome
     - developer
+    - gnome
     - gnomeshell
 
   vars_prompt:
