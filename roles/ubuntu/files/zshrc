@@ -105,6 +105,10 @@ alias gr="git rebase"
 alias gst="git stash"
 alias gpum="git pull upstream master"
 
+function gcgh() {
+  git clone git@github.com:$1
+}
+
 # Tig Aliases
 alias ta="tig --all"
 alias t="tig"
