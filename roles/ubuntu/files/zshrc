@@ -106,7 +106,7 @@ alias gst="git stash"
 alias gpum="git pull upstream master"
 alias gd="git diff"
 
-alias -g gh="git@github.com:MichaelAquilina"
+export GH="git@github.com:MichaelAquilina"
 
 # Tig Aliases
 alias ta="tig --all"
