@@ -11,7 +11,6 @@ NOTE: The playbooks in this repo currently only work with ansible 1.9.4. Install
 Once thats done then run one of the playbooks found in this repo.
 
 `setup_gnome.yml` is used for setting up a Ubuntu Gnome environment using Gnome Shell.
-`setup_unity.yml` is for setting up a standard run of the mill Ubuntu environment using Unity.
 
 For example, setting up a machine with Ubuntu Gnome would be done as follows:
 
