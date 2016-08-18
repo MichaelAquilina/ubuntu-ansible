@@ -16,11 +16,14 @@ For example, setting up a machine with Ubuntu Gnome would be done as follows:
 
     ansible-playbook setup_gnome.yml -i local.inventory --ask-sudo-pass
 
-This will prompt you for your user password, your Git username and your Git email address (this is to set up your git configuration correctly). The user you run this as must have sudo priveleges for this playook to run successfully due to installing system wide applications.
+This will prompt you for your user password, your Git username, your Git email address (this is to set up your git configuration correctly) and finally your gpg key id. 
+
+The user you run this as must have sudo priveleges for this playook to run successfully due to installing system wide applications.
 
 This repo is currently designed so that core UNIX tools like curl and git which are purely terminal based and not dependent on any desktop environment are separated from UI based applications. Currently it is organised using roles as follows:
 
   * Ubuntu: core Ubuntu Linux tools
+  * Developer: developer specific packages
   * Gnome: Gnome core-related settings and applications
   * Gnomeshell: Gnome shell specific configurations.
 
