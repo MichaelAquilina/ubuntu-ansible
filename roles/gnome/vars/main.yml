@@ -1,14 +1,14 @@
 ---
 ui_apt_repos:
-  - 'deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner'
-  - 'deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib'
-  - 'deb http://repo.steampowered.com/steam/ precise steam'
-  - 'deb http://repository.spotify.com testing non-free'
-  - 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main'
-  - 'deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main '
-  - 'ppa:webupd8team/atom'
-  - 'ppa:m.eik/seafile'
-  - 'ppa:transmissionbt/ppa'
+  - "deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner"
+  - "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
+  - "deb http://repo.steampowered.com/steam/ precise steam"
+  - "deb http://repository.spotify.com testing non-free"
+  - "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+  - "deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main "
+  - "ppa:webupd8team/atom"
+  - "ppa:m.eik/seafile"
+  - "ppa:transmissionbt/ppa"
 
 ui_apt_keys:
   - BBEBDCB318AD50EC6865090613B00F1FD2C19886  # Spotify
