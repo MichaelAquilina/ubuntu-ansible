@@ -1,7 +1,7 @@
 - name: Change Default Shell to Zsh
   sudo: yes
   user:
-    name: '{{ ansible_env.USER }}'
+    name: "{{ ansible_env.USER }}"
     shell: /bin/zsh
 
 - name: Setup dircolors

@@ -5,7 +5,9 @@
     update: no
 
 - name: mkidr vim
-  file: path=~/.vim/colors state=directory
+  file:
+    path: ~/.vim/colors
+    state: directory
 
 - name: Install Vim Molokai Theme
   get_url:

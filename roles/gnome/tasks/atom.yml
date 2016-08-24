@@ -7,7 +7,8 @@
     - dockerlint
 
 - name: Setup Atom Packages
-  apm: name={{ item }}
+  apm:
+    name: "{{ item }}"
   with_items:
     - an-old-hope-syntax
     - atom-beautify
@@ -45,7 +46,11 @@
     - vim-mode
 
 - name: Setup Atom configuration
-  file: dest={{ item.dest }} force=yes state=link src={{ item.src }}
+  file:
+    dest: "{{ item.dest }}"
+    force: yes
+    state: link
+    src: "{{ item.src }}"
   with_items:
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_config.cson", dest: ~/.atom/config.cson}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_keymap.cson", dest: ~/.atom/keymap.cson}

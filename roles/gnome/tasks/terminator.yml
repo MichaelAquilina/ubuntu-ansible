@@ -1,5 +1,7 @@
 - name: Create terminator config dir
-  file: state=directory dest=~/.config/terminator
+  file:
+    state: directory
+    dest: ~/.config/terminator
 
 - name: Setup terminator
   file:

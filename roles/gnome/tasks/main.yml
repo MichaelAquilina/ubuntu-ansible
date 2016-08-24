@@ -7,12 +7,17 @@
 
 - name: Add Additional APT Repostories
   sudo: yes
-  apt_repository: "repo='{{ item }}' state=present update_cache=yes"
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+    update_cache: yes
   with_items: ui_apt_repos
 
 - name: Install APT Packages
   sudo: yes
-  apt: pkg={{ item }} state=latest
+  apt:
+    pkg: "{{ item }}"
+    state: latest
   with_items: ui_apt_packages
 
 - name: Make sure Flash player is uninstalled

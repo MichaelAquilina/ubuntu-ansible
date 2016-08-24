@@ -6,7 +6,9 @@
 
 - name: Disable Gnome Keyring for GPG
   sudo: yes
-  file: state=absent path={{ item }}
+  file:
+    state: absent
+    path: "{{ item }}"
   with_items:
      - /etc/xdg/autostart/gnome-keyring-gpg.desktop
      - /usr/share/upstart/sessions/gnome-keyring-gpg.conf
