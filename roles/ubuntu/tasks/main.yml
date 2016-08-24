@@ -74,7 +74,9 @@
 
 - name: Update to latest PIP
   sudo: yes
-  pip: name=pip state=latest
+  pip:
+    name: pip
+    state: latest
 
 - name: Install Default PIP Requirements
   pip:

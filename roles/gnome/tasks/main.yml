@@ -22,7 +22,9 @@
 
 - name: Make sure Flash player is uninstalled
   sudo: yes
-  apt: pkg=flashplugin-installer state=absent
+  apt:
+    pkg: flashplugin-installer
+    state: absent
 
 - name: Set file type associations
   file:
