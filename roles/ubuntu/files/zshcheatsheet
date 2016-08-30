@@ -36,22 +36,28 @@ expands to the last argument of the last command
 .SS Replace:
 
 .nf
-$ a = "hello world hello world"
+$ a="hello world hello world"
+
+
 # Start from Beginning
 $ echo "${a/#hello/goodbye}"
 goodbye world hello world
+
+
 # Start from End
 $ echo "${a/$hello/mike}"
 hello world hello mike
+
+
 # All
-$ echo "${a//hello/mike}"
+$ echo "${a//world/mike}"
 hello mike hello mike
 .if
 
 .SS Field Separation:
 
 .nf
-$ line = "one,two,three"
+$ line="one,two,three"
 $ echo "${(@s:,:)line}"
 one two three
 .if
