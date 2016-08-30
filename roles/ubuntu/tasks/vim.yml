@@ -1,6 +1,6 @@
 - name: Install Vundle
   git:
-    repo: https://github.com/gmarik/Vundle.vim.git
+    repo: https://github.com/MichaelAquilina/Vundle.vim.git
     dest: ~/.vim/bundle/Vundle.vim
     update: no
 
@@ -11,5 +11,5 @@
 
 - name: Install Vim Molokai Theme
   get_url:
-    url: https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+    url: https://raw.githubusercontent.com/MichaelAquilina/molokai/master/colors/molokai.vim
     dest: ~/.vim/colors/molokai.vim
