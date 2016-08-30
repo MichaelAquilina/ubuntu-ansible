@@ -27,6 +27,7 @@ def clone_git_repo(uri, target_path):
 
 
 def toggle_extension(name, state='enable'):
+    assert state in ('enable', 'disable')
     subprocess.check_output([
         'gnome-shell-extension-tool', '--{}-extension={}'.format(state, name)
     ])
