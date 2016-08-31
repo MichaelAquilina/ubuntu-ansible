@@ -57,7 +57,9 @@ host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
 export ANSIBLE_NOCOWS=1
 
 # Source any additional configuration specific to this machine
-if [[ -f ~/.machinerc ]]; then
+if [[ -f ~/.machinerc.gpg ]]; then
+  eval "$(gpg -d --no-tty ~/.machinerc.gpg 2>/dev/null)"
+elif [[ -f ~/.machinerc ]]; then
   source ~/.machinerc
 fi
 
