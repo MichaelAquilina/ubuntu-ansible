@@ -78,7 +78,7 @@ export WORDCHARS=''
 
 setopt extended_glob
 
-export PAGER="most"
+export PAGER="less"
 export EDITOR="vim"
 
 # Use pushd instead of cd
