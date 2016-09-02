@@ -1,3 +1,5 @@
+fs = require('fs')
+
 document.body.classList.add("an-old-hope-modify-ui");
 
 atom.commands.add("atom-text-editor", "dot-atom:to-snake-case", () => {
@@ -83,5 +85,36 @@ set_window_title = function() {
   window.setTitle(window_title);
 }
 
-atom.workspace.onDidChangeActivePaneItem(set_window_title);
+open_pytest_file = function() {
+  let window = atom.getCurrentWindow();
+  let editor = atom.workspace.getActiveTextEditor();
+  if (editor == null) {
+    return;
+  }
+
+  let output = atom.project.relativizePath(editor.getPath());
+  let project_path = output[0];
+  let relative_path = output[1];
+
+  if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
+    relative_path = relative_path.replace('src/', '');
+    let path_tokens = relative_path.split('/');
+    let current_file = path_tokens[path_tokens.length - 1]
+
+    path_tokens[path_tokens.length - 1] = 'test_' + current_file;
+    let test_path = `tests/${path_tokens.join('/')}`
+
+    if (fs.existsSync(test_path)) {
+      console.log(`Opening ${test_path}`);
+      atom.workspace.open(
+          test_path,
+          {'split': 'right', 'activatePane': false, 'activateItem': true, 'pending': true}
+      );
+    }
+  }
+}
+
 set_window_title();
+atom.workspace.onDidChangeActivePaneItem(set_window_title);
+// WIP helper to always open respective test file in python in the left pane
+// atom.workspace.onDidChangeActivePaneItem(open_pytest_file);
