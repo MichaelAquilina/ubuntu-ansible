@@ -94,7 +94,7 @@ open_pytest_file = function() {
   let output = atom.project.relativizePath(editor.getPath());
   let relative_path = output[1];
 
-  // Currently only works with ptyhon
+  // Currently only works with python
   if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
     relative_path = relative_path.replace('src/', '');
     let path_tokens = relative_path.split('/');
