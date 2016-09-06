@@ -92,6 +92,7 @@ open_pytest_file = function() {
   }
 
   let output = atom.project.relativizePath(editor.getPath());
+  let project_path = output[0];
   let relative_path = output[1];
 
   // Currently only works with python
@@ -101,7 +102,7 @@ open_pytest_file = function() {
     let current_file = path_tokens[path_tokens.length - 1]
 
     path_tokens[path_tokens.length - 1] = 'test_' + current_file;
-    let test_path = 'tests/' + path_tokens.join('/');
+    let test_path = project_path + '/tests/' + path_tokens.join('/');
 
     if (fs.existsSync(test_path)) {
       atom.workspace.open(
