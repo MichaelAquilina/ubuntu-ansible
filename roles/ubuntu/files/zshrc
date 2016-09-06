@@ -168,16 +168,3 @@ function color_cheatsheet() {
      echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
    done
 }
-
-function mkvenv() {
-   venv_name="$(basename $PWD)"
-   echo "$venv_name" > ".venv"
-   mkvirtualenv "$venv_name" $@
-   if [[ -f "requirements.txt" ]]; then
-    printf "Found a requirements.txt. Install? (y/N): "
-    read prompt
-    if [[ "$prompt" = "y" ]]; then
-      pip install -r requirements.txt
-    fi
-  fi
-}
