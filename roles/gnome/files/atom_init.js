@@ -95,6 +95,10 @@ open_pytest_file = function() {
   let project_path = output[0];
   let relative_path = output[1];
 
+  if (relative_path == null) {
+    return
+  }
+
   // Currently only works with python
   if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
     relative_path = relative_path.replace('src/', '');
