@@ -1,4 +1,3 @@
-awscli
 csvkit
 flake8
 httpie
