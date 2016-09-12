@@ -85,6 +85,7 @@
     virtualenv: ~/.virtualenvs/default3
 
 - name: Install Global PIP Requirements
+  sudo: yes
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements_global.txt"
     state: latest
