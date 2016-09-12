@@ -44,7 +44,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
 atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path-and-line", () => {
   let editor = atom.workspace.getActiveTextEditor();
   let relative_path = atom.project.relativizePath(editor.getPath())[1];
-  let line_number = editor.getCursorBufferPosition().row
+  let line_number = editor.getCursorBufferPosition().row  + 1
 
   atom.clipboard.write(`${relative_path}:${line_number}`);
 });
