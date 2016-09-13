@@ -168,3 +168,18 @@ function color_cheatsheet() {
      echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
    done
 }
+
+function s3sync() {
+  if [[ -f ~/.s3sync ]]; then
+    BUCKET="$(jq -r '.bucket' < ~/.s3sync)"
+
+    IFS=$'\n'
+    for directory in $(jq -r '.directories[]' < ~/.s3sync)
+    do
+      echo "Syncing '$directory'"
+      aws s3 sync "$directory" "$BUCKET/$(basename $directory)" $@
+    done
+  else
+    echo "~/.s3sync not found"
+  fi
+}
