@@ -177,8 +177,14 @@ function s3sync() {
     for directory in $(jq -r '.directories[]' < ~/.s3sync)
     do
       echo "Syncing '$directory'"
-      aws s3 sync "$directory" "$BUCKET/$(basename $directory)" $@
-    done
+      if [[ ! -d "$directory" ]]; then
+        mkdir "$directory"
+      fi
+      S3PATH="$BUCKET/$(basename $directory)"
+
+      aws s3 sync --delete "$directory" "$S3PATH" $@
+      aws s3 sync --delete "$S3PATH" "$directory" $@
+   done
   else
     echo "~/.s3sync not found"
   fi
