@@ -108,17 +108,19 @@ open_pytest_file = function() {
     path_tokens[path_tokens.length - 1] = 'test_' + current_file;
     let test_path = project_path + '/tests/' + path_tokens.join('/');
 
-    if (fs.existsSync(test_path)) {
-      atom.workspace.open(
-          test_path,
-          {
-            'split': 'right',
-            'activatePane': false,
-            'activateItem': true,
-            'pending': true
-          }
-      );
-    }
+    fs.access(test_path, (err) => {
+      if (!err) {
+        atom.workspace.open(
+            test_path,
+            {
+              'split': 'right',
+              'activatePane': false,
+              'activateItem': true,
+              'pending': true
+            }
+        );
+      }
+    });
   }
 }
 
