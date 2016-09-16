@@ -164,6 +164,15 @@ function color_cheatsheet() {
    done
 }
 
+function s3synclog() {
+  # Add some temporary logging for debugging
+  date >> ~/.s3synclogs
+  echo "Directory State" >> ~/.s3synclogs
+  ls --time-style=long-iso -l "$directory" >> ~/.s3synclogs
+  echo "S3 State" >> ~/.s3synclogs
+  aws s3 ls "$S3PATH/" >> ~/.s3synclogs
+}
+
 function s3sync() {
   if [[ -f ~/.s3sync ]]; then
     BUCKET="$(jq -r '.bucket' < ~/.s3sync)"
@@ -176,6 +185,8 @@ function s3sync() {
         mkdir "$directory"
       fi
       S3PATH="$BUCKET/$(basename $directory)"
+
+      s3synclog
 
       aws s3 sync --delete "$directory" "$S3PATH" $@
       aws s3 sync --delete "$S3PATH" "$directory" $@
