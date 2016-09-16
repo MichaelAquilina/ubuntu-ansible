@@ -105,6 +105,7 @@ alias gpum="git pull upstream master"
 alias gd="git diff"
 
 export GH="git@github.com:MichaelAquilina"
+export GL="git@gitlab.com:Aquilina"
 export BB="git@bitbucket.org:maquilina"
 
 # Tig Aliases
