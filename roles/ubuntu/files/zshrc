@@ -184,3 +184,11 @@ function s3sync() {
     echo "~/.s3sync not found"
   fi
 }
+
+function clean_branches() {
+  IFS=$'\n'
+  for item in $(git branch --merged master | grep -v master)
+  do
+    git branch -d "${item:2}"
+  done
+}
