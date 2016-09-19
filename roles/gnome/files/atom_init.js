@@ -127,4 +127,4 @@ open_pytest_file = function() {
 set_window_title();
 atom.workspace.onDidChangeActivePaneItem(set_window_title);
 // WIP helper to always open respective test file in python in the left pane
-// atom.workspace.onDidChangeActivePaneItem(open_pytest_file);
+atom.workspace.onDidChangeActivePaneItem(open_pytest_file);
