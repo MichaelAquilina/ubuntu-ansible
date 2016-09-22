@@ -86,7 +86,7 @@ set_window_title = function() {
 }
 
 open_pytest_file = function() {
-  if (atom.config.get('ini/open_pytest_file')) {
+  if (atom.config.get('init/open_pytest_file')) {
     let editor = atom.workspace.getActiveTextEditor();
     if (editor == null) {
       return;
