@@ -102,8 +102,9 @@ open_pytest_file = function() {
 
     // Currently only works with python
     if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
-      relative_path = relative_path.replace('src/', '');
       let path_tokens = relative_path.split('/');
+      path_tokens.shift();  // we dont care about the src folder name
+
       let current_file = path_tokens[path_tokens.length - 1]
 
       path_tokens[path_tokens.length - 1] = 'test_' + current_file;
