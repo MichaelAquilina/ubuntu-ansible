@@ -4,6 +4,13 @@
     key: clock-show-date
     value: "true"
 
+# does not support ed25519 keys
+- name: gnome-keyring is uninstalled
+  sudo: yes
+  apt:
+    pkg: gnome-keyring
+    state: absent
+
 - name: Never Auto-run with Removable Media
   gsettings:
     schema: org.gnome.desktop.media-handling
