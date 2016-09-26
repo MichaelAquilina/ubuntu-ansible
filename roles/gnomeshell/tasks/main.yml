@@ -213,7 +213,6 @@
   with_items:
     - caffeine.desktop
     - redshift-gtk.desktop
-    - seafile-applet.desktop
     - tomboy.desktop
 
 - name: Setup Gnome Bookmarks
