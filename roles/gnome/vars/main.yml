@@ -7,7 +7,6 @@ ui_apt_repos:
   - "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
   - "deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main "
   - "ppa:webupd8team/atom"
-  - "ppa:m.eik/seafile"
   - "ppa:transmissionbt/ppa"
 
 ui_apt_keys:
@@ -36,7 +35,6 @@ ui_apt_packages:
   - powerline
   - python-gtksourceview2  # Required for meld syntax highlighting
   - runsnakerun
-  - seafile-gui
   - spotify-client
   - synaptic
   - terminator
