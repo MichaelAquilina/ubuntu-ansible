@@ -21,7 +21,7 @@
     ]
     themes: [
       "nucleus-dark-ui"
-      "atom-dark-fusion-syntax"
+      "atom-material-syntax"
     ]
   editor:
     fontSize: 14
