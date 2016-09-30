@@ -8,6 +8,8 @@ antigen theme MichaelAquilina/agnoster-zsh-theme agnoster
 antigen bundle MichaelAquilina/zsh-syntax-highlighting
 antigen bundle MichaelAquilina/zsh-completions
 
+antigen bundle MichaelAquilina/zsh-emojis
+
 antigen bundle MichaelAquilina/zsh-history-substring-search
 
 antigen bundle MichaelAquilina/zsh-autosuggestions
@@ -44,11 +46,6 @@ if [[ -f "$VIRTUALENVWRAPPER" ]]; then
 fi
 
 eval $(dircolors ~/.dircolors)
-
-export shrug='¯\_(ツ)_/¯'
-export fliptable='(╯°□°）╯︵ ┻━┻'
-export angry='ლ(ಠ益ಠ)ლ'
-export lennyface='( ͡° ͜ʖ ͡°)'
 
 echo "Is the Internet on Fire? $fliptable"
 host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
