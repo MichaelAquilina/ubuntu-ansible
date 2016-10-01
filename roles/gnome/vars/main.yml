@@ -5,7 +5,6 @@ ui_apt_repos:
   - "deb http://repo.steampowered.com/steam/ precise steam"
   - "deb http://repository.spotify.com testing non-free"
   - "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-  - "deb http://ppa.launchpad.net/caffeine-developers/ppa/ubuntu vivid main "
   - "ppa:webupd8team/atom"
   - "ppa:transmissionbt/ppa"
 
@@ -14,7 +13,6 @@ ui_apt_keys:
   - BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7  # Valve
   - 1C61A2656FB57B7E4DE0F4C1FC918B335044912E  # Dropbox
   - 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991  # Google
-  - DC2887936B4153CA9AFB151B0F678A01569113AE  # Caffeine Developers
   - B9F8D658297AF3EFC18D5CDFA2F683C52980AECF  # Virtualbox 2016
   - 7B0FAB3A13B907435925D9C954422A4B98AB5139  # Virtualbox 2015
 
