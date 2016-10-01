@@ -2,7 +2,6 @@
 ui_apt_repos:
   - "deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner"
   - "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
-  - "deb http://repo.steampowered.com/steam/ precise steam"
   - "deb http://repository.spotify.com testing non-free"
   - "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
   - "ppa:webupd8team/atom"
@@ -10,7 +9,6 @@ ui_apt_repos:
 
 ui_apt_keys:
   - BBEBDCB318AD50EC6865090613B00F1FD2C19886  # Spotify
-  - BA1816EF8E75005FCF5E27A1F24AEA9FB05498B7  # Valve
   - 1C61A2656FB57B7E4DE0F4C1FC918B335044912E  # Dropbox
   - 4CCA1EAF950CEE4AB83976DCA040830F7FAC5991  # Google
   - B9F8D658297AF3EFC18D5CDFA2F683C52980AECF  # Virtualbox 2016
