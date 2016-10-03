@@ -48,7 +48,7 @@ fi
 eval $(dircolors ~/.dircolors)
 
 echo "Is the Internet on Fire? $fliptable"
-host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux
+host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux | lolcat
 
 # Disable ansible from using cowsay
 export ANSIBLE_NOCOWS=1
