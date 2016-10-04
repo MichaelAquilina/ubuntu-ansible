@@ -214,6 +214,7 @@
     - caffeine.desktop
     - redshift-gtk.desktop
     - tomboy.desktop
+    - gnome-keyring-ssh.desktop  # Actually disables SSH in gnome-keyring
 
 - name: Setup Gnome Bookmarks
   template:
