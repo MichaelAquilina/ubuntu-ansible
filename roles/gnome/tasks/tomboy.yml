@@ -6,7 +6,6 @@
     dest: "{{ item.dest }}"
   with_items:
     - {src: tomboy_todo.sh, dest: /usr/bin/tomboy_todo}
-    - {src: tomboy_retrospective.sh, dest: /usr/bin/retrospective}
 
 - name: Setup Tomboy Desktop Shortcuts
   file:
