@@ -1,1 +1,8 @@
 awscli
+httpie
+ipython
+magic-wormhole
+pygments
+speedtest-cli
+tox
+youtube-dl

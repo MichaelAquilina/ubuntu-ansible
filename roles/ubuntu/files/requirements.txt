@@ -1,13 +1,5 @@
-csvkit
 flake8
-httpie
-ipython
 isort
 jupyter
-magic-wormhole
 numpy
 pandas
-pygments
-speedtest-cli
-tox
-youtube-dl
