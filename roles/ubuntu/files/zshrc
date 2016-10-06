@@ -89,8 +89,6 @@ function psync() {
   pass git push
 }
 
-alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
-
 # Enable 256 color mode
 export TERM="xterm-256color"
 
@@ -176,5 +174,7 @@ alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
+
+alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
 
 alias cb="clean_branches"
