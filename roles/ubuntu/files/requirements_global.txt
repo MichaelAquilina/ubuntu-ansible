@@ -1,4 +1,5 @@
 awscli
+docker-compose
 httpie
 ipython
 magic-wormhole

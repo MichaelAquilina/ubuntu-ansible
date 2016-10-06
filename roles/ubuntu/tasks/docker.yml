@@ -14,12 +14,6 @@
   apt:
     name: docker-engine
 
-- name: Install Docker Compose
-  sudo: yes
-  pip:
-    name: docker-compose
-    version: 1.7.1
-
 - name: Create Docker group
   sudo: yes
   group:
