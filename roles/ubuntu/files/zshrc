@@ -176,3 +176,5 @@ alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
+
+alias cb="clean_branches"
