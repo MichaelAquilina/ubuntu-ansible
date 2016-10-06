@@ -45,14 +45,6 @@ if [[ -f "$VIRTUALENVWRAPPER" ]]; then
   workon default3
 fi
 
-eval $(dircolors ~/.dircolors)
-
-echo "Is the Internet on Fire? $fliptable"
-host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux | lolcat
-
-# Disable ansible from using cowsay
-export ANSIBLE_NOCOWS=1
-
 # Source any additional configuration specific to this machine
 if [[ -f ~/.machinerc.gpg ]]; then
   eval "$(gpg -d --no-tty ~/.machinerc.gpg 2>/dev/null)"
@@ -63,6 +55,14 @@ fi
 if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(cat ~/.github)"
 fi
+
+echo "Is the Internet on Fire? $fliptable"
+host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux | lolcat
+
+eval $(dircolors ~/.dircolors)
+
+# Disable ansible from using cowsay
+export ANSIBLE_NOCOWS=1
 
 # Allow ctrl+left and ctrl+right movement
 bindkey ';5D' emacs-backward-word
@@ -78,6 +78,54 @@ export EDITOR="vim"
 # Use pushd instead of cd
 setopt AUTO_PUSHD
 setopt PUSHD_SILENT
+
+############################
+#        FUNCTIONS         #
+############################
+
+# Synchronise pass account
+function psync() {
+  pass git pull
+  pass git push
+}
+
+alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
+
+# Enable 256 color mode
+export TERM="xterm-256color"
+
+function whatismyip() {
+  curl ifconfig.co -s --connect-timeout 1
+}
+
+# Recursively list all values in gsettings
+function all_gsettings() {
+  for schema in $(gsettings list-schemas)
+  do
+      gsettings list-recursively "$schema"
+  done
+}
+
+function color_cheatsheet() {
+   x=`tput op`
+   y=`printf %$((${COLUMNS}-6))s`
+   for i in {0..256}; do
+     o=00$i
+     echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
+   done
+}
+
+function clean_branches() {
+  IFS=$'\n'
+  for item in $(git branch --merged master | grep -v master)
+  do
+    git branch -d "${item:2}"
+  done
+}
+
+############################
+#         ALIASES          #
+############################
 
 alias H="history"
 alias -g NE="2>/dev/null"
@@ -128,44 +176,3 @@ alias xcopy="xsel -i -b"
 alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
-
-
-# Synchronise pass account
-function psync() {
-  pass git pull
-  pass git push
-}
-
-alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
-
-# Enable 256 color mode
-export TERM="xterm-256color"
-
-function whatismyip() {
-  curl ifconfig.co -s --connect-timeout 1
-}
-
-# Recursively list all values in gsettings
-function all_gsettings() {
-  for schema in $(gsettings list-schemas)
-  do
-      gsettings list-recursively "$schema"
-  done
-}
-
-function color_cheatsheet() {
-   x=`tput op`
-   y=`printf %$((${COLUMNS}-6))s`
-   for i in {0..256}; do
-     o=00$i
-     echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x
-   done
-}
-
-function clean_branches() {
-  IFS=$'\n'
-  for item in $(git branch --merged master | grep -v master)
-  do
-    git branch -d "${item:2}"
-  done
-}
