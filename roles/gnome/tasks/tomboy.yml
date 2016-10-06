@@ -16,7 +16,6 @@
     - tomboy_todo.desktop
     - tomboy_yesterday.desktop
     - tomboy_tomorrow.desktop
-    - tomboy_retrospective.desktop
 
 - name: Setup Tomboy New Note Desktop Shortcut
   file:
