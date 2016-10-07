@@ -31,8 +31,6 @@
     showIndentGuide: true
     showInvisibles: true
     tabType: "soft"
-  "ini/open_pytest_file": false
-  "init/open_pytest_file": true
   "keybinding-cheatsheet": {}
   linter: {}
   "linter-flake8":

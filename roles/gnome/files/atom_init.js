@@ -86,48 +86,47 @@ set_window_title = function() {
 }
 
 open_pytest_file = function() {
-  if (atom.config.get('init/open_pytest_file')) {
-    let editor = atom.workspace.getActiveTextEditor();
-    if (editor == null) {
-      return;
-    }
+  let editor = atom.workspace.getActiveTextEditor();
+  if (editor == null) {
+    console.error('Tried opening pytest file but editor is null');
+    return;
+  }
 
-    let output = atom.project.relativizePath(editor.getPath());
-    let project_path = output[0];
-    let relative_path = output[1];
+  let output = atom.project.relativizePath(editor.getPath());
+  let project_path = output[0];
+  let relative_path = output[1];
 
-    if (relative_path == null) {
-      return
-    }
+  if (relative_path == null) {
+    console.error(`Tried opening pytest file for '${output}' but relative path could not be found`);
+    return
+  }
 
-    // Currently only works with python
-    if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
-      let path_tokens = relative_path.split('/');
-      path_tokens.shift();  // we dont care about the src folder name
+  // Currently only works with python
+  if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
+    let path_tokens = relative_path.split('/');
+    path_tokens.shift();  // we dont care about the src folder name
 
-      let current_file = path_tokens[path_tokens.length - 1]
+    let current_file = path_tokens[path_tokens.length - 1]
 
-      path_tokens[path_tokens.length - 1] = 'test_' + current_file;
-      let test_path = project_path + '/tests/' + path_tokens.join('/');
+    path_tokens[path_tokens.length - 1] = 'test_' + current_file;
+    let test_path = project_path + '/tests/' + path_tokens.join('/');
 
-      fs.access(test_path, (err) => {
-        if (!err) {
-          atom.workspace.open(
-              test_path,
-              {
-                'split': 'right',
-                'activatePane': false,
-                'activateItem': true,
-                'pending': true
-              }
-          );
-        }
-      });
-    }
+    fs.access(test_path, (err) => {
+      if (!err) {
+        atom.workspace.open(
+            test_path,
+            {
+              'split': 'right',
+              'activatePane': false,
+              'activateItem': true,
+              'pending': true
+            }
+        );
+      }
+    });
   }
 }
+atom.commands.add("atom-text-editor", "dot-atom:open-pytest-file", open_pytest_file)
 
 set_window_title();
 atom.workspace.onDidChangeActivePaneItem(set_window_title);
-// WIP helper to always open respective test file in python in the left pane
-atom.workspace.onDidChangeActivePaneItem(open_pytest_file);

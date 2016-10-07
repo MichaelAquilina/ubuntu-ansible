@@ -32,6 +32,7 @@
 'atom-text-editor':
   'ctrl-1': 'dot-atom:copy-relative-path'
   'ctrl-2': 'dot-atom:copy-relative-path-and-line'
+  'ctrl-3': 'dot-atom:open-pytest-file'
   'ctrl-shift-q': 'dot-atom:open-in-newpane'
 
 'atom-text-editor.vim-mode':
