@@ -88,7 +88,7 @@ set_window_title = function() {
 open_pytest_file = function() {
   let editor = atom.workspace.getActiveTextEditor();
   if (editor == null) {
-    console.error('Tried opening pytest file but editor is null');
+    atom.notifications.addWarning('Tried opening pytest file but editor is null');
     return;
   }
 
@@ -97,7 +97,9 @@ open_pytest_file = function() {
   let relative_path = output[1];
 
   if (relative_path == null) {
-    console.error(`Tried opening pytest file for '${output}' but relative path could not be found`);
+    atom.notifications.addWarning(
+        `Tried opening pytest file for '${output}' but relative path could not be found`
+    );
     return
   }
 
@@ -124,6 +126,10 @@ open_pytest_file = function() {
         );
       }
     });
+  } else {
+    atom.notifications.addInfo(
+        `Tried opening pytest file for '${relative_path}' but corresonding test file`
+    );
   }
 }
 atom.commands.add("atom-text-editor", "dot-atom:open-pytest-file", open_pytest_file)
