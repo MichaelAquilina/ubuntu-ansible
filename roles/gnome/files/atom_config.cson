@@ -24,7 +24,7 @@
       "atom-material-syntax"
     ]
   editor:
-    fontSize: 14
+    fontSize: 15
     invisibles: {}
     preferredLineLength: 100
     scrollPastEnd: true
