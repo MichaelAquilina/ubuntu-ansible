@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=YESTERDAY
-Exec=tomboy_todo yesterday
-Icon=tomboy
+Name=TOMORROW
+Exec=gnote_todo tomorrow
+Icon=gnote
 StartupNotify=true
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=tomboy
+X-GNOME-Bugzilla-Product=gnote
 X-GNOME-Bugzilla-Component=General

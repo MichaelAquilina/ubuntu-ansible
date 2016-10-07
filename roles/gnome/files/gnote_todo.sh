@@ -8,12 +8,12 @@ fi
 
 target=$(date +%Y-%m-%d -d $DATE)
 
-# Opens a tomboy note with target's date as a title or creates it if it doesnt exist
+# Opens a gnote note with target's date as a title or creates it if it doesnt exist
 grep "<title>$target</title>" -r ~/.local/share/tomboy -h
 echo $?
 if [ $? -eq 0 ];
 then
-  tomboy --new-note "$target"
+  gnote --new-note "$target"
 else
-  tomboy --open-note "$target"
+  gnote --open-note "$target"
 fi

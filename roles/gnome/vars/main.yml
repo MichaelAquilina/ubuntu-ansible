@@ -21,6 +21,7 @@ ui_apt_packages:
   - gdebi
   - gimp
   - gnome-dictionary
+  - gnote
   - google-chrome-stable
   - gparted
   - gpick
@@ -34,7 +35,6 @@ ui_apt_packages:
   - spotify-client
   - synaptic
   - terminator
-  - tomboy
   - transmission-gtk
   - virtualbox-5.0
   - vlc

@@ -20,6 +20,12 @@
     state: latest
   with_items: ui_apt_packages
 
+- name: Tomboy is removed
+  sudo: yes
+  apt:
+    pkg: tomboy
+    state: absent
+
 - name: Make sure Flash player is uninstalled
   sudo: yes
   apt:
@@ -52,7 +58,7 @@
 
 - include: wireshark.yml
 
-- include: tomboy.yml
+- include: gnote.yml
 
 - include: atom.yml
 

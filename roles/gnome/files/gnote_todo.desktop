@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=New Note
-Exec=tomboy --new-note
-Icon=tomboy
+Name=TODO
+Exec=gnote_todo
+Icon=gnote
 StartupNotify=true
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=tomboy
+X-GNOME-Bugzilla-Product=gnote
 X-GNOME-Bugzilla-Component=General

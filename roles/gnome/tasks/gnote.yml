@@ -1,0 +1,24 @@
+- name: Setup Gnote TODO Shell Script
+  sudo: yes
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - {src: gnote_todo.sh, dest: /usr/bin/gnote_todo}
+
+- name: Setup Gnote Desktop Shortcuts
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item }}"
+    dest: "~/.local/share/applications/{{ item }}"
+  with_items:
+    - gnote_todo.desktop
+    - gnote_yesterday.desktop
+    - gnote_tomorrow.desktop
+
+- name: Setup Gnote New Note Desktop Shortcut
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/gnote_newnote.desktop"
+    dest: "~/.local/share/applications/gnote_newnote.desktop"
