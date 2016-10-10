@@ -2,6 +2,7 @@ fs = require('fs')
 
 document.body.classList.add("an-old-hope-modify-ui");
 
+
 atom.commands.add("atom-text-editor", "dot-atom:to-snake-case", () => {
   console.log("converting to snake case! (From Camel Case)");
   let editor = atom.workspace.getActiveTextEditor();
@@ -17,6 +18,7 @@ atom.commands.add("atom-text-editor", "dot-atom:to-snake-case", () => {
 
   editor.insertText(output.join("_"));
 })
+
 
 atom.commands.add("atom-text-editor", "dot-atom:to-camel-case", () => {
   console.log("converting to camel case! (From Snake Case)");
@@ -41,6 +43,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
   atom.clipboard.write(relative_path);
 });
 
+
 atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path-and-line", () => {
   let editor = atom.workspace.getActiveTextEditor();
   let relative_path = atom.project.relativizePath(editor.getPath())[1];
@@ -48,6 +51,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path-and-line", ()
 
   atom.clipboard.write(`${relative_path}:${line_number}`);
 });
+
 
 atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
   let editor = atom.workspace.getActiveTextEditor();
@@ -84,6 +88,9 @@ set_window_title = function() {
 
   window.setTitle(window_title);
 }
+set_window_title();
+atom.workspace.onDidChangeActivePaneItem(set_window_title);
+
 
 open_pytest_file = function() {
   let editor = atom.workspace.getActiveTextEditor();
@@ -133,6 +140,3 @@ open_pytest_file = function() {
   }
 }
 atom.commands.add("atom-text-editor", "dot-atom:open-pytest-file", open_pytest_file)
-
-set_window_title();
-atom.workspace.onDidChangeActivePaneItem(set_window_title);
