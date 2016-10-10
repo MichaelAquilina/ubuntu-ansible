@@ -100,12 +100,34 @@
 - name: Update Spotify Desktop File to use AutoScale
   sudo: yes
   lineinfile:
-    dest: "{{ item }}"
+    dest: /usr/share/spotify/spotify.desktop
     regexp: "^Exec="
     state: present
     line: "Exec=spotify-autoscale"
-  with_items:
-    - /usr/share/spotify/spotify.desktop
+
+- name: Update Google Chrome Desktop file to use GPU workaround
+  sudo: yes
+  ini_file:
+    dest: /usr/share/applications/google-chrome.desktop
+    section: "Desktop Entry"
+    option: "Exec"
+    value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers %U"
+
+- name: Update Google Chrome Desktop file New Window to use GPU workaround
+  sudo: yes
+  ini_file:
+    dest: /usr/share/applications/google-chrome.desktop
+    section: "NewWindow Shortcut Group"
+    option: "Exec"
+    value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers"
+
+- name: Update Google Chrome Desktop file Icongnito to use GPU workaround
+  sudo: yes
+  ini_file:
+    dest: /usr/share/applications/google-chrome.desktop
+    section: "NewIncognito Shortcut Group"
+    option: "Exec"
+    value: "/usr/bin/google-chrome-stable --incognito --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers"
 
 - name: Automatically clean Temp/Trash files
   gsettings:
