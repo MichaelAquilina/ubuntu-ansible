@@ -157,10 +157,12 @@ open_pytest_file = function() {
               'pending': true
             }
         );
+      } else {
+        atom.notifications.addError(err);
       }
     });
   } else {
-    atom.notifications.addInfo(
+    atom.notifications.addWarning(
         `Tried opening pytest file for '${relative_path}' but corresonding test file`
     );
   }
