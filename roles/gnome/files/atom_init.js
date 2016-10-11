@@ -65,6 +65,7 @@ atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
   )
 });
 
+
 atom.commands.add("atom-text-editor", "dot-atom:copy-github-permalink", () => {
   let editor = atom.workspace.getActiveTextEditor();
   let line = editor.getCursorBufferPosition().row + 1;
@@ -88,6 +89,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-github-permalink", () => {
   atom.clipboard.write(permalink);
   atom.notifications.addInfo("Copied Github permalink to clipboard");
 });
+
 
 // Use full file path as Window title
 set_window_title = function() {
