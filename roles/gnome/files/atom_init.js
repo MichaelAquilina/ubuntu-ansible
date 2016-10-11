@@ -121,7 +121,7 @@ atom.workspace.onDidChangeActivePaneItem(set_window_title);
 open_pytest_file = function() {
   let editor = atom.workspace.getActiveTextEditor();
   if (editor == null) {
-    atom.notifications.addWarning('Tried opening pytest file but editor is null');
+    atom.notifications.addError('Tried opening pytest file but editor is null');
     return;
   }
 
