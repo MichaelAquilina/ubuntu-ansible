@@ -65,6 +65,30 @@ atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
   )
 });
 
+atom.commands.add("atom-text-editor", "dot-atom:copy-github-permalink", () => {
+  let editor = atom.workspace.getActiveTextEditor();
+  let line = editor.getCursorBufferPosition().row + 1;
+  let current_path = editor.getPath();
+  let repos = atom.project.getRepositories();
+
+  if (repos.length != 1) {
+    atom.notifications.addWarning("Only supports 1 repo");
+    return;
+  }
+
+  let target_repo = repos[0];
+  let file_path = target_repo.relativize(current_path);
+  let short_head = target_repo.getShortHead();
+  let origin = target_repo.getOriginURL().split('@')[1];
+  let origin_tokens = origin.split(':');
+  let origin_domain = origin_tokens[0];
+  let origin_path = origin_tokens[1].replace('.git', '');
+  let permalink = `https://${origin_domain}/${origin_path}/blob/${short_head}/${file_path}#L${line}`;
+
+  atom.clipboard.write(permalink);
+  atom.notifications.addInfo("Copied Github permalink to clipboard");
+});
+
 // Use full file path as Window title
 set_window_title = function() {
   let window = atom.getCurrentWindow();
