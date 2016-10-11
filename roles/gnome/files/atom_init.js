@@ -41,6 +41,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path", () => {
   let editor = atom.workspace.getActiveTextEditor();
   let relative_path = atom.project.relativizePath(editor.getPath())[1];
   atom.clipboard.write(relative_path);
+  atom.notifications.addInfo("Copied relative path to clipboard");
 });
 
 
@@ -50,6 +51,7 @@ atom.commands.add("atom-text-editor", "dot-atom:copy-relative-path-and-line", ()
   let line_number = editor.getCursorBufferPosition().row  + 1
 
   atom.clipboard.write(`${relative_path}:${line_number}`);
+  atom.notifications.addInfo("Copied relative path and line to clipboard");
 });
 
 
