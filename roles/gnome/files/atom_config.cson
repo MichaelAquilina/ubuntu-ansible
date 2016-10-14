@@ -19,6 +19,7 @@
     packagesWithKeymapsDisabled: [
       "vim-mode"
     ]
+    telemetryConsent: "no"
     themes: [
       "nucleus-dark-ui"
       "atom-material-syntax"
