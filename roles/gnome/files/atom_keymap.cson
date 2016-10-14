@@ -33,7 +33,7 @@
   'ctrl-1': 'dot-atom:copy-relative-path'
   'ctrl-2': 'dot-atom:copy-relative-path-and-line'
   'ctrl-3': 'dot-atom:open-pytest-file'
-  'ctrl-4': 'dot-atom:copy-github-permalink'
+  'ctrl-4': 'atom-github-permalinker:copy-link'
   'ctrl-5': 'dot-atom:open-in-newpane'
 
 'atom-text-editor.vim-mode':
