@@ -16,6 +16,7 @@
     - atom-jinja2
     - atom-material-syntax
     - autocomplete-python
+    - better-window-title
     - blame
     - color-picker
     - dash

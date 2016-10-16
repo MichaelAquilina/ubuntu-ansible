@@ -66,35 +66,6 @@ atom.commands.add("atom-text-editor", "dot-atom:open-in-newpane", () => {
 });
 
 
-// Use full file path as Window title
-set_window_title = function() {
-  let window = atom.getCurrentWindow();
-  let editor = atom.workspace.getActiveTextEditor();
-
-  let window_title = 'Atom';
-
-  if (editor) {
-    window_title += ' -';
-
-    let output = atom.project.relativizePath(editor.getPath());
-
-    let project_path = '';
-    if (output[0] != null) {
-        project_path = output[0].split('/');
-        project_path = project_path[project_path.length - 1];
-        window_title += ` (${project_path})`;
-    }
-
-    let relative_path = output[1];
-    window_title += ` ${relative_path}`;
-  }
-
-  window.setTitle(window_title);
-}
-set_window_title();
-atom.workspace.onDidChangeActivePaneItem(set_window_title);
-
-
 open_pytest_file = function() {
   let editor = atom.workspace.getActiveTextEditor();
   if (editor == null) {
