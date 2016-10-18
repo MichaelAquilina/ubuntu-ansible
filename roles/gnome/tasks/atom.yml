@@ -28,6 +28,7 @@
     - keybinding-cheatsheet
     - language-babel
     - language-docker
+    - language-protobuf
     - language-r
     - language-restructuredtext
     - language-vala
