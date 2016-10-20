@@ -31,6 +31,7 @@
     - language-protobuf
     - language-r
     - language-restructuredtext
+    - language-swift
     - language-vala
     - last-cursor-position
     - linter
