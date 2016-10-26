@@ -100,10 +100,13 @@
 - name: Update Spotify Desktop File to use AutoScale
   sudo: yes
   lineinfile:
-    dest: /usr/share/spotify/spotify.desktop
+    dest: "{{ item }}"
     regexp: "^Exec="
     state: present
     line: "Exec=spotify-autoscale"
+  with_items:
+    - /usr/share/spotify/spotify.desktop
+    - /usr/share/applications/spotify.desktop
 
 - name: Update Google Chrome Desktop file to use GPU workaround
   sudo: yes
