@@ -88,13 +88,11 @@ open_pytest_file = function() {
             }
         );
       } else {
-        atom.notifications.addError(err);
+        atom.notifications.addWarning(`${test_path} does not exist or cannot be accessed`);
       }
     });
   } else {
-    atom.notifications.addWarning(
-        `Tried opening pytest file for '${relative_path}' but corresonding test file`
-    );
+    atom.notifications.addWarning(`Cannot open test file for ${relative_path}`);
   }
 }
 atom.commands.add("atom-text-editor", "dot-atom:open-pytest-file", open_pytest_file)
