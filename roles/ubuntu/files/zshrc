@@ -178,3 +178,6 @@ alias xp="xpaste"
 alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
 
 alias cb="clean_branches"
+
+# Weather in London
+alias weather="curl wttr.in/London"
