@@ -39,3 +39,4 @@ ui_apt_packages:
   - virtualbox-5.0
   - vlc
   - zeal
+  - zim
