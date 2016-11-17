@@ -9,14 +9,14 @@
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
-  with_items: apt_keys
+  with_items: "{{ apt_keys }}"
 
 - name: Add Apt Repos
   sudo: yes
   apt_repository:
     state: present
     repo: "{{ item }}"
-  with_items: apt_repos
+  with_items: "{{ apt_repos }}"
 
 - name: Install APT Packages
   sudo: yes
@@ -24,7 +24,7 @@
     pkg: "{{ item }}"
     state: present
     update_cache: yes
-  with_items: apt_packages
+  with_items: "{{ apt_packages }}"
 
 - name: Setup node symbolic link
   sudo: yes
