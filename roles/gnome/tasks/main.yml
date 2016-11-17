@@ -3,7 +3,7 @@
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
-  with_items: ui_apt_keys
+  with_items: "{{ ui_apt_keys }}"
 
 - name: Add Additional APT Repostories
   sudo: yes
@@ -11,14 +11,14 @@
     repo: "{{ item }}"
     state: present
     update_cache: yes
-  with_items: ui_apt_repos
+  with_items: "{{ ui_apt_repos }}"
 
 - name: Install APT Packages
   sudo: yes
   apt:
     pkg: "{{ item }}"
     state: latest
-  with_items: ui_apt_packages
+  with_items: "{{ ui_apt_packages }}"
 
 - name: Tomboy is removed
   sudo: yes
