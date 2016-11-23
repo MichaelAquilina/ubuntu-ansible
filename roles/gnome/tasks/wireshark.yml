@@ -1,5 +1,5 @@
 - name: Wireshark is Installed
-  sudo: yes
+  become: yes
   apt:
     name: wireshark
 

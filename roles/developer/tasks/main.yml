@@ -1,12 +1,12 @@
 - name: Install Developer PPAs
-  sudo: yes
+  become: yes
   apt_repository:
     repo: "{{ item }}"
   with_items:
     - 'ppa:alexlarsson/flatpak'
 
 - name: Install Developer Packages
-  sudo: yes
+  become: yes
   apt:
     name: "{{ item }}"
   with_items:

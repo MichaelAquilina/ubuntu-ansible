@@ -1,12 +1,12 @@
 - name: Add Additional APT Keys
-  sudo: yes
+  become: yes
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
   with_items: "{{ ui_apt_keys }}"
 
 - name: Add Additional APT Repostories
-  sudo: yes
+  become: yes
   apt_repository:
     repo: "{{ item }}"
     state: present
@@ -14,20 +14,20 @@
   with_items: "{{ ui_apt_repos }}"
 
 - name: Install APT Packages
-  sudo: yes
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: latest
   with_items: "{{ ui_apt_packages }}"
 
 - name: Tomboy is removed
-  sudo: yes
+  become: yes
   apt:
     pkg: tomboy
     state: absent
 
 - name: Make sure Flash player is uninstalled
-  sudo: yes
+  become: yes
   apt:
     pkg: flashplugin-installer
     state: absent

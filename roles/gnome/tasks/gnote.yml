@@ -1,5 +1,5 @@
 - name: Setup Gnote TODO Shell Script
-  sudo: yes
+  become: yes
   file:
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"

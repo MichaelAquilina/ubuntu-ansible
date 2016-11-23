@@ -29,7 +29,7 @@
     value: "list-view"
 
 - name: Install OpenVPN gnome
-  sudo: yes
+  become: yes
   apt:
     pkg: network-manager-openvpn-gnome
     state: latest
@@ -45,7 +45,7 @@
 
 # Not installed automatically
 - name: System Monitor Dependencies
-  sudo: yes
+  become: yes
   apt:
     name: "{{ item }}"
   with_items:
@@ -91,14 +91,14 @@
     state: link
 
 - name: Spotify autoscaling script
-  sudo: yes
+  become: yes
   file:
     src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/spotify-autoscale"
     dest: /usr/bin/spotify-autoscale
     state: link
 
 - name: Update Spotify Desktop File to use AutoScale
-  sudo: yes
+  become: yes
   lineinfile:
     dest: "{{ item }}"
     regexp: "^Exec="
@@ -109,7 +109,7 @@
     - /usr/share/applications/spotify.desktop
 
 - name: Update Google Chrome Desktop file to use GPU workaround
-  sudo: yes
+  become: yes
   ini_file:
     dest: /usr/share/applications/google-chrome.desktop
     section: "Desktop Entry"
@@ -117,7 +117,7 @@
     value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers %U"
 
 - name: Update Google Chrome Desktop file New Window to use GPU workaround
-  sudo: yes
+  become: yes
   ini_file:
     dest: /usr/share/applications/google-chrome.desktop
     section: "NewWindow Shortcut Group"
@@ -125,7 +125,7 @@
     value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers"
 
 - name: Update Google Chrome Desktop file Icongnito to use GPU workaround
-  sudo: yes
+  become: yes
   ini_file:
     dest: /usr/share/applications/google-chrome.desktop
     section: "NewIncognito Shortcut Group"
@@ -210,7 +210,7 @@
     value: "true"
 
 - name: Remove NoDisplay from Gnome Shortucts
-  sudo: yes
+  become: yes
   ini_file:
     dest: "{{ item }}"
     option: NoDisplay

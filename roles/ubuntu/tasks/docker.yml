@@ -1,34 +1,34 @@
 - name: Add Docker GPG Key
-  sudo: yes
+  become: yes
   apt_key:
     keyserver: p80.pool.sks-keyservers.net
     id: 58118E89F3A912897C070ADBF76221572C52609D
 
 - name: Add Docker Repoistory
-  sudo: yes
+  become: yes
   apt_repository:
      repo: "deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main"
 
 - name: Install Docker
-  sudo: yes
+  become: yes
   apt:
     name: docker-engine
 
 - name: Create Docker group
-  sudo: yes
+  become: yes
   group:
     name: docker
     state: present
 
 - name: Add Current User to Docker group
-  sudo: yes
+  become: yes
   user:
     name: "{{ ansible_env.USER }}"
     groups: docker
     append: yes
 
 - name: Start Docker Service
-  sudo: yes
+  become: yes
   service:
     name: docker
     state: started

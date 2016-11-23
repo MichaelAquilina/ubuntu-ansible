@@ -1,11 +1,11 @@
 - name: Install GPG2
-  sudo: yes
+  become: yes
   apt:
     name: gnupg2
     state: latest
 
 - name: Disable Gnome Keyring for GPG
-  sudo: yes
+  become: yes
   file:
     state: absent
     path: "{{ item }}"

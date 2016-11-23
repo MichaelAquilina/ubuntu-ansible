@@ -1,25 +1,25 @@
 - name: Install Aptitude
-  sudo: yes
+  become: yes
   apt:
     name: aptitude
     state: latest
 
 - name: Add Apt Keys
-  sudo: yes
+  become: yes
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
   with_items: "{{ apt_keys }}"
 
 - name: Add Apt Repos
-  sudo: yes
+  become: yes
   apt_repository:
     state: present
     repo: "{{ item }}"
   with_items: "{{ apt_repos }}"
 
 - name: Install APT Packages
-  sudo: yes
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: present
@@ -27,7 +27,7 @@
   with_items: "{{ apt_packages }}"
 
 - name: Setup node symbolic link
-  sudo: yes
+  become: yes
   file:
     src: /usr/bin/nodejs
     dest: /usr/bin/node
@@ -66,20 +66,20 @@
     state: link
 
 - name: Setup Insults
-  sudo: yes
+  become: yes
   copy:
     src: "roles/ubuntu/files/sudoers_insults"
     dest: "/etc/sudoers.d/insults"
     mode: "0440"
 
 - name: Update to latest PIP
-  sudo: yes
+  become: yes
   pip:
     name: pip
     state: latest
 
 - name: Install Global PIP Requirements
-  sudo: yes
+  become: yes
   pip:
     requirements: "{{ ansible_env.PWD }}/roles/ubuntu/files/requirements_global.txt"
     state: latest
@@ -118,7 +118,7 @@
     dest: ~/bin/git_status
 
 - name: Setup Postgres Cheatsheet
-  sudo: yes
+  become: yes
   file:
     state: link
     dest: "/usr/share/man/man1/psqlcheatsheet.1"

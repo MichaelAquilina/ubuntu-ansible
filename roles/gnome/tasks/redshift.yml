@@ -1,5 +1,5 @@
 - name: Install Redshift
-  sudo: yes
+  become: yes
   apt:
     pkg: "{{ item }}"
     state: latest
@@ -7,7 +7,7 @@
     - redshift-gtk
 
 - name: Allow Redshift to use geoclue2
-  sudo: yes
+  become: yes
   ini_file:
     dest: /etc/geoclue/geoclue.conf
     section: redshift

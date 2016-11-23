@@ -1,5 +1,5 @@
 - name: Setup Atom NPM package Dependencies
-  sudo: yes
+  become: yes
   npm:
     name: "{{ item }}"
     global: yes

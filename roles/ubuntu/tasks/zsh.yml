@@ -1,5 +1,5 @@
 - name: Change Default Shell to Zsh
-  sudo: yes
+  become: yes
   user:
     name: "{{ ansible_env.USER }}"
     shell: /bin/zsh
@@ -23,7 +23,7 @@
     force: yes
 
 - name: Setup zsh cheatsheet
-  sudo: yes
+  become: yes
   file:
     state: link
     dest: "/usr/share/man/man1/zshcheatsheet.1"
