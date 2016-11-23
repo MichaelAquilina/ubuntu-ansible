@@ -7,7 +7,7 @@
 - name: Add Docker Repoistory
   become: yes
   apt_repository:
-     repo: "deb https://apt.dockerproject.org/repo ubuntu-{{ ansible_distribution_release }} main"
+     repo: "deb https://apt.dockerproject.org/repo ubuntu-xenial main"
 
 - name: Install Docker
   become: yes

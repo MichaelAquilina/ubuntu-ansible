@@ -1,7 +1,6 @@
 ---
 ui_apt_repos:
   - "deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner"
-  - "deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
   - "deb http://repository.spotify.com testing non-free"
   - "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
   - "ppa:webupd8team/atom"
@@ -36,7 +35,6 @@ ui_apt_packages:
   - synaptic
   - terminator
   - transmission-gtk
-  - virtualbox-5.0
   - vlc
   - zeal
   - zim

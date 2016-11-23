@@ -1,6 +1,6 @@
 apt_repos:
   - 'deb http://ppa.launchpad.net/mercurial-ppa/releases/ubuntu trusty main'
-  - 'ppa:fkrull/deadsnakes'
+#  - 'ppa:fkrull/deadsnakes'
   - 'ppa:git-core/ppa'
 
 apt_keys:
@@ -28,14 +28,12 @@ apt_packages:
   - ffmpeg
   - figlet
   - git
-  - gnupg-curl
   - htop
   - iftop
   - jq
   - lame
   - libblas3
   - liblapack3
-  - lnav
   - lolcat
   - mercurial
   - mesa-utils
