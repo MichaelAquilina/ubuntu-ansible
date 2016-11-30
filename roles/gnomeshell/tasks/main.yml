@@ -160,6 +160,16 @@
     key: center-new-windows
     value: "true"
 
+- name: Add Paper Icon Theme Repo
+  become: yes
+  apt_repository:
+    repo: ppa:snwh/pulp
+
+- name: Install Paper Icon Theme
+  become: yes
+  apt:
+    name: paper-icon-theme
+
 - name: Install Arc Dark Theme
   become: yes
   apt:
