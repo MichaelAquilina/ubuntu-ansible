@@ -160,13 +160,18 @@
     key: center-new-windows
     value: "true"
 
-- name: Set Icon and Theme
+- name: Install Arc Dark Theme
+  become: yes
+  apt:
+    name: arc-theme
+
+- name: Set Icons and Theme
   gsettings:
     schema: org.gnome.desktop.interface
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - {key: gtk-theme, value: "Numix"}
+    - {key: gtk-theme, value: "Arc-Dark"}
     - {key: icon-theme, value: "gnome"}
 
 - name: Resize with right button
