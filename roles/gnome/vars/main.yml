@@ -23,6 +23,7 @@ ui_apt_packages:
   - gparted
   - gpick
   - kdiff3
+  - krita
   - meld
   - pavucontrol
   - polari
