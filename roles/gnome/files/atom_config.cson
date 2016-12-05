@@ -5,9 +5,6 @@
   core:
     autoHideMenuBar: true
     customFileTypes:
-      "text.html.jinja": [
-        "jinja"
-      ]
       "text.xml": [
         "glade"
       ]
