@@ -191,7 +191,7 @@
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - {key: gtk-theme, value: "Arc-Dark"}
+    - {key: gtk-theme, value: "Adapta-Nokto-Eta"}
     - {key: icon-theme, value: "gnome"}
 
 - name: Resize with right button
