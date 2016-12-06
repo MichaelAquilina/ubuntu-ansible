@@ -28,6 +28,7 @@ apt_packages:
   - figlet
   - git
   - htop
+  - httpcode
   - iftop
   - jq
   - lame
