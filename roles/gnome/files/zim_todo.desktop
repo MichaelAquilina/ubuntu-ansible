@@ -1,11 +1,11 @@
 [Desktop Entry]
 Name=TODO
-Exec=gnote_todo
-Icon=gnote
+Exec=zim_todo
+Icon=zim
 StartupNotify=true
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Utility;
 X-GNOME-Bugzilla-Bugzilla=GNOME
-X-GNOME-Bugzilla-Product=gnote
+X-GNOME-Bugzilla-Product=zim
 X-GNOME-Bugzilla-Component=General

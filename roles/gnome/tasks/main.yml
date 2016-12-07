@@ -58,7 +58,7 @@
 
 - include: wireshark.yml
 
-- include: gnote.yml
+- include: zim.yml
 
 - include: atom.yml
 

@@ -1,0 +1,18 @@
+- name: Setup Zim TODO Shell Script
+  become: yes
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - {src: zim_todo.sh, dest: /usr/bin/zim_todo}
+
+- name: Setup Zim Desktop Shortcuts
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item }}"
+    dest: "~/.local/share/applications/{{ item }}"
+  with_items:
+    - zim_todo.desktop
+    - zim_yesterday.desktop
+    - zim_tomorrow.desktop
