@@ -16,3 +16,10 @@
     - zim_todo.desktop
     - zim_yesterday.desktop
     - zim_tomorrow.desktop
+
+- name: Setup Zim Style Configuration
+  file:
+    state: link
+    src: "{{ ansible_env.PWD }}/roles/gnome/files/zim_style.conf"
+    dest: "~/.config/zim/style.conf"
+    force: yes
