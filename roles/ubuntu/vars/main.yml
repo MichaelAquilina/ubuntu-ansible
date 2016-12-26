@@ -42,6 +42,7 @@ apt_packages:
   - nmap
   - nodejs
   - npm
+  - parallel
   - pass
   - ppa-purge
   - python-dev
