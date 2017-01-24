@@ -150,6 +150,8 @@ alias ig="grep -i"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
 
+alias shrug='echo $em_shrug'
+
 # Git Aliases
 alias gs="git status"
 alias gc="git commit"
