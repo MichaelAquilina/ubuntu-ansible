@@ -35,7 +35,6 @@ apt_packages:
   - libblas3
   - liblapack3
   - lolcat
-  - mercurial
   - mesa-utils
   - most
   - nfs-kernel-server
