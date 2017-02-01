@@ -85,8 +85,9 @@ setopt PUSHD_SILENT
 
 # Synchronise pass account
 function psync() {
-  pass git pull
-  pass git push
+  pass git pull origin master
+  pass git push origin master
+  pass git push backup master
 }
 
 # Enable 256 color mode
