@@ -193,7 +193,7 @@ alias xpaste="xsel -o -b"
 alias xc="xcopy"
 alias xp="xpaste"
 
-alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ci %C(bold yellow)%s"'
+alias plog='pass git log --pretty="format:%C(bold) %G? %C(cyan) %ai %C(bold yellow)%s"'
 
 alias cb="clean_branches"
 
