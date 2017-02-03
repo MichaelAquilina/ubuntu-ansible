@@ -29,8 +29,6 @@
     showIndentGuide: true
     showInvisibles: true
     tabType: "soft"
-  "exception-reporting":
-    userId: "965087db-3f50-4b74-ab0b-15f693dc1ccd"
   "keybinding-cheatsheet": {}
   linter: {}
   "linter-flake8":
