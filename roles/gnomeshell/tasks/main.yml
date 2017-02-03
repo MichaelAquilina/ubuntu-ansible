@@ -108,30 +108,6 @@
     - /usr/share/spotify/spotify.desktop
     - /usr/share/applications/spotify.desktop
 
-- name: Update Google Chrome Desktop file to use GPU workaround
-  become: yes
-  ini_file:
-    dest: /usr/share/applications/google-chrome.desktop
-    section: "Desktop Entry"
-    option: "Exec"
-    value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers %U"
-
-- name: Update Google Chrome Desktop file New Window to use GPU workaround
-  become: yes
-  ini_file:
-    dest: /usr/share/applications/google-chrome.desktop
-    section: "NewWindow Shortcut Group"
-    option: "Exec"
-    value: "/usr/bin/google-chrome-stable --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers"
-
-- name: Update Google Chrome Desktop file Icongnito to use GPU workaround
-  become: yes
-  ini_file:
-    dest: /usr/share/applications/google-chrome.desktop
-    section: "NewIncognito Shortcut Group"
-    option: "Exec"
-    value: "/usr/bin/google-chrome-stable --incognito --disable-gpu-driver-bug-workarounds --enable-native-gpu-memory-buffers"
-
 - name: Disable Natural Scrolling on Touchpad
   gsettings:
     schema: org.gnome.desktop.peripherals.touchpad
