@@ -5,6 +5,7 @@ ui_apt_repos:
   - "ppa:webupd8team/atom"
   - "ppa:transmissionbt/ppa"
   - "ppa:mozillateam/firefox-next"
+  - "ppa:ubuntu-mozilla-daily/ppa"
 
 ui_apt_keys:
   - "BBEBDCB318AD50EC6865090613B00F1FD2C19886"  # Spotify
@@ -14,6 +15,8 @@ ui_apt_packages:
   - atom
   - caffeine
   - elementary-icon-theme  # Installs hi-res icons on all icon themes
+  - firefox
+  - firefox-trunk
   - gdebi
   - gimp
   - gnome-dictionary
