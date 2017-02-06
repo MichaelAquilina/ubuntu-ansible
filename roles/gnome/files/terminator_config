@@ -6,6 +6,8 @@
   title_transmit_bg_color = "#d64937"
   title_transmit_fg_color = "#f9f9f9"
 [keybindings]
+  page_down = Page_Down
+  page_up = Page_Up
 [layouts]
   [[default]]
     [[[child1]]]
