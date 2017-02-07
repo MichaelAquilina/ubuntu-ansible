@@ -7,6 +7,6 @@ else
 fi
 
 folder=$(date +%Y-%m -d $DATE)
-target=$(date +%Y-%m-%d -d $DATE)
+target=$(date +%d -d $DATE)
 
 zim Notes "TODO:$folder:$target"
