@@ -30,6 +30,7 @@ apt_packages:
   - htop
   - httpcode
   - iftop
+  - inotify-tools
   - jq
   - lame
   - libblas3
