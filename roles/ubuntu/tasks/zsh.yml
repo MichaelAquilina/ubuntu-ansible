@@ -26,7 +26,7 @@
   file:
     state: link
     dest: "{{ ansible_env.HOME }}/.crypto_squirrel"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/cyrpto_squirrel"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/crypto_squirrel.txt"
     force: yes
 
 - name: Setup zsh cheatsheet
