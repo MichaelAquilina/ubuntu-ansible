@@ -56,8 +56,7 @@ if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(cat ~/.github)"
 fi
 
-echo "Is the Internet on Fire? $fliptable"
-host -W 1 -t txt istheinternetonfire.com | cut -f 2 -d '"' | cowsay -W 75 -f tux | lolcat
+cat ~/.crypto_squirrel
 
 eval $(dircolors ~/.dircolors)
 

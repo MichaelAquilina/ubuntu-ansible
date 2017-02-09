@@ -22,6 +22,13 @@
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshrc"
     force: yes
 
+- name: Deploy the Crypto Squirrel!
+  file:
+    state: link
+    dest: "{{ ansible_env.HOME }}/.crypto_squirrel"
+    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/cyrpto_squirrel"
+    force: yes
+
 - name: Setup zsh cheatsheet
   become: yes
   file:
