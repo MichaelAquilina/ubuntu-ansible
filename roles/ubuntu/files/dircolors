@@ -125,6 +125,7 @@ ORPHAN    01;38;5;196
 *Procfile           04;01;38;5;220
 *Vagrantfile        04;01;38;5;220
 *requirements.txt   04;01;38;5;220
+*requiremment.in    04;01;38;5;220
 
 .jpg    00;38;5;198
 .jpeg   00;38;5;198
