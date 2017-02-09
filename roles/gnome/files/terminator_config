@@ -6,8 +6,10 @@
   title_transmit_bg_color = "#d64937"
   title_transmit_fg_color = "#f9f9f9"
 [keybindings]
-  page_down = Page_Down
-  page_up = Page_Up
+  next_tab = None
+  page_down = <Primary>Page_Down
+  page_up = <Primary>Page_Up
+  prev_tab = None
 [layouts]
   [[default]]
     [[[child1]]]
