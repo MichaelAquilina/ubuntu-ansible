@@ -36,11 +36,3 @@
     dest: "/usr/share/man/man1/zshcheatsheet.1"
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshcheatsheet"
     force: yes
-
-- name: Setup Http Status Codes man page
-  become: yes
-  file:
-    state: link
-    dest: "/usr/share/man/man1/httpcodes.1"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/httpcodes"
-    force: yes
