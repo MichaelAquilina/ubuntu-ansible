@@ -6,7 +6,6 @@ else
   DATE="today"
 fi
 
-folder=$(date +%Y-%m -d $DATE)
-target=$(date +%d -d $DATE)
+target=$(date +%Y:%m:%d -d $DATE)
 
-zim Notes "TODO:$folder:$target"
+zim Notes "TODO:$target"
