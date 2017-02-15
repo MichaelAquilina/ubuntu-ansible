@@ -51,6 +51,7 @@ apt_packages:
   - python-sqlparse
   - shellcheck
   - smartmontools
+  - sqlformat
   - subversion
   - tig
   - traceroute
