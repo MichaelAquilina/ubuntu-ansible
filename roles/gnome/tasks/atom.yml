@@ -48,6 +48,7 @@
     - sort-lines
     - tab-title
     - vim-mode
+    - atom-zentabs
 
 - name: Setup Atom configuration
   file:
