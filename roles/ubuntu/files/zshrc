@@ -135,6 +135,10 @@ function notify() {
   notify-send "Command Completed in $runtime seconds!"
 }
 
+function flush_gpg_passwords() {
+  echo RELOADAGENT | gpg-connect-agent
+}
+
 
 ############################
 #         ALIASES          #
