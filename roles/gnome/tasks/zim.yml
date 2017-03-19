@@ -17,6 +17,11 @@
     - zim_yesterday.desktop
     - zim_tomorrow.desktop
 
+- name: Create Zim Config folder
+  file:
+    state: directory
+    src: "~/.config/zim"
+
 - name: Setup Zim Style Configuration
   file:
     state: link
