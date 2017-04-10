@@ -6,6 +6,7 @@ ui_apt_repos:
   - "ppa:transmissionbt/ppa"
   - "ppa:mozillateam/firefox-next"
   - "ppa:ubuntu-mozilla-daily/ppa"
+  - "ppa:webupd8team/terminix"
 
 ui_apt_keys:
   - "BBEBDCB318AD50EC6865090613B00F1FD2C19886"  # Spotify
@@ -34,6 +35,7 @@ ui_apt_packages:
   - spotify-client
   - synaptic
   - terminator
+  - tilix
   - transmission-gtk
   - virtualbox
   - vlc

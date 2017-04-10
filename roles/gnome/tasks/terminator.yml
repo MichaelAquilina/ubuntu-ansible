@@ -9,9 +9,3 @@
     force: yes
     src: "{{ ansible_env.PWD }}/roles/gnome/files/terminator_config"
     dest: ~/.config/terminator/config
-
-- name: Set Terminator as default terminal
-  gsettings:
-    schema: org.gnome.desktop.default-applications.terminal
-    key: exec
-    value: "terminator"

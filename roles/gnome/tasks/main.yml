@@ -39,6 +39,12 @@
     dest: ~/.config/mimeapps.list
     force: yes
 
+- name: Set Tilix as Default Terminal
+  gsettings:
+    schema: org.gnome.desktop.default-applications.terminal
+    key: exec
+    value: tilix
+
 - name: Setup lnav shortcut
   file:
     state: link
