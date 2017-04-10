@@ -34,6 +34,7 @@ TERM vt100
 TERM urxvt
 TERM rxvt-unicode
 TERM rxvt-unicode-256color
+TERM xterm-256color
 
 # EIGHTBIT, followed by '1' for on, '0' for off. (8-bit output)
 #EIGHTBIT 1
