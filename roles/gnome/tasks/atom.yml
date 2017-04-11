@@ -28,6 +28,7 @@
     - hyperclick
     - keybinding-cheatsheet
     - language-babel
+    - language-d
     - language-docker
     - language-protobuf
     - language-r
