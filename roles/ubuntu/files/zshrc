@@ -45,6 +45,12 @@ if [[ -f "$VIRTUALENVWRAPPER" ]]; then
   workon default3
 fi
 
+# Fix VTE Configuration Issues when using Tilix
+# https://github.com/gnunn1/tilix/wiki/VTE-Configuration-Issue#user-content-1-source-vtesh-in-bashrc
+if [[ $TILIX_ID ]]; then
+  source /etc/profile.d/vte.sh
+fi
+
 # Source any additional configuration specific to this machine
 if [[ -f ~/.machinerc.gpg ]]; then
   eval "$(gpg -d --no-tty ~/.machinerc.gpg 2>/dev/null)"
