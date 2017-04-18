@@ -208,3 +208,5 @@ alias cb="clean_branches"
 
 # Weather in London
 alias weather="curl wttr.in/London"
+
+export PATH="$HOME/.yarn/bin:$PATH"
