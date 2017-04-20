@@ -1,4 +1,6 @@
 "*":
+  "autocomplete-python":
+    useKite: false
   autosave:
     enabled: true
   blame: {}
