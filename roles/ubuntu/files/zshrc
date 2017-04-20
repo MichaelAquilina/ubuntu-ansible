@@ -1,27 +1,26 @@
 #! /bin/zsh
-source ~/.antigen.zsh
+source ~/Development/zplug/init.zsh
 
-antigen use oh-my-zsh
-
-antigen theme MichaelAquilina/agnoster-zsh-theme agnoster
-
-antigen bundle MichaelAquilina/zsh-syntax-highlighting
-antigen bundle MichaelAquilina/zsh-completions
-
-antigen bundle MichaelAquilina/zsh-emojis
-
-antigen bundle MichaelAquilina/zsh-history-substring-search
-
-antigen bundle MichaelAquilina/zsh-autosuggestions
-
+zplug "MichaelAquilina/zsh-history-substring-search"
+zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
+zplug "MichaelAquilina/zsh-completions"
+zplug "MichaelAquilina/zsh-emojis"
+zplug "MichaelAquilina/zsh-autosuggestions"
 export AUTOSWITCH_DEFAULTENV="default3"
-antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
 
-antigen bundle history
+zplug "lib/completion", from:oh-my-zsh
 
-antigen apply
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 
-plugins=()
+zplug load
 
 # Infinite History
 export HISTSIZE="999999999999999"
@@ -31,7 +30,7 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY_TIME
 
-PREFERRED_HISTFILE="$HOME/Personal/zsh_history"
+PREFERRED_HISTFILE="$HOME/Documents/zsh_history"
 if [[ -f "$PREFERRED_HISTFILE" ]]; then
   export HISTFILE="$PREFERRED_HISTFILE"
 fi
@@ -150,13 +149,14 @@ function flush_gpg_passwords() {
 #         ALIASES          #
 ############################
 
-alias H="history"
+alias h="history"
 alias -g NE="2>/dev/null"
 
 # Grep Aliases
 alias g="grep"
 alias ig="grep -i"
 
+alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
 
