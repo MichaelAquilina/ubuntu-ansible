@@ -10,7 +10,7 @@ export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
 
-zplug "modules/history", from:oh-my-zsh
+zplug "lib/completion", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -149,7 +149,7 @@ function flush_gpg_passwords() {
 #         ALIASES          #
 ############################
 
-alias H="history"
+alias h="history"
 alias -g NE="2>/dev/null"
 
 # Grep Aliases
