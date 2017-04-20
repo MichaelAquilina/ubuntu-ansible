@@ -9,6 +9,9 @@ zplug "MichaelAquilina/zsh-autosuggestions"
 export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
+zplug "chrissicool/zsh-256color"
+
+zplug "modules/history", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -154,6 +157,7 @@ alias -g NE="2>/dev/null"
 alias g="grep"
 alias ig="grep -i"
 
+alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
 
