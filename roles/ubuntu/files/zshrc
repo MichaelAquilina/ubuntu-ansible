@@ -9,7 +9,6 @@ zplug "MichaelAquilina/zsh-autosuggestions"
 export AUTOSWITCH_DEFAULTENV="default3"
 zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
-zplug "chrissicool/zsh-256color"
 
 zplug "modules/history", from:oh-my-zsh
 
