@@ -1,27 +1,24 @@
 #! /bin/zsh
-source ~/.antigen.zsh
+source ~/Development/zplug/init.zsh
 
-antigen use oh-my-zsh
-
-antigen theme MichaelAquilina/agnoster-zsh-theme agnoster
-
-antigen bundle MichaelAquilina/zsh-syntax-highlighting
-antigen bundle MichaelAquilina/zsh-completions
-
-antigen bundle MichaelAquilina/zsh-emojis
-
-antigen bundle MichaelAquilina/zsh-history-substring-search
-
-antigen bundle MichaelAquilina/zsh-autosuggestions
-
+zplug "MichaelAquilina/zsh-history-substring-search"
+zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
+zplug "MichaelAquilina/zsh-completions"
+zplug "MichaelAquilina/zsh-emojis"
+zplug "MichaelAquilina/zsh-autosuggestions"
 export AUTOSWITCH_DEFAULTENV="default3"
-antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
+zplug "MichaelAquilina/agnoster-zsh-theme", as:theme
 
-antigen bundle history
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 
-antigen apply
-
-plugins=()
+zplug load
 
 # Infinite History
 export HISTSIZE="999999999999999"
