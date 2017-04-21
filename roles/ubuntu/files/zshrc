@@ -1,5 +1,5 @@
 #! /bin/zsh
-source ~/Development/zplug/init.zsh
+source ~/.zplug/init.zsh
 
 zplug "MichaelAquilina/zsh-history-substring-search"
 zplug "MichaelAquilina/zsh-syntax-highlighting", defer:2
