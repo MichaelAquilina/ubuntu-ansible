@@ -20,7 +20,7 @@
 - name: Create Zim Config folder
   file:
     state: directory
-    src: "~/.config/zim"
+    path: "~/.config/zim"
 
 - name: Setup Zim Style Configuration
   file:
