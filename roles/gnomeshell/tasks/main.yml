@@ -66,6 +66,7 @@
     - {uri: "topicons", name: "topIcons@kevinboxhoorn.yahoo.com", subfolder: ""}
     - {uri: "nohotcorner", name: "nohotcorner@azuri.free.fr", subfolder: ""}
     - {uri: "status-title-bar", name: "StatusTitleBar@devpower.org", subfolder: "src"}
+    - {uri: "gnome-shell-extension-bettervolume", name: "bettervolume@tudmotu.com", subfolder: ""}
 
 - name: Enable inbuilt Gnome Shell extensions
   shell_extension:
