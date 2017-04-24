@@ -1,3 +1,4 @@
+roles/gnome/files/kite-config.json
 *.orig
 .vagrant
 *.retry
