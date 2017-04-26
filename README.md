@@ -16,7 +16,7 @@ For example, setting up a machine with Ubuntu Gnome would be done as follows:
 
     ansible-playbook setup_gnome.yml -i local.inventory --ask-sudo-pass
 
-This will prompt you for your user password, your Git username, your Git email address (this is to set up your git configuration correctly) and finally your gpg key id. 
+This will prompt you for your user password, your Git username, your Git email address (this is to set up your git configuration correctly) and finally your gpg key id.
 
 The user you run this as must have sudo priveleges for this playook to run successfully due to installing system wide applications.
 
@@ -30,3 +30,7 @@ This repo is currently designed so that core UNIX tools like curl and git which 
 Further desktop environment roles may be added in the future (e.g. gnome, kde etc...)
 
 The playbooks provided in this repo are currently being tested on a Ubuntu Gnome 16.04 machine
+
+Also, check out my [Tumbleweed Ansible](http://github.com/michaelaquilina/tumbleweed-ansible) repo which currently maintains
+the state of my OpenSUSE Tumbleweed machine. I believe this is better structured than this repo due to being able to apply
+learnings from this repo from the ground up.
