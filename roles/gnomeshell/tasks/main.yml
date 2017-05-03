@@ -109,11 +109,11 @@
     - /usr/share/spotify/spotify.desktop
     - /usr/share/applications/spotify.desktop
 
-- name: Disable Natural Scrolling on Touchpad
+- name: Natural Scrolling on Touchpad
   gsettings:
     schema: org.gnome.desktop.peripherals.touchpad
     key: natural-scroll
-    value: "false"
+    value: "true"
 
 - name: Automatically clean Temp/Trash files
   gsettings:
