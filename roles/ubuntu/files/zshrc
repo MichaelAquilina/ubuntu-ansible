@@ -30,7 +30,7 @@ setopt HIST_IGNORE_DUPS
 setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY_TIME
 
-PREFERRED_HISTFILE="$HOME/Personal/zsh_history"
+PREFERRED_HISTFILE="$HOME/Documents/zsh_history"
 if [[ -f "$PREFERRED_HISTFILE" ]]; then
   export HISTFILE="$PREFERRED_HISTFILE"
 fi
