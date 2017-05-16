@@ -156,6 +156,8 @@ alias -g NE="2>/dev/null"
 alias g="grep"
 alias ig="grep -i"
 
+alias less="less -R"
+
 alias ls="ls --color=auto"
 alias ll="ls -lh --group-directories-first"
 alias l="ls -lah --group-directories-first"
