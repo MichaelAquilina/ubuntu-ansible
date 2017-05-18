@@ -39,6 +39,7 @@
     - linter
     - linter-docker
     - linter-flake8
+    - linter-flow
     - linter-shellcheck
     - nucleus-dark-ui
     - pdf-view
