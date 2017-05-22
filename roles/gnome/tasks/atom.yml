@@ -46,7 +46,6 @@
     - pigments
     - python-isort
     - python-tools
-    - seti-syntax
     - sort-lines
     - tab-title
     - vim-mode
