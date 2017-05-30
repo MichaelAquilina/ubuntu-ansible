@@ -66,21 +66,31 @@ open_pytest_file = function() {
   }
 
   // Currently only works with python
-  if (!relative_path.startsWith('tests/') && relative_path.endsWith('.py')) {
+  if (relative_path.endsWith('.py')) {
+
     let path_tokens = relative_path.split('/');
     path_tokens.shift();  // we dont care about the src folder name
 
-    let current_file = path_tokens[path_tokens.length - 1]
+    let current_file = path_tokens[path_tokens.length - 1];
+    let test_path = null;
+    let open_to_the = null;
 
-    path_tokens[path_tokens.length - 1] = 'test_' + current_file;
-    let test_path = project_path + '/tests/' + path_tokens.join('/');
+    if (relative_path.startsWith('tests/')) {
+      path_tokens[path_tokens.length - 1] = current_file.replace('test_', '');
+      test_path = project_path + '/src/' + path_tokens.join('/');
+      open_to_the = 'left';
+    } else {
+      path_tokens[path_tokens.length - 1] = 'test_' + current_file;
+      test_path = project_path + '/tests/' + path_tokens.join('/');
+      open_to_the = 'right';
+    }
 
     fs.access(test_path, (err) => {
       if (!err) {
         atom.workspace.open(
             test_path,
             {
-              'split': 'right',
+              'split': open_to_the,
               'activatePane': false,
               'activateItem': true,
               'pending': true
@@ -97,7 +107,7 @@ open_pytest_file = function() {
                     atom.workspace.open(
                         test_path,
                         {
-                          'split': 'right',
+                          'split': open_to_the,
                           'activatePane': false,
                           'activateItem': true,
                           'pending': true
