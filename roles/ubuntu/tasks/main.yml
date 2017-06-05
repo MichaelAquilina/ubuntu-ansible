@@ -111,6 +111,13 @@
     state: directory
     mode: 0700
 
+- name: Create man home Directory
+  file:
+    path: "{{ ansible_env.HOME }}/man/man1"
+    recurse: true
+    state: directory
+    mode: 0700
+
 - name: Global Git Status Script
   file:
     state: link
