@@ -212,5 +212,6 @@ alias cb="clean_branches"
 alias weather="curl wttr.in/London"
 
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 export MANPATH="$HOME/man:$MANPATH"
