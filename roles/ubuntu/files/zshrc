@@ -153,8 +153,8 @@ alias h="history"
 alias -g NE="2>/dev/null"
 
 # Grep Aliases
-alias g="grep"
-alias ig="grep -i"
+alias g="rg"
+alias ig="rg -i"
 
 alias less="less -R"
 
