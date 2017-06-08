@@ -48,7 +48,6 @@
   with_items:
     - {filename: tigrc, dest: ~/.tigrc }
     - {filename: nanorc, dest: ~/.nanorc }
-    - {filename: vimrc, dest: ~/.vimrc }
     - {filename: htoprc, dest: ~/.config/htop/htoprc }
     - {filename: xprofile, dest: ~/.xprofile}
     - {filename: ansible.cfg, dest: ~/.ansible.cfg}

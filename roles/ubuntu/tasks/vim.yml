@@ -13,3 +13,16 @@
   get_url:
     url: https://raw.githubusercontent.com/MichaelAquilina/molokai/master/colors/molokai.vim
     dest: ~/.vim/colors/molokai.vim
+
+- name: vimrc repo
+  git:
+    repo: https://github.com/MichaelAquilina/vimrc.git
+    update: yes
+    dest: ~/Development/vimrc
+
+- name: link vimrc
+  file:
+    state: link
+    force: yes
+    src: ~/Development/vimrc/vimrc
+    dest: ~/.vimrc
