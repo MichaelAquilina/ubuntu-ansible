@@ -48,7 +48,6 @@
     - python-tools
     - sort-lines
     - tab-title
-    - vim-mode
 
 - name: Setup Atom configuration
   file:
