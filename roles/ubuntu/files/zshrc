@@ -61,8 +61,6 @@ if [[ -f ~/.github ]]; then
   export GITHUB_TOKEN="$(cat ~/.github)"
 fi
 
-cat ~/.crypto_squirrel
-
 eval $(dircolors ~/.dircolors)
 
 # Disable ansible from using cowsay
