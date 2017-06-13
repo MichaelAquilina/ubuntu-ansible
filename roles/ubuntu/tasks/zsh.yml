@@ -16,11 +16,17 @@
     dest: ~/.zplug
     update: yes
 
-- name: Setup zshrc
+- name: Zshrc Repo
+  git:
+    repo: https://github.com/MichaelAquilina/zshrc.git
+    dest: ~/Development/zshrc
+    update: yes
+
+- name: zshrc link
   file:
     state: link
-    dest: "{{ ansible_env.HOME }}/.zshrc"
-    src: "{{ ansible_env.PWD }}/roles/ubuntu/files/zshrc"
+    dest: "~/.zshrc"
+    src: "~/Development/zshrc/zshrc"
     force: yes
 
 - name: Setup zsh cheatsheet
