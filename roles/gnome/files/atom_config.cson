@@ -10,6 +10,9 @@
       "text.xml": [
         "glade"
       ]
+    disabledPackages: [
+      "vim-mode-plus"
+    ]
     excludeVcsIgnoredPaths: true
     ignoredNames: [
       "*.pyc"
