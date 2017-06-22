@@ -1,18 +1,13 @@
-- name: Install Vundle
-  git:
-    repo: https://github.com/MichaelAquilina/Vundle.vim.git
-    dest: ~/.vim/bundle/Vundle.vim
-    update: no
-
 - name: mkidr vim
   file:
-    path: ~/.vim/colors
+    path: ~/.vim/autoload
     state: directory
+    recurse: yes
 
-- name: Install Vim Molokai Theme
+- name: Install vim-plug
   get_url:
-    url: https://raw.githubusercontent.com/MichaelAquilina/molokai/master/colors/molokai.vim
-    dest: ~/.vim/colors/molokai.vim
+    url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    dest: ~/.vim/autoload/plug.vim
 
 - name: vimrc repo
   git:
