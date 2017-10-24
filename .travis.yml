@@ -1,0 +1,11 @@
+
+sudo: false
+dist: trusty
+
+language: python
+
+services:
+  - docker
+
+script:
+  - docker build .
