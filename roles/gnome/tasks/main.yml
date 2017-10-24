@@ -45,6 +45,11 @@
     key: exec
     value: tilix
 
+- name: local applications directory
+  file:
+    state: directory
+    dest: "~/.local/share/applications"
+
 - name: Setup lnav shortcut
   file:
     state: link
