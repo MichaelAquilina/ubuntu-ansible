@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-RUN apt-get update &&
+RUN apt-get update && \
     apt-get install -y python-pip gnome-shell && \
     pip install ansible
 
