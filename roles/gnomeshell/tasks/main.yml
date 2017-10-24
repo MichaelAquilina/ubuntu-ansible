@@ -204,6 +204,10 @@
     key: favorite-apps
     value: "['google-chrome.desktop', 'terminator.desktop', 'org.gnome.Polari.desktop', 'org.gnome.Nautilus.desktop', 'wireshark.desktop']"
 
+- name: Install Evolution
+  apt:
+    name: evolution
+
 - name: Display Reminders in Notification Area Only
   gsettings:
     schema: org.gnome.evolution.calendar
