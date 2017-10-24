@@ -77,6 +77,11 @@
 
 # TODO: Restart gnome shell on change with `gnome-shell --replace`
 
+- name: gtk3 config directory
+  file:
+    state: directory
+    dest: "~/.config/gtk-3.0/"
+
 - name: Gtk3 Settings
   file:
     src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/gtk3_settings.ini"
