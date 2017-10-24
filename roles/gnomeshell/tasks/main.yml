@@ -162,18 +162,12 @@
   apt:
     name: paper-icon-theme
 
-- name: Install Arc Dark Theme
-  become: yes
-  apt:
-    name: arc-theme
-
 - name: Set Icons and Theme
   gsettings:
     schema: org.gnome.desktop.interface
     key: "{{ item.key }}"
     value: "{{ item.value }}"
   with_items:
-    - {key: gtk-theme, value: "Arc-Darker"}
     - {key: icon-theme, value: "gnome"}
 
 - name: Resize with right button
