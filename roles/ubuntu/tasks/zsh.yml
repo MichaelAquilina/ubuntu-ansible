@@ -1,7 +1,7 @@
 - name: Change Default Shell to Zsh
   become: yes
   user:
-    name: "{{ ansible_env.USER }}"
+    name: "{{ ansible_user_id }}"
     shell: /bin/zsh
 
 - name: Setup dircolors
