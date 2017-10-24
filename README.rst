@@ -27,10 +27,10 @@ The user you run this as must have sudo priveleges for this playook to run succe
 
 This repo is currently designed so that core UNIX tools like curl and git which are purely terminal based and not dependent on any desktop environment are separated from UI based applications. Currently it is organised using roles as follows:
 
-  * Ubuntu: core Ubuntu Linux tools
-  * Developer: developer specific packages
-  * Gnome: Gnome core-related settings and applications
-  * Gnomeshell: Gnome shell specific configurations.
+- Ubuntu: core Ubuntu Linux tools
+- Developer: developer specific packages
+- Gnome: Gnome core-related settings and applications
+- Gnomeshell: Gnome shell specific configurations.
 
 Further desktop environment roles may be added in the future (e.g. gnome, kde etc...)
 
