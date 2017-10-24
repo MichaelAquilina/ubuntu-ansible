@@ -6,6 +6,8 @@ Ubuntu Ansible
 Configure a Ubuntu machine using my personal preferences and usual tools and applications installed.
 After installing a fresh Ubuntu installation all you need to do is install ansible:
 
+::
+
     sudo apt-get install python-pip
     sudo pip install ansible
 
@@ -14,6 +16,8 @@ Once thats done then run one of the playbooks found in this repo.
 ``setup_gnome.yml`` is used for setting up a Ubuntu Gnome environment using Gnome Shell.
 
 For example, setting up a machine with Ubuntu Gnome would be done as follows:
+
+::
 
     ansible-playbook setup_gnome.yml -i local.inventory --ask-sudo-pass
 
