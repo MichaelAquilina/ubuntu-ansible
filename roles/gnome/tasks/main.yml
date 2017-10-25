@@ -13,12 +13,19 @@
     update_cache: yes
   with_items: "{{ ui_apt_repos }}"
 
-- name: Install APT Packages
+- name: Install Development APT Packages
   become: yes
   apt:
     pkg: "{{ item }}"
     state: latest
-  with_items: "{{ ui_apt_packages }}"
+  with_items: "{{ development_packages }}"
+
+- name: Install Other APT Packages
+  become: yes
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items: "{{ other_packages }}"
 
 - name: Tomboy is removed
   become: yes
@@ -44,6 +51,11 @@
     schema: org.gnome.desktop.default-applications.terminal
     key: exec
     value: tilix
+
+- name: local applications directory
+  file:
+    state: directory
+    dest: "~/.local/share/applications"
 
 - name: Setup lnav shortcut
   file:

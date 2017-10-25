@@ -64,6 +64,13 @@
     force: yes
     state: link
 
+- name: Insults Directory
+  become: yes
+  file:
+    state: directory
+    dest: "/etc/sudoers.d"
+    mode: "440"
+
 - name: Setup Insults
   become: yes
   copy:
