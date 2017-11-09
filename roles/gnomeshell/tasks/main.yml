@@ -94,25 +94,6 @@
     src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/gtk.css"
     dest: ~/.config/gtk-3.0/gtk.css
     force: yes
-    state: link
-
-- name: Spotify autoscaling script
-  become: yes
-  file:
-    src: "{{ ansible_env.PWD }}/roles/gnomeshell/files/spotify-autoscale"
-    dest: /usr/bin/spotify-autoscale
-    state: link
-
-- name: Update Spotify Desktop File to use AutoScale
-  become: yes
-  lineinfile:
-    dest: "{{ item }}"
-    regexp: "^Exec="
-    state: present
-    line: "Exec=spotify-autoscale"
-  with_items:
-    - /usr/share/spotify/spotify.desktop
-    - /usr/share/applications/spotify.desktop
 
 - name: Natural Scrolling on Touchpad
   gsettings:

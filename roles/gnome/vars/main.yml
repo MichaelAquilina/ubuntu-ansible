@@ -1,7 +1,6 @@
 ---
 ui_apt_repos:
   - "deb http://archive.canonical.com/ {{ ansible_distribution_release }} partner"
-  - "deb http://repository.spotify.com testing non-free"
   - "ppa:webupd8team/atom"
   - "ppa:transmissionbt/ppa"
   - "ppa:mozillateam/firefox-next"
@@ -33,7 +32,6 @@ other_packages:
   - pavucontrol
   - polari
   - powerline
-  - spotify-client
   - synaptic
   - tilix
   - transmission-gtk
