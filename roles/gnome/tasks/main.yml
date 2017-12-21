@@ -74,14 +74,14 @@
     - {key: style-scheme, value: "cobalt"}
     - {key: show-line-numbers, value: "true"}
 
-- include: wireshark.yml
+- include_tasks: wireshark.yml
 
-- include: zim.yml
+- include_tasks: zim.yml
 
-- include: atom.yml
+- include_tasks: atom.yml
 
-- include: redshift.yml
+- include_tasks: redshift.yml
 
-- include: terminator.yml
+- include_tasks: terminator.yml
 
-- include: powersettings.yml
+- include_tasks: powersettings.yml

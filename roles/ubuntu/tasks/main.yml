@@ -139,10 +139,10 @@
     src: "{{ ansible_env.PWD }}/roles/ubuntu/files/psqlcheatsheet"
     force: yes
 
-- include: gpg.yml
+- include_tasks: gpg.yml
 
-- include: zsh.yml
+- include_tasks: zsh.yml
 
-- include: vim.yml
+- include_tasks: vim.yml
 
-- include: docker.yml
+- include_tasks: docker.yml
