@@ -81,6 +81,7 @@
   file:
     state: directory
     dest: "~/.config/gtk-3.0/"
+    recurse: "yes"
 
 - name: Gtk3 Settings
   file:
