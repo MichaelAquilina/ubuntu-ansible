@@ -105,16 +105,6 @@
     key: center-new-windows
     value: "true"
 
-- name: Add Adapta Theme Repo
-  become: yes
-  apt_repository:
-    repo: ppa:tista/adapta
-
-- name: Install Adapta Theme
-  become: yes
-  apt:
-    name: adapta-gtk-theme
-
 - name: Add Paper Icon Theme Repo
   become: yes
   apt_repository:
