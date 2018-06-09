@@ -20,7 +20,6 @@ development_packages:
 other_packages:
   - elementary-icon-theme  # Installs hi-res icons on all icon themes
   - caffeine
-  - firefox-trunk
   - firefox
   - gdebi
   - gimp
