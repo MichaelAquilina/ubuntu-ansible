@@ -2,7 +2,7 @@
   become: yes
   apt:
     name: "{{ item }}"
-  with_items:
+  loop:
     - g++
     - gfortran
     - intltool

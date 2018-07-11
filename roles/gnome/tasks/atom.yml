@@ -3,13 +3,13 @@
   npm:
     name: "{{ item }}"
     global: yes
-  with_items:
+  loop:
     - dockerlint
 
 - name: Setup Atom Packages
   apm:
     name: "{{ item }}"
-  with_items:
+  loop:
     - an-old-hope-syntax
     - atom-beautify
     - atom-dark-fusion-syntax
@@ -55,7 +55,7 @@
     force: yes
     state: link
     src: "{{ item.src }}"
-  with_items:
+  loop:
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_config.cson", dest: ~/.atom/config.cson}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_keymap.cson", dest: ~/.atom/keymap.cson}
     - {src: "{{ ansible_env.PWD }}/roles/gnome/files/atom_snippets.cson", dest: ~/.atom/snippets.cson}

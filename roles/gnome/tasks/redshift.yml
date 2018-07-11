@@ -3,7 +3,7 @@
   apt:
     pkg: "{{ item }}"
     state: latest
-  with_items:
+  loop:
     - redshift-gtk
 
 - name: Allow Redshift to use geoclue2
@@ -13,7 +13,7 @@
     section: redshift
     option: "{{ item.option }}"
     value: "{{ item.value }}"
-  with_items:
+  loop:
     - {option: allowed, value: "true"}
     - {option: system, value: "false"}
     - {option: users, value: ""}

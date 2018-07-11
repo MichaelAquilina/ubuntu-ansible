@@ -9,7 +9,7 @@
   file:
     state: absent
     path: "{{ item }}"
-  with_items:
+  loop:
      - /etc/xdg/autostart/gnome-keyring-gpg.desktop
      - /usr/share/upstart/sessions/gnome-keyring-gpg.conf
 

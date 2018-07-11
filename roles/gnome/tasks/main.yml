@@ -3,7 +3,7 @@
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: "{{ item }}"
-  with_items: "{{ ui_apt_keys }}"
+  loop: "{{ ui_apt_keys }}"
 
 - name: Add Additional APT Repostories
   become: yes
@@ -11,21 +11,21 @@
     repo: "{{ item }}"
     state: present
     update_cache: yes
-  with_items: "{{ ui_apt_repos }}"
+  loop: "{{ ui_apt_repos }}"
 
 - name: Install Development APT Packages
   become: yes
   apt:
     pkg: "{{ item }}"
     state: latest
-  with_items: "{{ development_packages }}"
+  loop: "{{ development_packages }}"
 
 - name: Install Other APT Packages
   become: yes
   apt:
     pkg: "{{ item }}"
     state: latest
-  with_items: "{{ other_packages }}"
+  loop: "{{ other_packages }}"
 
 - name: Tomboy is removed
   become: yes
@@ -69,7 +69,7 @@
     schema: org.gnome.meld
     key: "{{ item.key }}"
     value: "{{ item.value }}"
-  with_items:
+  loop:
     - {key: highlight-syntax, value: "true"}
     - {key: style-scheme, value: "cobalt"}
     - {key: show-line-numbers, value: "true"}

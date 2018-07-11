@@ -4,7 +4,7 @@
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item.src }}"
     dest: "{{ item.dest }}"
-  with_items:
+  loop:
     - {src: zim_todo.sh, dest: /usr/bin/zim_todo}
 
 - name: Setup Zim Desktop Shortcuts
@@ -12,7 +12,7 @@
     state: link
     src: "{{ ansible_env.PWD }}/roles/gnome/files/{{ item }}"
     dest: "~/.local/share/applications/{{ item }}"
-  with_items:
+  loop:
     - zim_todo.desktop
     - zim_yesterday.desktop
     - zim_tomorrow.desktop
